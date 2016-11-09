@@ -1,39 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_home"
+    android:id="@+id/activity_trimesters"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.projectina.ina.Home">
+    tools:context="com.projectina.ina.Trimesters">
 
     <Button
-        android:text="Map"
+        android:text="Trimester 1"
+        android:onClick="dispatchTrimesterOneWeeksIntent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="82dp"
-        android:id="@+id/button" />
+        android:layout_marginTop="72dp"
+        android:id="@+id/trimester1Button" />
 
     <Button
-        android:text="Pregnancy Progress"
-        android:onClick="dispatchTrimesterIntent"
+        android:text="Trimester 2"
+        android:onClick="dispatchTrimesterTwoWeeksIntent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="49dp"
-        android:id="@+id/button2"
-        android:layout_below="@+id/button"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/trimester1Button"
+        android:id="@+id/trimester2Button" />
 
     <Button
-        android:text="Glossary"
+        android:text="Trimester 3"
+        android:onClick="dispatchTrimesterThreeWeeksIntent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/button"
-        android:layout_marginBottom="64dp"
-        android:id="@+id/button3" />
+        android:layout_alignStart="@+id/trimester2Button"
+        android:layout_marginBottom="69dp"
+        android:id="@+id/trimester3Button" />
+
 </RelativeLayout>
