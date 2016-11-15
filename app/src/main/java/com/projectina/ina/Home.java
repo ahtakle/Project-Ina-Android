@@ -14,6 +14,11 @@ public class Home extends AppCompatActivity {
     }
 
 
+    public void dispatchMapIntent(View view) {
+        Intent intent = new Intent(this, Map.class);
+        startActivity(intent);
+    }
+
     /** Called when the user clicks the Send button */
     public void dispatchTrimesterIntent(View view) {
         Intent intent = new Intent(this, InfoNav.class);
@@ -27,5 +32,7 @@ public class Home extends AppCompatActivity {
         Intent intent = new Intent(this, Glossary.class);
         startActivity(intent);
     }
+
+
 
 }
