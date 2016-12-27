@@ -1,36 +1,73 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.projectina.ina.TrimestersFrag">
 
 
-    <Button
-        android:text="Trimester 1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="89dp"
-        android:id="@+id/toTrimester1" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="7">
 
-    <Button
-        android:text="Trimester 2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toTrimester1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
-        android:id="@+id/toTrimester2" />
 
-    <Button
-        android:text="Trimester 3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toTrimester2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
-        android:id="@+id/toTrimester3" />
+        <TextView
+            android:id="@+id/TrimesterInstructions"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+
+            android:text="@string/trim_instructions" />
+
+        <Button
+            android:id="@+id/toTrimester1"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+
+            android:layout_centerHorizontal="true"
+            android:layout_margin="30dp"
+
+
+            android:layout_weight="2"
+            android:text="@string/trim1" />
+        <!--android:layout_marginTop="89dp"-->
+
+        <Button
+            android:id="@+id/toTrimester2"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/toTrimester1"
+
+            android:layout_centerHorizontal="true"
+            android:layout_margin="30dp"
+
+
+            android:layout_weight="2"
+            android:text="@string/trim2" />
+        <!--android:layout_marginTop="75dp"-->
+
+        <Button
+            android:id="@+id/toTrimester3"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/toTrimester2"
+
+            android:layout_centerHorizontal="true"
+            android:layout_margin="30dp"
+
+
+            android:layout_weight="2"
+            android:text="@string/trim3" />
+        <!--android:layout_marginTop="90dp"-->
+
+    </LinearLayout>
 
 </RelativeLayout>

@@ -4,33 +4,48 @@ package com.projectina.ina;
  * Created by zrs on 11/13/16.
  */
 
+import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceFragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Glossary extends AppCompatActivity {
+public class Glossary extends AppCompatActivity implements OnFragmentInteractionListener {
     private List<GlossaryTerm> glossaryList = new ArrayList<>();
     private RecyclerView recyclerView;
     private GlossaryAdapter mAdapter;
+
+    RelativeLayout glossaryView;
+    PopupWindow popUpWindow;
+    LayoutInflater layoutInflater;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_glossary);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //Log.d("content", getCurrentFocus().toString());
+
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_trimester); //same toolbar for now
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         mAdapter = new GlossaryAdapter(glossaryList);
@@ -56,6 +71,15 @@ public class Glossary extends AppCompatActivity {
             }
         }));
 
+
+        glossaryView = (RelativeLayout) findViewById(R.id.glossary_view);
+        //make the background clear (the foreground therefore transparent
+        try {
+            glossaryView.getForeground().setAlpha(0);
+        } catch (Exception e) {
+
+        }
+
         prepareGlossaryData();
     }
 
@@ -73,12 +97,130 @@ public class Glossary extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        popUpWindow = new PopupWindow(this);
+
+
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            PreferenceFragment fragment = new SettingsFrag();
+            android.app.FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.flContent, fragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+
+            //Change toolbar title to "Settings"
+            getSupportActionBar().setTitle("Settings");
+
+            //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            //drawer.closeDrawer(GravityCompat.START);
+
             return true;
+        } else if (id == R.id.action_about_me) {
+            android.support.v4.app.Fragment fragment = null;
+            Class fragmentClass = null;
+            fragmentClass = AboutMeFrag.class;
+            try {
+                fragment = (android.support.v4.app.Fragment) fragmentClass.newInstance();
+            } catch (Exception e) {
+                e.printStackTrace();
+                Log.e("glossary error", e.toString());
+            }
+            android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.flContent, fragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+
+            //Change toolbar title to "About Me"
+            getSupportActionBar().setTitle("About Me");
+
+            //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            //drawer.closeDrawer(GravityCompat.START);
+            return true;
+        } else if (id == R.id.action_help) {
+            android.support.v4.app.Fragment fragment = null;
+            Class fragmentClass = null;
+            fragmentClass = HelpFrag.class;
+            try {
+                fragment = (android.support.v4.app.Fragment) fragmentClass.newInstance();
+            } catch (Exception e) {
+                e.printStackTrace();
+                Log.e("help error", e.toString());
+            }
+            android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.flContent, fragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+
+            //Change toolbar title to "Help"
+            getSupportActionBar().setTitle("Help");
+
+            //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            //drawer.closeDrawer(GravityCompat.START);
+            return true;
+        } else if (id == R.id.action_feedback) {
+            android.support.v4.app.Fragment fragment = null;
+            Class fragmentClass = null;
+            fragmentClass = FeedbackFrag.class;
+            try {
+                fragment = (android.support.v4.app.Fragment) fragmentClass.newInstance();
+            } catch (Exception e) {
+                e.printStackTrace();
+                Log.e("help error", e.toString());
+            }
+            android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.flContent, fragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+
+            //Change toolbar title to "Feedback"
+            getSupportActionBar().setTitle("Feedback");
+
+            //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            //drawer.closeDrawer(GravityCompat.START);
+            return true;
+        } else if (id == R.id.action_resources) {
+            layoutInflater = (LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
+            //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            ViewGroup container = (ViewGroup) layoutInflater.inflate(R.layout.fragment_resource_pop_up, null);
+
+            popUpWindow = new PopupWindow(container, glossaryView.getWidth() * 2 / 3, glossaryView.getHeight() / 3, true);
+            popUpWindow.showAtLocation(glossaryView, Gravity.CENTER, 0, 0);
+            try {
+                glossaryView.getForeground().setAlpha(125);
+            } catch (Exception e) {
+
+            }
+
+            popUpWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+                @Override
+                public void onDismiss() {
+                    try {
+                        glossaryView.getForeground().setAlpha(0);
+                    } catch (Exception e) {
+
+                    }
+                }
+            });
+
+
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        //Change the toolbar title back to "Glossary"
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_trimester); //Same toolbar for now...?
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Glossary");
+
     }
 
     private void prepareGlossaryData() {
@@ -131,5 +273,10 @@ public class Glossary extends AppCompatActivity {
         glossaryList.add(term16);
 
         mAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }

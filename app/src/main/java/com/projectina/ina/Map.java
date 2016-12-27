@@ -1,25 +1,30 @@
 package com.projectina.ina;
 
-import android.support.design.widget.TabLayout;
+import android.net.Uri;
+import android.os.Bundle;
+import android.preference.PreferenceFragment;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
-public class Map extends AppCompatActivity {
+public class Map extends AppCompatActivity implements OnFragmentInteractionListener {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -36,12 +41,16 @@ public class Map extends AppCompatActivity {
      */
     private ViewPager mViewPager;
 
+    CoordinatorLayout coordLayout;
+    PopupWindow popUpWindow;
+    LayoutInflater layoutInflater;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_trimester);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // Create the adapter that will return a fragment for each of the three
@@ -64,6 +73,14 @@ public class Map extends AppCompatActivity {
             }
         });
 
+        coordLayout = (CoordinatorLayout) findViewById(R.id.main_content);
+        //make the background clear (the foreground therefore transparent
+        try {
+            coordLayout.getForeground().setAlpha(0);
+        } catch (Exception e) {
+
+        }
+
     }
 
 
@@ -81,9 +98,116 @@ public class Map extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        popUpWindow = new PopupWindow(this);
+
+
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            PreferenceFragment fragment = new SettingsFrag();
+            android.app.FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.flContent, fragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+
+            //Change toolbar title to "Settings"
+            getSupportActionBar().setTitle("Settings");
+
+            //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            //drawer.closeDrawer(GravityCompat.START);
+
             return true;
+        } else if (id == R.id.action_about_me) {
+            android.support.v4.app.Fragment fragment = null;
+            Class fragmentClass = null;
+            fragmentClass = AboutMeFrag.class;
+            try {
+                fragment = (android.support.v4.app.Fragment) fragmentClass.newInstance();
+            } catch (Exception e) {
+                e.printStackTrace();
+                Log.e("glossary error", e.toString());
+            }
+            android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.flContent, fragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+
+            //Change toolbar title to "About Me"
+            getSupportActionBar().setTitle("About Me");
+
+            //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            //drawer.closeDrawer(GravityCompat.START);
+            return true;
+        } else if (id == R.id.action_help) {
+            android.support.v4.app.Fragment fragment = null;
+            Class fragmentClass = null;
+            fragmentClass = HelpFrag.class;
+            try {
+                fragment = (android.support.v4.app.Fragment) fragmentClass.newInstance();
+            } catch (Exception e) {
+                e.printStackTrace();
+                Log.e("help error", e.toString());
+            }
+            android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.flContent, fragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+
+            //Change toolbar title to "Help"
+            getSupportActionBar().setTitle("Help");
+
+            //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            //drawer.closeDrawer(GravityCompat.START);
+            return true;
+        } else if (id == R.id.action_feedback) {
+            android.support.v4.app.Fragment fragment = null;
+            Class fragmentClass = null;
+            fragmentClass = FeedbackFrag.class;
+            try {
+                fragment = (android.support.v4.app.Fragment) fragmentClass.newInstance();
+            } catch (Exception e) {
+                e.printStackTrace();
+                Log.e("help error", e.toString());
+            }
+            android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.flContent, fragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+
+            //Change toolbar title to "Feedback"
+            getSupportActionBar().setTitle("Feedback");
+
+            //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            //drawer.closeDrawer(GravityCompat.START);
+            return true;
+        } else if (id == R.id.action_resources) {
+            layoutInflater = (LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
+            //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            ViewGroup container = (ViewGroup) layoutInflater.inflate(R.layout.fragment_resource_pop_up, null);
+
+            popUpWindow = new PopupWindow(container, coordLayout.getWidth() * 2 / 3, coordLayout.getHeight() / 3, true);
+            popUpWindow.showAtLocation(coordLayout, Gravity.CENTER, 0, 0);
+            try {
+                coordLayout.getForeground().setAlpha(125);
+            } catch (Exception e) {
+
+            }
+
+            popUpWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+                @Override
+                public void onDismiss() {
+                    try {
+                        coordLayout.getForeground().setAlpha(0);
+                    } catch (Exception e) {
+
+                    }
+                }
+            });
+
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -159,5 +283,11 @@ public class Map extends AppCompatActivity {
             }
             return null;
         }
+    }
+
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }

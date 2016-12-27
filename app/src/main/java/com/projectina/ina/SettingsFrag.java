@@ -1,23 +1,25 @@
 package com.projectina.ina;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceFragment;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
  * {} interface
  * to handle interaction events.
- * Use the {@link TrimestersFrag#newInstance} factory method to
+ * Use the {@link SettingsFrag#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class TrimestersFrag extends Fragment {
+public class SettingsFrag extends PreferenceFragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +31,7 @@ public class TrimestersFrag extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public TrimestersFrag() {
+    public SettingsFrag() {
         // Required empty public constructor
     }
 
@@ -39,11 +41,11 @@ public class TrimestersFrag extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment TrimestersFrag.
+     * @return A new instance of fragment SettingsFrag.
      */
     // TODO: Rename and change types and number of parameters
-    public static TrimestersFrag newInstance(String param1, String param2) {
-        TrimestersFrag fragment = new TrimestersFrag();
+    public static SettingsFrag newInstance(String param1, String param2) {
+        SettingsFrag fragment = new SettingsFrag();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -58,13 +60,36 @@ public class TrimestersFrag extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+        addPreferencesFromResource(R.xml.preferences);
+        PreferenceManager preferenceManager = getPreferenceManager();
+
+        if (preferenceManager.getSharedPreferences().getBoolean("notif_pref", true)) { //notifications on
+
+        } else { //notifications off
+
+        }
+
+        if (preferenceManager.getSharedPreferences().getBoolean("notif_pref", true)) { //sound on
+
+        } else { //sound off
+
+        }
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_trimesters, container, false);
+
+        View view = super.onCreateView(inflater, container, savedInstanceState);
+        view.setBackgroundColor(Color.WHITE);
+
+        return view;
+        //return inflater.inflate(R.xml.preferences, container, false);
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -90,5 +115,4 @@ public class TrimestersFrag extends Fragment {
         super.onDetach();
         mListener = null;
     }
-
 }

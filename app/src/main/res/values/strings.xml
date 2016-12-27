@@ -1,17 +1,62 @@
 <resources>
     <string name="app_name">Ina</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Hello World</string>
+
+    <!--About Me Page-->
+    <string name="about_me_description">Welcome to Project Ina! This app was created in order to
+        help pregnant women in your reservation learn more about what happens before, during,
+        and after pregnancy, making the process just a little bit easier.</string>
+    <string name="about_me_title">About Me</string>
+
+    <!--Help Page-->
+    <string name="help_title">Help</string>
+    <string name="help_description">See the tutorial below for step by step instructions on how
+        to use this app.</string>
+
     <string name="title_activity_trimester">Trimester</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <!--Menu Items-->
     <string name="action_settings">Settings</string>
+    <string name="action_about_me">About Me</string>
+    <string name="action_feedback">Feedback</string>
+    <string name="action_help">Help</string>
+    <string name="resources">Resources</string>
 
     <string name="glossary_header">Glossary</string>
     <string name="title_activity_map">Map</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_glossary">Glossary</string>
+
+    <!--Trimesters Page-->
+    <string name="trim1">Trimester 1</string>
+    <string name="trim2">Trimester 2</string>
+    <string name="trim3">Trimester 3</string>
+    <string name="trim_instructions">Select a trimester below.</string>
+
+    <!--Feedback Page-->
+    <string name="feedbackInstructions">Enter a message below:</string>
+    <string name="email">Enter your e-mail address:</string>
+    <string name="questions">Question</string>
+    <string name="suggestions">Suggestion</string>
+    <string name="submit">Submit</string>
+    <string name="name">Enter your name:</string>
+    <string name="selectFeedbackType">Select type of feedback below:</string>
+
+
+    <string name="title_activity_resource">Resource</string>
+
+    <!--Resources Page-->
+    <string name="app_help">Need help with the app?</string>
+    <string name="aditi_resource">Aditi Takle: 571-422-0259</string>
+    <string name="zach_resource">Zach Skemp: 703-401-6163</string>
+    <string name="local_resources">Local Resources</string>
+    <string name="local_hospital_1">Hospital #1: 555-555-5555</string>
+    <string name="local_hospital_2">Hospital #2: 111-111-1111\n</string>
+    <string name="title_activity_about_me">AboutMeActivity</string>
+
+
 </resources>
