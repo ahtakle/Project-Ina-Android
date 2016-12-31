@@ -2,6 +2,7 @@ package com.projectina.ina;
 
 /**
  * Created by zrs on 11/13/16.
+ * Simple class to create a divider. Ya, not important
  */
 
 import android.content.Context;

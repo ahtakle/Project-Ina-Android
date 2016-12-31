@@ -2,6 +2,8 @@ package com.projectina.ina;
 
 /**
  * Created by zrs on 11/13/16.
+ * Basic Java Class for a Glossary Term
+ * TODO: Need to change parameters
  */
 
 public class GlossaryTerm {

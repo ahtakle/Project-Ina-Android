@@ -2,6 +2,7 @@ package com.projectina.ina;
 
 /**
  * Created by zrs on 11/13/16.
+ * Basic RecyclerView Adapter needed to set up the recyclerview
  */
 
 

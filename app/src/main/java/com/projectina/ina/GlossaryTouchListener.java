@@ -8,6 +8,8 @@ import android.view.View;
 
 /**
  * Created by zrs on 11/13/16.
+ * This is the onClickListener for Glossary.
+ * The onClick method in this class aren't actually implemented here, focus on one in Glossary.java
  */
 
 

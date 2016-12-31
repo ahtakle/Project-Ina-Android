@@ -2,6 +2,9 @@ package com.projectina.ina;
 
 /**
  * Created by zrs on 11/13/16.
+ * Glossary activity.
+ * Uses a recyclerView activity with a clickListener
+ * TODO: a fragment manager to change to new activity and parse which fragment to go to as well
  */
 
 import android.os.Bundle;
@@ -31,8 +34,8 @@ public class Glossary extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        //Following lines of code are where we prepare the recyclerView
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-
         mAdapter = new GlossaryAdapter(glossaryList);
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
@@ -81,6 +84,7 @@ public class Glossary extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //Here is where we prepare the Glossary Data
     private void prepareGlossaryData() {
         GlossaryTerm term = new GlossaryTerm("Mad Max: Fury Road", "Action & Adventure", "2015");
         glossaryList.add(term);
