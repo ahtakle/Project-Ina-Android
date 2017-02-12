@@ -23,7 +23,7 @@ public class Home extends AppCompatActivity {
 
     // Start Trimester Activity
     public void dispatchTrimesterIntent(View view) {
-        Intent intent = new Intent(this, InfoNav.class);
+        Intent intent = new Intent(this, Trimesters.class);
         /*EditText editText = (EditText) findViewById(R.id.edit_message);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);*/

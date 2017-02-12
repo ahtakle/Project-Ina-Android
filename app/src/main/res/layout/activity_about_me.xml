@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.projectina.ina.InfoNav">
+    tools:context="com.projectina.ina.AboutMe">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,20 +21,23 @@
 
     </android.support.design.widget.AppBarLayout>
 
-   <!-- <include layout="@layout/content_trimester" />-->
-    <FrameLayout
-        android:id="@+id/flContent"
+    <LinearLayout
+        android:id="@+id/about_me_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize"/>
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="1"
+        android:background="@android:color/background_light"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <!-- Taken Out With Floating Action Bar, uncomment if implemented -->
-    <!--<android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />-->
+        <TextView
+            android:id="@+id/aboutMeDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_me_description"
+            android:layout_margin="10dp" />
+
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

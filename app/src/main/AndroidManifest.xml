@@ -21,10 +21,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".InfoNav"
-            android:label="@string/title_activity_trimester"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".Map"
             android:label="@string/title_activity_map"
             android:parentActivityName=".Home"
@@ -42,7 +38,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.projectina.ina.Home" />
         </activity>
-        <activity android:name=".SplashActivity"
+        <activity
+            android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -62,6 +59,30 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity
+            android:name=".AboutMe"
+            android:label="@string/title_activity_about_me"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Feedback"
+            android:label="@string/title_activity_feedback"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Help"
+            android:label="@string/title_activity_help"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".Trimesters"
+            android:label="@string/title_activity_trimesters"
+            android:parentActivityName=".Home"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.projectina.ina.Home" />
+        </activity>
     </application>
 
 </manifest>
