@@ -1,14 +1,13 @@
 package com.projectina.ina;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceFragment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -115,21 +114,24 @@ public class InfoNav extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
 
-            PreferenceFragment fragment = new SettingsFrag();
+            /*PreferenceFragment fragment = new SettingsFrag();
             android.app.FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.flContent, fragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
 
             //Change toolbar title to "Settings"
-            getSupportActionBar().setTitle("Settings");
+            getSupportActionBar().setTitle("Settings"); */
+
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
 
             //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
 
             return true;
         } else if (id == R.id.action_about_me) {
-            android.support.v4.app.Fragment fragment = null;
+            /*android.support.v4.app.Fragment fragment = null;
             Class fragmentClass = null;
             fragmentClass = AboutMeFrag.class;
             try {
@@ -142,16 +144,19 @@ public class InfoNav extends AppCompatActivity
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.flContent, fragment);
             fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+            fragmentTransaction.commit(); */
 
             //Change toolbar title to "About Me"
             getSupportActionBar().setTitle("About Me");
+
+            Intent intent = new Intent(this, AboutMeActivity.class);
+            startActivity(intent);
 
             //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
             return true;
         } else if (id == R.id.action_help) {
-            android.support.v4.app.Fragment fragment = null;
+            /*android.support.v4.app.Fragment fragment = null;
             Class fragmentClass = null;
             fragmentClass = HelpFrag.class;
             try {
@@ -164,16 +169,19 @@ public class InfoNav extends AppCompatActivity
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.flContent, fragment);
             fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+            fragmentTransaction.commit(); */
 
             //Change toolbar title to "Help"
             getSupportActionBar().setTitle("Help");
+
+            Intent intent = new Intent(this, HelpActivity.class);
+            startActivity(intent);
 
             //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
             return true;
         } else if (id == R.id.action_feedback) {
-            android.support.v4.app.Fragment fragment = null;
+            /*android.support.v4.app.Fragment fragment = null;
             Class fragmentClass = null;
             fragmentClass = FeedbackFrag.class;
             try {
@@ -186,10 +194,13 @@ public class InfoNav extends AppCompatActivity
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.flContent, fragment);
             fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+            fragmentTransaction.commit();*/
 
             //Change toolbar title to "Feedback"
             getSupportActionBar().setTitle("Feedback");
+
+            Intent intent = new Intent(this, FeedbackActivity.class);
+            startActivity(intent);
 
             //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);

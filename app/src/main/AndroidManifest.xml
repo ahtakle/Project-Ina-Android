@@ -37,6 +37,21 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.projectina.ina.Home" />
         </activity>
+        <activity
+            android:name=".AboutMeActivity"
+            android:label="@string/title_activity_about_me"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".FeedbackActivity"
+            android:label="@string/title_activity_feedback"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".HelpActivity"
+            android:label="@string/title_activity_help"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
     </application>
 
 </manifest>

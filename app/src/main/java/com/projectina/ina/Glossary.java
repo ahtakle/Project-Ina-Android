@@ -4,16 +4,15 @@ package com.projectina.ina;
  * Created by zrs on 11/13/16.
  */
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -117,7 +116,7 @@ public class Glossary extends AppCompatActivity implements OnFragmentInteraction
 
             return true;
         } else if (id == R.id.action_about_me) {
-            android.support.v4.app.Fragment fragment = null;
+            /*android.support.v4.app.Fragment fragment = null;
             Class fragmentClass = null;
             fragmentClass = AboutMeFrag.class;
             try {
@@ -130,16 +129,19 @@ public class Glossary extends AppCompatActivity implements OnFragmentInteraction
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.flContent, fragment);
             fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+            fragmentTransaction.commit(); */
 
             //Change toolbar title to "About Me"
             getSupportActionBar().setTitle("About Me");
+
+            Intent intent = new Intent(this, AboutMeActivity.class);
+            startActivity(intent);
 
             //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             //drawer.closeDrawer(GravityCompat.START);
             return true;
         } else if (id == R.id.action_help) {
-            android.support.v4.app.Fragment fragment = null;
+            /*android.support.v4.app.Fragment fragment = null;
             Class fragmentClass = null;
             fragmentClass = HelpFrag.class;
             try {
@@ -152,16 +154,19 @@ public class Glossary extends AppCompatActivity implements OnFragmentInteraction
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.flContent, fragment);
             fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+            fragmentTransaction.commit();*/
 
             //Change toolbar title to "Help"
             getSupportActionBar().setTitle("Help");
+
+            Intent intent = new Intent(this, HelpActivity.class);
+            startActivity(intent);
 
             //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             //drawer.closeDrawer(GravityCompat.START);
             return true;
         } else if (id == R.id.action_feedback) {
-            android.support.v4.app.Fragment fragment = null;
+            /*android.support.v4.app.Fragment fragment = null;
             Class fragmentClass = null;
             fragmentClass = FeedbackFrag.class;
             try {
@@ -174,10 +179,13 @@ public class Glossary extends AppCompatActivity implements OnFragmentInteraction
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.flContent, fragment);
             fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+            fragmentTransaction.commit();*/
 
             //Change toolbar title to "Feedback"
             getSupportActionBar().setTitle("Feedback");
+
+            Intent intent = new Intent(this, FeedbackActivity.class);
+            startActivity(intent);
 
             //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             //drawer.closeDrawer(GravityCompat.START);
