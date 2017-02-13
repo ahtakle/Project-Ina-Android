@@ -3,34 +3,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.projectina.ina.TrimesterFragments.TrimestersFrag">
+    tools:context="com.projectina.ina.TrimesterFragments.Trimester1">
 
     <Button
-        android:text="@string/Trimester1"
+        android:text="Weeks 1-4"
         android:layout_width="match_parent"
         android:layout_height="170dp"
         android:layout_marginTop="18dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:id="@+id/toTrimester1" />
+        android:id="@+id/toWeek1" />
 
     <Button
-        android:text="@string/Trimester2"
+        android:text="Weeks 5-8"
         android:layout_width="match_parent"
         android:layout_height="170dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:id="@+id/toTrimester2" />
+        android:id="@+id/toWeek2" />
 
     <Button
-        android:text="@string/Trimester3"
+        android:text="Weeks 9-12"
         android:layout_width="match_parent"
         android:layout_height="170dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:id="@+id/toTrimester3" />
+        android:id="@+id/toWeek3" />
 
 
 </LinearLayout>

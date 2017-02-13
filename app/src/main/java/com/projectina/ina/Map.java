@@ -70,12 +70,14 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
         mMap = googleMap;
 
         // Add some markers to the map, and add a data object to each marker.
-        mPerth = mMap.addMarker(new MarkerOptions().position(PERTH).title("Perth"));
+        mPerth = mMap.addMarker(new MarkerOptions().position(PERTH).title("Perth").snippet("Some infor will go here, it can be a few lines?"));
         mPerth.setTag(0);
-        mSydney = mMap.addMarker(new MarkerOptions().position(SYDNEY).title("Sydney"));
+        mSydney = mMap.addMarker(new MarkerOptions().position(SYDNEY).title("Sydney").snippet("Some infor will go here, it can be a few lines?"));
         mSydney.setTag(1);
-        mBrisbane = mMap.addMarker(new MarkerOptions().position(BRISBANE).title("Brisbane"));
+        mBrisbane = mMap.addMarker(new MarkerOptions().position(BRISBANE).title("Brisbane").snippet("Some infor will go here, it can be a few lines?"));
         mBrisbane.setTag(2);
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(SYDNEY));
 
         // Set a listener for info window events.
         mMap.setOnInfoWindowClickListener(this);
