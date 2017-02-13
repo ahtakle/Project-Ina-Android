@@ -1,42 +1,42 @@
 package com.projectina.ina;
 
-import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.design.widget.TabLayout;
+import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.os.Bundle;
-import android.util.AttributeSet;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
-public class Map extends AppCompatActivity
-        implements Map_Offline_Frag.OnFragmentInteractionListener, Map_Online_Frag.OnFragmentInteractionListener{
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMapOptions;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
-    /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     */
-    private SectionsPagerAdapter mSectionsPagerAdapter;
+public class Map extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener  {
 
-    /**
-     * The {@link ViewPager} that will host the section contents.
-     */
-    private ViewPager mViewPager;
+    private GoogleMap mMap;
+    Button button;
+
+    private static final LatLng PERTH = new LatLng(-31.952854, 115.857342);
+    private static final LatLng SYDNEY = new LatLng(-33.87365, 151.20689);
+    private static final LatLng BRISBANE = new LatLng(-27.47093, 153.0235);
+
+    private Marker mPerth;
+    private Marker mSydney;
+    private Marker mBrisbane;
+
+    private static final CharSequence[] MAP_TYPE_ITEMS =
+            {"Road Map", "Hybrid", "Satellite", "Terrain"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,22 +46,117 @@ public class Map extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-        // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
-        mViewPager.setAdapter(mSectionsPagerAdapter);
+        button=(Button)findViewById(R.id.button);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(mViewPager);
-
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
     }
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
 
+    /**
+     * Manipulates the map once available.
+     * This callback is triggered when the map is ready to be used.
+     * This is where we can add markers or lines, add listeners or move the camera. In this case,
+     * we just add a marker near Sydney, Australia.
+     * If Google Play services is not installed on the device, the user will be prompted to install
+     * it inside the SupportMapFragment. This method will only be triggered once the user has
+     * installed Google Play services and returned to the app.
+     */
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        // Add some markers to the map, and add a data object to each marker.
+        mPerth = mMap.addMarker(new MarkerOptions().position(PERTH).title("Perth"));
+        mPerth.setTag(0);
+        mSydney = mMap.addMarker(new MarkerOptions().position(SYDNEY).title("Sydney"));
+        mSydney.setTag(1);
+        mBrisbane = mMap.addMarker(new MarkerOptions().position(BRISBANE).title("Brisbane"));
+        mBrisbane.setTag(2);
+
+        // Set a listener for info window events.
+        mMap.setOnInfoWindowClickListener(this);
+
+
+
+
+
+        //Do other setup things
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+
+        //Button Things
+        button.bringToFront();
+        //button.getBackground().setAlpha(128);  // 50% transparent
+        //button.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showMapTypeSelectorDialog();
+
+            }
+        });
+    }
+
+    /**  Called when the user clicks an info window
+     *   TODO: Customize this as necessary for what we want
+     */
+    @Override
+    public void onInfoWindowClick(Marker marker) {
+        Toast.makeText(this, "Info window clicked", Toast.LENGTH_SHORT).show();
+
+        //Set up correct data to map to each marker
+        Uri gmmIntentUri = Uri.parse("google.navigation:q=Taronga+Zoo,+Sydney+Australia");
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        startActivity(mapIntent);
+    }
+
+
+
+    private void showMapTypeSelectorDialog() {
+        // Prepare the dialog by setting up a Builder.
+        final String fDialogTitle = "Select Map Type";
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(fDialogTitle);
+
+        // Find the current map type to pre-check the item representing the current state.
+        int checkItem = mMap.getMapType() - 1;
+
+        // Add an OnClickListener to the dialog, so that the selection will be handled.
+        builder.setSingleChoiceItems(
+                MAP_TYPE_ITEMS,
+                checkItem,
+                new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int item) {
+                        // Locally create a finalised object.
+
+                        // Perform an action depending on which item was selected.
+                        switch (item) {
+                            case 1:
+                                mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+                                break;
+                            case 2:
+                                mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+                                break;
+                            case 3:
+                                mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+                                break;
+                            default:
+                                mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                        }
+                        dialog.dismiss();
+                    }
+                }
+        );
+
+        // Build the dialog and show it.
+        AlertDialog fMapTypeDialog = builder.create();
+        fMapTypeDialog.setCanceledOnTouchOutside(true);
+        fMapTypeDialog.show();
     }
 
     @Override
@@ -105,82 +200,4 @@ public class Map extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-        public PlaceholderFragment() {
-        }
-
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.map_frag, container, false);
-            return rootView;
-        }
-    }
-
-    /**
-     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-     * one of the sections/tabs/pages.
-     */
-    public class SectionsPagerAdapter extends FragmentPagerAdapter {
-
-        public SectionsPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
-            //return PlaceholderFragment.newInstance(position + 1);
-            switch (position) {
-                case 0:
-                    Map_Offline_Frag tab1 = new Map_Offline_Frag();
-                    return tab1;
-                case 1:
-                    Map_Online_Frag tab2 = new Map_Online_Frag();
-                    return tab2;
-                default:
-                    return null;
-            }
-        }
-
-        @Override
-        public int getCount() {
-            // Show 2 total pages.
-            return 2;
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return "Offline";
-                case 1:
-                    return "Online";
-            }
-            return null;
-        }
-    }
 }

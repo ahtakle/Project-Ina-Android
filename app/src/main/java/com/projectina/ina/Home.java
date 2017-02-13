@@ -3,7 +3,6 @@ package com.projectina.ina;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.View;
 
 public class Home extends AppCompatActivity {
@@ -15,7 +14,7 @@ public class Home extends AppCompatActivity {
     }
 
 
-    //Start Map Activity
+    //Start MapFragHostActivity Activity
     public void dispatchMapIntent(View view) {
         Intent intent = new Intent(this, Map.class);
         startActivity(intent);

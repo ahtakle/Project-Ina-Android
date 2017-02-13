@@ -7,7 +7,7 @@
     <!--Glossary Term Colors-->
     <color name="info">#999999</color>
     <color name="term">#222222</color>
-    <!-- Map Tab Colors -->
+    <!-- MapFragHostActivity Tab Colors -->
     <color name="tab_background_selected">#795548</color>
     <color name="tab_background_unselected">#BCAAA4</color>
 </resources>

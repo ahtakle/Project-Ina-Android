@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:orientation="vertical"
-    tools:context="com.projectina.ina.Map">
+    android:orientation="vertical">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
@@ -28,25 +27,25 @@
 
     </android.support.design.widget.AppBarLayout>
 
-   <!-- This was disabled, and a CustomViewPager added below to disable scrolling to change tabs -->
-   <!-- <android.support.v4.view.ViewPager
-        android:id="@+id/container"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
+        android:layout_height="match_parent">
 
-    <com.projectina.ina.CustomViewPager
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+        <fragment android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.projectina.ina.Map_Online"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools" />
 
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tabs"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        app:tabBackground="@drawable/tab_background_color"
-        app:tabIndicatorColor="@android:color/holo_orange_dark" />
+        <Button
+            android:text="Change Map Type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:id="@+id/button" />
+
+    </FrameLayout>
 
 </LinearLayout>
