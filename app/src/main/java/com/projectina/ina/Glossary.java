@@ -9,7 +9,6 @@ package com.projectina.ina;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.GravityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,8 +16,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +35,7 @@ public class Glossary extends AppCompatActivity {
 
         //Following lines of code are where we prepare the recyclerView
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        mAdapter = new GlossaryAdapter(glossaryList);
+        mAdapter = new GlossaryAdapter(glossaryList, getSupportFragmentManager());
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
@@ -48,18 +45,16 @@ public class Glossary extends AppCompatActivity {
         recyclerView.setAdapter(mAdapter);
 
         //When a glossary term gets clicked!
-        recyclerView.addOnItemTouchListener(new GlossaryTouchListener(getApplicationContext(), recyclerView, new ClickListener() {
+        /*recyclerView.addOnItemTouchListener(new GlossaryTouchListener(getApplicationContext(), recyclerView, new ClickListener() {
             @Override
             public void onClick(View view, int position) {
                 GlossaryTerm term = glossaryList.get(position);
                 Toast.makeText(getApplicationContext(), term.getTitle() + " is selected!", Toast.LENGTH_SHORT).show();
             }
-
             @Override
             public void onLongClick(View view, int position) {
-
             }
-        }));
+        }));*/
 
         prepareGlossaryData();
     }
@@ -108,31 +103,31 @@ public class Glossary extends AppCompatActivity {
 
     //Here is where we prepare the Glossary Data
     private void prepareGlossaryData() {
-        GlossaryTerm term = new GlossaryTerm("Mad Max: Fury Road", "Action & Adventure", "2015");
+        GlossaryTerm term = new GlossaryTerm("Family Planning", "Social", "Weeks 16-19");
         glossaryList.add(term);
 
-        GlossaryTerm term2 = new GlossaryTerm("Inside Out", "Animation, Kids & Family", "2015");
+        GlossaryTerm term2 = new GlossaryTerm("Healthy Diet", "Health", "Weeks 5-9");
         glossaryList.add(term2);
 
-        GlossaryTerm term3 = new GlossaryTerm("Star Wars: Episode VII - The Force Awakens", "Action", "2015");
+        GlossaryTerm term3 = new GlossaryTerm("Healthy Relationships", "Social", "Weeks 24-28");
         glossaryList.add(term3);
 
-        GlossaryTerm term4 = new GlossaryTerm("Shaun the Sheep", "Animation", "2015");
+        GlossaryTerm term4 = new GlossaryTerm("Domestic Violence and Sexual Assault", "Social", "Weeks 24-28");
         glossaryList.add(term4);
 
-        GlossaryTerm term5 = new GlossaryTerm("The Martian", "Science Fiction & Fantasy", "2015");
+        GlossaryTerm term5 = new GlossaryTerm("Next Steps", "Lifestyle", "Weeks 1-4");
         glossaryList.add(term5);
 
-        GlossaryTerm term6 = new GlossaryTerm("Mission: Impossible Rogue Nation", "Action", "2015");
+        GlossaryTerm term6 = new GlossaryTerm("Alcohol and Substance Abuse During Pregnancy", "Health", "Weeks 1-4");
         glossaryList.add(term6);
 
-        GlossaryTerm term7 = new GlossaryTerm("Up", "Animation", "2009");
+        GlossaryTerm term7 = new GlossaryTerm("Mental Health Issues During and After Pregnancy", "Health", "Weeks 30-32");
         glossaryList.add(term7);
 
-        GlossaryTerm term8 = new GlossaryTerm("Star Trek", "Science Fiction", "2009");
+        GlossaryTerm term8 = new GlossaryTerm("Medications and Supplements Considered Safe During Pregnancy", "Health", "Weeks 1-4");
         glossaryList.add(term8);
 
-        GlossaryTerm term9 = new GlossaryTerm("The LEGO GlossaryTerm", "Animation", "2014");
+        GlossaryTerm term9 = new GlossaryTerm("Fetal Development", "Health", "Weeks 5-9");
         glossaryList.add(term9);
 
         GlossaryTerm term10 = new GlossaryTerm("Iron Man", "Action & Adventure", "2008");

@@ -30,7 +30,7 @@ public class Trimester1 extends Fragment {
         weeks1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment fragment = new Fragment();
+                Fragment fragment = new Weeks_1();
                 // Insert the fragment by replacing any existing fragment
                 FragmentManager fragmentManager = getFragmentManager();
                 fragmentManager.beginTransaction()

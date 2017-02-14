@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         app:srcCompat="@mipmap/question"
         android:id="@+id/imageButtonQuestion"
+        android:onClick="dispatchBackgroundIntent"
         android:layout_marginStart="55dp"
         android:layout_marginBottom="28dp"
         android:layout_alignBottom="@+id/imageButtonGlossary"

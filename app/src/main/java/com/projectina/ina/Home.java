@@ -13,6 +13,11 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
     }
 
+    //Start BackgroundIntro Activity
+    public void dispatchBackgroundIntent(View view) {
+        Intent intent = new Intent(this, BackgroundIntro.class);
+        startActivity(intent);
+    }
 
     //Start MapFragHostActivity Activity
     public void dispatchMapIntent(View view) {

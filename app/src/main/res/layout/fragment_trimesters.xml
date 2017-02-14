@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.projectina.ina.TrimesterFragments.TrimestersFrag">
+    tools:context="com.projectina.ina.TrimesterFragments.TrimestersFragment">
 
     <Button
         android:text="@string/Trimester1"
