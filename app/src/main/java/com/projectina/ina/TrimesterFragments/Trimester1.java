@@ -1,7 +1,7 @@
 package com.projectina.ina.TrimesterFragments;
 
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,7 +30,7 @@ public class Trimester1 extends Fragment {
         weeks1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment fragment = new Fragment();
+                Fragment fragment = new Weeks1to4();
                 // Insert the fragment by replacing any existing fragment
                 FragmentManager fragmentManager = getFragmentManager();
                 fragmentManager.beginTransaction()
@@ -66,4 +66,6 @@ public class Trimester1 extends Fragment {
 
         return rootView;
     }
+
+
 }

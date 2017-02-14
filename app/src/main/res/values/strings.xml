@@ -146,4 +146,105 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Glossary Fragments -->
+    <string name="fetal_dev_title">\n<b>Fetal Development</b>\n</string>
+<string name="fetal_dev_frag"><b>Fertilization after conception (Weeks 0 – 2)</b>
+\n\u2022 For women, an ovum (an “egg”) is released from the ovary usually every month
+\n\u2022 During sex, when sperm from the male enters the fallopian tube through the vagina and cervix, it fertilizes the ovum
+\n\u2022 The fertilized egg, with genes from both parents, begins to rapidly grow and divide in the first two weeks
+\n\n<b>Implantation (Week 3)</b>
+\n\u2022 Protective liquid, called the amniotic fluid, begins to collect in womb of the mother, also called the amniotic sac.
+\n\u2022 The fertilized egg is now a small clump of several hundred rapidly dividing cells
+\n\u2022 Cells of the embryo (the baby) arrange themselves into two layers
+\n\u2022 Cells of the placenta produce a hormone for the baby called human chorionic gonadotrophin
+\n\u2022 The placenta is an organ in the mother that nourishes and maintains the fetus through the umbilical cord
+\n\n<b>Early development (Weeks 4-7)</b>
+\n\u2022 Neural tube develops, beginning with the spine
+\n\u2022 Yolk sac, which generates the baby’s blood cells, develops
+\n\u2022 Arm, leg, tailbone, eyelid, and jaw structures begin to develop
+\n\u2022 The umbilical cord begins to loop into the baby’s intestines
+\n\u2022 The mother will experience increased need for urination due to increased internal fluid volumes
+\n\n<b>Month 2-3 (Week 8 – 13)</b>
+\n\u2022 Earlobes, neural networks in the brain, knees, fingers, wrists, and shoulders begin to develop
+\n\u2022 Uterus has doubled in size
+\n\u2022 Chorionic villi sampling, which is a test that detects early abnormalities in the fetus, occurs at this stage. A tiny tissue sample is taken from the fetus part of the placenta.
+\n\u2022 Bones begin to solidify, and skin remains translucent
+\n\n<b>Month 4 (Week 14 – 17)</b>
+\n\u2022 The baby’s urinary and circulatory systems are operational
+\n\u2022 Limbs continue to grow, and all joints completely develop
+\n\u2022 Toenails, and a thin sheath of hair known as lanugo, have developed
+\n\n<b>Month 5 (Week 18 – 22)</b>
+\n\u2022 Ultrasounds and birth defect screening should occur at this point, check with your doctor
+\n\u2022 Vernix caseosa, a greasy outer cover,  develops over the baby’s skin to protect it from damage within the amniotic fluid
+\n\u2022 The sensory system develops in the brain
+\n\u2022 Eyes develop, but the irises still lack pigmentation
+\n\u2022 Tooth buds and lips begin to become distinct
+\n\u2022 The mother will begin showing, as the uterus enlarges further
+\n\n<b>Month 6 (Week 23 – 27)</b>
+\n\u2022 Uterus pressure can cause edema in the mother, or swelling caused by excess fluid
+\n\u2022 Taste buds and hair texture and color are now recognizable
+\n\u2022 Eyes can now be opened and closed, male genitals and the respiratory system begin to develop
+\n\n<b>Month 7 (Week 28 – 32)</b>
+\n\u2022 The baby has developed eyelashes, taste buds, fingernails, and toenails
+\n\u2022 The baby grows to about 3.75 pounds and 16.7 inches long
+\n\u2022 The skeleton is solidified, and fat cells accumulate under the skin
+\n\u2022 STD testing is critical here for the mother
+\n\u2022 Preeclampsia is more prevalent here, and should be tested for
+\n\n<b>Month 8 (Week 33 – 37)</b>
+\n\u2022 Babies now have temperature regulation, due to fat accumulation, and ~99% can survive outside of the womb at this point
+\n\u2022 Skull bones begin to constrict to make passage through the birth canal easier
+\n\u2022 Protective coverings on the skin and hari, the vernix caseosa and lanugo, are shed
+\n\u2022 Facial muscles are developed enough so that babies can smile
+\n\u2022 The baby will grow about an ounce a day, and should be around 19 inches long
+\n\u2022 Labor, both false and actual, is possible by now and the uterus continues to enlarge
+\n\n<b>Month 9 (Week 38 – 41)</b>
+\n\u2022 Lung maturation is completed, as is initial eye coloration
+\n\u2022 Soft spots in the skull form, and may last up to a year after delivery
+\n\u2022 Hair and nails continue to grow, even past the fingers, scalp, and toes
+\n\u2022 The amniotic fluid can “break,” signifying the start of labor
+\n\u2022 The average baby, by now, is amount 7.5 pounds and 20 inches long
+</string>
+
+    <string name="next_steps_title">\n<b>Next Steps</b>\n</string>
+    <string name="next_steps_frag"><b>How can I tell if I’m pregnant?</b>
+        \nEarly signs of pregnancy may include:
+\n\u2022 Missed period
+\n\u2022 Nausea
+\n\u2022 Unusual tiredness
+\n\u2022 Full, tender breasts
+\n\u2022 Frequent urination
+\n\u2022 Change in appetite
+\n\u2022 Vaginal spotting
+\n\nIf you think you’re pregnant, contact your medical provider to arrange for a pregnancy test. It’s quick and painless, and normally it only requires a urine sample. There are many pregnancy tests that can be purchased for “home use.” Most are accurate. The urine test is considered accurate when a woman is at least 2 weeks late for her expected period (or if her cycle is irregular, 6 weeks after the start of her last period). A sample of blood can also be used to determine if you are pregnant. A physician should also determine if you’re pregnant by giving you an internal exam or perhaps performing an ultrasound examination.
+\n\nIf you are pregnant, don’t panic! There are many sources of advice and assistance.
+\n\u2022 Try talking to parents and family members, your physician, a school nurse or guidance counselor, social service agencies, or youth service agencies.
+Arrange for proper prenatal care to safeguard your and your baby’s health. Make an appointment with your physician or a prenatal care clinic as soon as you know you’re pregnant.
+\n\n\u2022 One unplanned pregnancy doesn’t have to lead to another. Start thinking about birth control now if you’ll continue to have sex.
+\n\n\u2022 Can a woman get pregnant while she still has her period? Yes - it’s less likely but still possible. To be safe, always use a reliable method of birth control. How soon after giving birth can a woman become pregnant again? She can become pregnant again as soon as she starts having sex-even if she hasn’t had a period yet. Use contraception.
+</string>
+
+    <string name="healthy_relationships_title">\n<b>Healthy Relationships</b>\n</string>
+    <string name="healthy_relationships_frag"><b>What is a healthy relationship?</b>
+\n\n\u2022 Safe spaces where partners are able to express feelings. Sharing the joys and pains of life is part of their growth as a couple and as individuals. Neither partner is abusing or being abused by the other.
+\n\n\u2022 Partners support each other in good times and when times are tough. Both partners are determined to work on the relationship and help it succeed. Both partners are committed only to each other in every way, sexually and emotionally.
+\n\n\u2022 Material needs are being met.
+\n\n\u2022 A healthy relationship also encourages positive values. You are together because you have a common vision, share basic values, have the other person’s interests at heart, and are strong individuals. Each person appreciates the other’s unique contributions to the relationship
+\n\n\u2022 You are together because you want to be - not because you fear being alone, want sex, or seek revenge (on an ex-partner).
+\n\n\u2022 Equality is another key to a healthy relationship. This means making decisions together, respecting each other’s boundaries, and being a team.
+\n\n\u2022 Healthy couples avoid competing with each other. Instead, they respect each other’s way of doing things, cooperate with each other, work as equal partners, and help each other reach goals.
+\n\n\n<b>Difference between aggression and assertion in relationships:</b>
+\n\n\u2022 People who are aggressive try to control others. They think in terms of ‘winning and losing’. They tend to make unreasonable demands, threats, or excuses for themselves.
+\n\n\u2022 Being assertive helps relationships by stating your needs and wants without attacking, blaming, or making excuses. It means you stand up for your rights and can say no when you need to. You are direct about your feelings without apologizing for them and respect the rights of others.
+</string>
+
+    <string name="procedures_title">\n<b>Pre-natal Medical Procedures</b>\n</string>
+
+    <string name="pregnancy_title">\n<b>Pregnancy</b>\n</string>
+
+    <string name="meds_title">\n<b>Medications and Supplements Considered Safe During Pregnancy</b>\n</string>
+
+    <string name="healthy_diet_title">\n<b>Healthy Diet</b>\n</string>
+
+    <string name="domestic_violence_title">\n<b>Domestic Violence and Sexual Assault</b>\n</string>
 </resources>

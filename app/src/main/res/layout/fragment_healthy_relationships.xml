@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.projectina.ina.GlossaryFragments.HealthyRelationshipsFrag"
+    android:id="@+id/healthy_relationships_frag"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/healthy_relationships_title"
+        android:textSize="20sp"
+        android:background="@color/background" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/healthy_relationships_frag"
+            android:textSize="16sp"
+            android:background="@color/background" />
+    </ScrollView>
+
+
+</LinearLayout>

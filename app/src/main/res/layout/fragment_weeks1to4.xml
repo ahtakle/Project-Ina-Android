@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/weeks1to4">
+
+    <ScrollView xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.projectina.ina.TrimesterFragments.Weeks1to4"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@mipmap/procedures"
+                android:id="@+id/weeks1button1"
+                android:text="@string/procedures_title" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@mipmap/pregnancy"
+                android:id="@+id/weeks1button2"
+                android:text="@string/pregnancy_title" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@mipmap/meds"
+                android:id="@+id/weeks1button3"
+                android:text="@string/meds_title" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@mipmap/steps"
+                android:id="@+id/weeks1button4"
+                android:text="@string/next_steps_title" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@mipmap/diet"
+                android:id="@+id/weeks1button5"
+                android:text="@string/healthy_diet_title" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@mipmap/relationships"
+                android:id="@+id/weeks1button6"
+                android:text="@string/healthy_relationships_title" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@mipmap/violence"
+                android:id="@+id/weeks1button7"
+                android:text="@string/domestic_violence_title" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
