@@ -27,13 +27,17 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
     private GoogleMap mMap;
     Button button;
 
-    private static final LatLng PERTH = new LatLng(-31.952854, 115.857342);
-    private static final LatLng SYDNEY = new LatLng(-33.87365, 151.20689);
-    private static final LatLng BRISBANE = new LatLng(-27.47093, 153.0235);
+    private static final LatLng HeadStart = new LatLng(45.5681150, -97.0669610);
+    private static final LatLng TribalAdminBuilding = new LatLng(45.5677590, -97.0711610);
+    private static final LatLng IHS = new LatLng(45.6568280, -97.0160580);
+    private static final LatLng RCHealthNurse = new LatLng(45.6674190, -97.0457440);
+    private static final LatLng DakotaPrideCenter = new LatLng(45.5636240, -97.0763670);
 
-    private Marker mPerth;
-    private Marker mSydney;
-    private Marker mBrisbane;
+    private Marker mHeadStart;
+    private Marker mTribalAdminBuilding;
+    private Marker mIHS;
+    private Marker mRCHealthNurse;
+    private Marker mDakotaPrideCenter;
 
     private static final CharSequence[] MAP_TYPE_ITEMS =
             {"Road Map", "Hybrid", "Satellite", "Terrain"};
@@ -70,14 +74,18 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
         mMap = googleMap;
 
         // Add some markers to the map, and add a data object to each marker.
-        mPerth = mMap.addMarker(new MarkerOptions().position(PERTH).title("Perth").snippet("Some infor will go here, it can be a few lines?"));
-        mPerth.setTag(0);
-        mSydney = mMap.addMarker(new MarkerOptions().position(SYDNEY).title("Sydney").snippet("Some infor will go here, it can be a few lines?"));
-        mSydney.setTag(1);
-        mBrisbane = mMap.addMarker(new MarkerOptions().position(BRISBANE).title("Brisbane").snippet("Some infor will go here, it can be a few lines?"));
-        mBrisbane.setTag(2);
+        mHeadStart = mMap.addMarker(new MarkerOptions().position(HeadStart).title("Head Start").snippet("Some infor will go here, it can be a few lines?"));
+        mHeadStart.setTag(0);
+        mTribalAdminBuilding = mMap.addMarker(new MarkerOptions().position(TribalAdminBuilding).title("Tribal Administration Building").snippet("Some infor will go here, it can be a few lines?"));
+        mTribalAdminBuilding.setTag(1);
+        mIHS = mMap.addMarker(new MarkerOptions().position(IHS).title("IHS").snippet("Some infor will go here, it can be a few lines?"));
+        mIHS.setTag(2);
+        mRCHealthNurse = mMap.addMarker(new MarkerOptions().position(RCHealthNurse).title("Roberts County Health Nurse").snippet("Some infor will go here, it can be a few lines?"));
+        mRCHealthNurse.setTag(3);
+        mDakotaPrideCenter = mMap.addMarker(new MarkerOptions().position(DakotaPrideCenter).title("Dakota Pride Center").snippet("Some infor will go here, it can be a few lines?"));
+        mDakotaPrideCenter.setTag(4);
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(SYDNEY));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(TribalAdminBuilding, 10));
 
         // Set a listener for info window events.
         mMap.setOnInfoWindowClickListener(this);
@@ -107,13 +115,13 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
      */
     @Override
     public void onInfoWindowClick(Marker marker) {
-        Toast.makeText(this, "Info window clicked", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "I will pull up the information for this service", Toast.LENGTH_SHORT).show();
 
         //Set up correct data to map to each marker
-        Uri gmmIntentUri = Uri.parse("google.navigation:q=Taronga+Zoo,+Sydney+Australia");
-        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-        mapIntent.setPackage("com.google.android.apps.maps");
-        startActivity(mapIntent);
+//        Uri gmmIntentUri = Uri.parse("google.navigation:q=Taronga+Zoo,+Sydney+Australia");
+//        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+//        mapIntent.setPackage("com.google.android.apps.maps");
+//        startActivity(mapIntent);
     }
 
 
