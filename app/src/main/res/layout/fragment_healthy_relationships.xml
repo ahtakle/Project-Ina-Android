@@ -2,30 +2,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.projectina.ina.GlossaryFragments.HealthyRelationshipsFrag"
-    android:id="@+id/healthy_relationships_frag"
-    android:layout_margin="10dp"
-    android:orientation="vertical">
+    android:id="@+id/next_steps_frag"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical"
+    android:background="@color/background">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/healthy_relationships_title"
+        android:text="@string/healthy_diet_title"
         android:textSize="20sp"
-        android:background="@color/background" />
+        android:background="@color/background"
+        android:layout_margin="10dp" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:keepScreenOn="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:layout_margin="10dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/healthy_relationships_frag"
             android:textSize="16sp"
-            android:background="@color/background" />
+            android:background="@color/background"
+            android:id="@+id/relationshipsText" />
     </ScrollView>
-
-
 </LinearLayout>
 

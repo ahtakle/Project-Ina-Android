@@ -82,7 +82,7 @@ public class Feedback extends AppCompatActivity {
                     break;
                 case R.id.buttonQuestions:
                     if (!questionsClicked) {
-                        buttonQuestions.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                        buttonQuestions.setBackgroundColor(getResources().getColor(R.color.colorAccent, null));
                         buttonSuggestions.setBackgroundColor(Color.WHITE);
                         questionsClicked = true;
                         suggestionsClicked = false;
@@ -90,7 +90,7 @@ public class Feedback extends AppCompatActivity {
                     break;
                 case R.id.buttonSuggestions:
                     if (!suggestionsClicked) {
-                        buttonSuggestions.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                        buttonSuggestions.setBackgroundColor(getResources().getColor(R.color.colorAccent, null));
                         buttonQuestions.setBackgroundColor(Color.WHITE);
                         questionsClicked = false;
                         suggestionsClicked = true;

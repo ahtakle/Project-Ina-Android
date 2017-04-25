@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.projectina.ina.BackgroundIntro">
+    tools:context="com.projectina.ina.BackgroundIntro"
+    android:id="@+id/background_intro"
+    android:background="@color/background">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -38,18 +40,22 @@
             android:layout_height="wrap_content"
             android:text="@string/background_intro_title"
             android:textSize="20sp"
-            android:background="@color/background" />
+            android:background="@color/background"
+            android:layout_margin="10dp" />
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/background_intro_text"
             android:textSize="16sp"
-            android:background="@color/background" />
+            android:background="@color/background"
+            android:id="@+id/background_text"
+            android:textColor="@color/colorText" />
 
         </ScrollView>
 

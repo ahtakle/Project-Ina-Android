@@ -41,4 +41,8 @@ public class GlossaryTerm {
     public void setGenre(String genre) {
         this.genre = genre;
     }
+
+    public int getColor() {
+        return R.color.colorText;
+    }
 }

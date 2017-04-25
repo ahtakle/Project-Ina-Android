@@ -103,53 +103,53 @@ public class Glossary extends AppCompatActivity {
 
     //Here is where we prepare the Glossary Data
     private void prepareGlossaryData() {
-        GlossaryTerm term = new GlossaryTerm("Family Planning", "Social", "Weeks 16-19");
-        glossaryList.add(term);
-
-        GlossaryTerm term2 = new GlossaryTerm("Healthy Diet", "Health", "Weeks 5-9");
-        glossaryList.add(term2);
-
-        GlossaryTerm term3 = new GlossaryTerm("Healthy Relationships", "Social", "Weeks 24-28");
-        glossaryList.add(term3);
-
-        GlossaryTerm term4 = new GlossaryTerm("Domestic Violence and Sexual Assault", "Social", "Weeks 24-28");
-        glossaryList.add(term4);
-
-        GlossaryTerm term5 = new GlossaryTerm("Next Steps", "Lifestyle", "Weeks 1-4");
-        glossaryList.add(term5);
-
-        GlossaryTerm term6 = new GlossaryTerm("Alcohol and Substance Abuse During Pregnancy", "Health", "Weeks 1-4");
-        glossaryList.add(term6);
-
-        GlossaryTerm term7 = new GlossaryTerm("Mental Health Issues During and After Pregnancy", "Health", "Weeks 30-32");
-        glossaryList.add(term7);
-
-        GlossaryTerm term8 = new GlossaryTerm("Medications and Supplements Considered Safe During Pregnancy", "Health", "Weeks 1-4");
-        glossaryList.add(term8);
-
-        GlossaryTerm term9 = new GlossaryTerm("Fetal Development", "Health", "Weeks 5-9");
-        glossaryList.add(term9);
-
-        GlossaryTerm term10 = new GlossaryTerm("Iron Man", "Action & Adventure", "2008");
+        GlossaryTerm term10 = new GlossaryTerm("Teen Pregnancy", "", "");
         glossaryList.add(term10);
 
-        GlossaryTerm term11 = new GlossaryTerm("Aliens", "Science Fiction", "1986");
+        GlossaryTerm term11 = new GlossaryTerm("Pre-Conception Health", "", "");
         glossaryList.add(term11);
 
-        GlossaryTerm term12 = new GlossaryTerm("Chicken Run", "Animation", "2000");
+        GlossaryTerm term = new GlossaryTerm("Family Planning", "", ""); //
+        glossaryList.add(term);
+
+        GlossaryTerm term2 = new GlossaryTerm("Healthy Diet", "", "");
+        glossaryList.add(term2);
+
+        GlossaryTerm term3 = new GlossaryTerm("Healthy Relationships", "", "");
+        glossaryList.add(term3);
+
+        GlossaryTerm term4 = new GlossaryTerm("Domestic Violence and Sexual Assault", "", "");
+        glossaryList.add(term4);
+
+        GlossaryTerm term5 = new GlossaryTerm("Next Steps", "", "");
+        glossaryList.add(term5);
+
+        GlossaryTerm term6 = new GlossaryTerm("Substance Abuse During Pregnancy", "", "");
+        glossaryList.add(term6);
+
+        GlossaryTerm term17 = new GlossaryTerm("Alcohol", "", "");
+        glossaryList.add(term17);
+
+        GlossaryTerm term7 = new GlossaryTerm("Mental Health Issues During and After Pregnancy", "", "");
+        glossaryList.add(term7);
+
+        GlossaryTerm term8 = new GlossaryTerm("Medications and Supplements Considered Safe During Pregnancy", "", "");
+        glossaryList.add(term8);
+
+        GlossaryTerm term9 = new GlossaryTerm("Fetal Development", "", "");
+        glossaryList.add(term9);
+
+        GlossaryTerm term12 = new GlossaryTerm("Breastfeeding", "", "");
         glossaryList.add(term12);
 
-        GlossaryTerm term13 = new GlossaryTerm("Back to the Future", "Science Fiction", "1985");
+        GlossaryTerm term13 = new GlossaryTerm("Pre-natal Medical Procedures", "", ""); //
         glossaryList.add(term13);
 
-        GlossaryTerm term14 = new GlossaryTerm("Raiders of the Lost Ark", "Action & Adventure", "1981");
+        GlossaryTerm term14 = new GlossaryTerm("Preparation for Delivery", "", ""); //
         glossaryList.add(term14);
 
-        GlossaryTerm term15 = new GlossaryTerm("Goldfinger", "Action & Adventure", "1965");
+        GlossaryTerm term15 = new GlossaryTerm("Pregnancy Complications", "", ""); //
         glossaryList.add(term15);
-
-        GlossaryTerm term16 = new GlossaryTerm("Guardians of the Galaxy", "Science Fiction & Fantasy", "2014");
-        glossaryList.add(term16);
 
         mAdapter.notifyDataSetChanged();
     }

@@ -6,18 +6,23 @@
     tools:context="com.projectina.ina.GlossaryFragments.NextStepsFrag"
     android:id="@+id/next_steps_frag"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/background">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/next_steps_title"
         android:textSize="20sp"
-        android:background="@color/background" />
+        android:background="@color/background"
+        android:layout_margin="10dp" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:keepScreenOn="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:layout_margin="10dp">
 
         <TextView
             android:layout_width="match_parent"

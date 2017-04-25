@@ -1,124 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context="com.projectina.ina.Home">
 
-    <Button
-        android:text="Introduction"
+    <ImageView
         android:layout_width="300dp"
-        android:layout_height="120dp"
+        android:layout_height="200dp"
+        app:srcCompat="@mipmap/mother_and_baby"
+        android:alpha="0.8" />
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/toIntroduction"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_marginTop="5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:textSize="25sp"
-        android:textStyle="italic"
+        android:width="300dp"
+        android:height="100dp"
         android:onClick="dispatchBackgroundIntent"
-        android:id="@+id/toIntroduction" />
-
-    <Button
-        android:text="Map"
-        android:layout_width="300dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:text="Introduction"
         android:textSize="25sp"
         android:textStyle="italic"
-        android:onClick="dispatchMapIntent"
-        android:id="@+id/toMap" />
-
-    <Button
-        android:text="Weekly Lessons"
-        android:layout_width="300dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:textSize="25sp"
-        android:textStyle="italic"
-        android:onClick="dispatchTrimesterIntent"
-        android:id="@+id/toTrimesters" />
-
-    <Button
-        android:text="Glossary"
-        android:layout_width="300dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:textSize="25sp"
-        android:textStyle="italic"
-        android:onClick="dispatchGlossaryIntent"
-        android:id="@+id/toGlossary" />
+        android:background="@color/colorButtons" />
 
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/toMap"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:width="155dp"
+                android:height="100dp"
+                android:onClick="dispatchMapIntent"
+                android:text="Map"
+                android:textSize="25sp"
+                android:textStyle="italic"
+                android:background="@color/colorButtons" />
+
+            <Button
+                android:id="@+id/toCalendar"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:width="155dp"
+                android:height="100dp"
+                android:onClick="dispatchCalendarIntent"
+                android:text="Calendar"
+                android:textSize="25sp"
+                android:textStyle="italic"
+                android:background="@color/colorButtons" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/toGlossary"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:width="155dp"
+                android:height="100dp"
+                android:onClick="dispatchGlossaryIntent"
+                android:text="Glossary"
+                android:textSize="25sp"
+                android:textStyle="italic"
+                android:background="@color/colorButtons" />
+
+            <Button
+                android:id="@+id/toTrimesters"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:width="155dp"
+                android:height="100dp"
+                android:onClick="dispatchResourcesIntent"
+                android:text="Resources"
+                android:textSize="25sp"
+                android:textStyle="italic"
+                android:background="@color/colorButtons" />
+        </TableRow>
+
+    </TableLayout>
 </LinearLayout>
 
 
+    <!--width: 300dp; height: 100dp-->
 
 
-
-    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--xmlns:tools="http://schemas.android.com/tools"-->
-    <!--android:id="@+id/activity_home"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--tools:context="com.projectina.ina.Home">-->
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--android:id="@+id/activity_home"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--tools:context="com.projectina.ina.Home">-->
 
 
-    <!--<ImageButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--app:srcCompat="@mipmap/glossary"-->
-        <!--android:id="@+id/imageButtonGlossary"-->
-        <!--android:onClick="dispatchGlossaryIntent"-->
-        <!--android:layout_marginBottom="36dp"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:layout_centerHorizontal="true" />-->
+    <!--<ImageButton--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--app:srcCompat="@mipmap/glossary"--><!--android:id="@+id/imageButtonGlossary"--><!--android:onClick="dispatchGlossaryIntent"--><!--android:layout_marginBottom="36dp"--><!--android:layout_alignParentBottom="true"--><!--android:layout_centerHorizontal="true" />-->
 
-    <!--<ImageButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--app:srcCompat="@mipmap/test1"-->
-        <!--android:id="@+id/imageButtonMap"-->
-        <!--android:onClick="dispatchMapIntent"-->
-        <!--android:layout_above="@+id/imageButtonGlossary"-->
-        <!--android:layout_centerHorizontal="true" />-->
+    <!--<ImageButton--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--app:srcCompat="@mipmap/test1"--><!--android:id="@+id/imageButtonMap"--><!--android:onClick="dispatchMapIntent"--><!--android:layout_above="@+id/imageButtonGlossary"--><!--android:layout_centerHorizontal="true" />-->
 
-    <!--<ImageButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--app:srcCompat="@mipmap/baby"-->
-        <!--android:id="@+id/imageButtonTrimesters"-->
-        <!--android:onClick="dispatchTrimesterIntent"-->
-        <!--android:layout_below="@+id/imageButtonQuestion"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_marginTop="22dp" />-->
+    <!--<ImageButton--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--app:srcCompat="@mipmap/baby"--><!--android:id="@+id/imageButtonTrimesters"--><!--android:onClick="dispatchTrimesterIntent"--><!--android:layout_below="@+id/imageButtonQuestion"--><!--android:layout_centerHorizontal="true"--><!--android:layout_marginTop="22dp" />-->
 
-    <!--<ImageButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--app:srcCompat="@mipmap/question"-->
-        <!--android:id="@+id/imageButtonQuestion"-->
-        <!--android:onClick="dispatchBackgroundIntent"-->
-        <!--android:layout_alignBottom="@+id/imageButtonMap"-->
-        <!--android:layout_alignParentStart="true"-->
-        <!--android:layout_marginStart="14dp"-->
-        <!--android:layout_marginBottom="109dp" />-->
+    <!--<ImageButton--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--app:srcCompat="@mipmap/question"--><!--android:id="@+id/imageButtonQuestion"--><!--android:onClick="dispatchBackgroundIntent"--><!--android:layout_alignBottom="@+id/imageButtonMap"--><!--android:layout_alignParentStart="true"--><!--android:layout_marginStart="14dp"--><!--android:layout_marginBottom="109dp" />-->
 
-    <!--<Button-->
-        <!--android:text="Button"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/button2"-->
-        <!--android:layout_marginTop="42dp"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_centerHorizontal="true" />-->
+    <!--<Button--><!--android:text="Button"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:id="@+id/button2"--><!--android:layout_marginTop="42dp"--><!--android:layout_alignParentTop="true"--><!--android:layout_centerHorizontal="true" />-->
 
 
-<!--</RelativeLayout>-->
+    <!--</RelativeLayout>-->

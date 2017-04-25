@@ -149,144 +149,1443 @@
 
     <!-- Background Introduction information -->
     <string name="background_intro_title">\n<b>What Is This App All About?</b>\n</string>
-    <string name="background_intro_text">\n<b><Content><p>
-        The health of women is of great importance, not only to the individual woman, but also as it relates to future generations:
-        Focusing on the health of women should begin prior to conception. Proper care should ensure that appropriate diet, vaccines,
-        medication, and activity are available, as well as a nurturing environment and opportunities for social and intellectual growth.
-        Moreover, it’s necessary to avoid of unhealthy environments, such as exposure to secondhand smoke and environmental toxins.</p><p/>
-        <p>By the time a young girl reaches the age of 10 to 12, it is possible for her to become pregnant. In most instances, teenage
-            females do not desire to become pregnant. While avoidance of sexual intercourse is a reliable method, it is not always practiced.
-            In such circumstances, family planning counseling (see family planning) is highly advised. Teen pregnancy is not the only
-            circumstance in which  the woman and her fetus/neonate are at increased risk: teen pregnancies are also associated with a
-            reduced likelihood of completing schooling and obtaining meaningful employment, as well as an increased risk of lifelong poverty.
-            (See Teenage Pregnancy)</p><p/><p>It is important that every young woman thinks about goals for health, school, work and other
-            aspects of her life each year. Every woman can benefit from preconception health, whether they plan to have a baby or not.
-            The Center for Disease Control (https://www.cdc.gov/preconception/women.html) suggests that every woman do the following annually:</p>
-        \r\n
-        \n\u2022 <p>Prevent unplanned pregnancies (see family planning)</p>
-        \n\u2022 <p>Eat healthy foods (see healthy food section) </p>
-        \n\u2022 <p>Stay active (Try to get 150 minutes moderate exercise each week) </p>
-        \n\u2022 <p>Take 400 micrograms (mcg) of folic acid daily</p>
-        \n\u2022 <p>Taking folic acid will help prevent birth defects should the woman become pregnant. This vitamin can be found in fortified foods and is also available as a supplement</p>
-        \n\u2022 <p>Maintain a healthy weight</p>
-        \n\u2022 <p>Protect against sexually transmitted infections (STIs) </p>
-        \n\u2022 <p>Abstinence (not having sexual intercourse)</p>
-        \n\u2022 <p>Practice monogamy (only having sexual intercourse with one partner)</p>
-        \n\u2022 <p>Have condoms available and use them correctly every time</p>
-        \n\u2022 <p>Get checked if concerned about being exposed to a sexually transmitted infection</p>
-        \n\u2022 <p>If a sexually transmitted infection develops, take medicine for the full time as directed </p>
-        \n\u2022 <p>Avoid harmful chemicals, metals, and toxic substances around the home and workplace</p>
-        \n\u2022 <p>Examples can be found at: http:/www.prhe.uscf.edu/prhe/pdfs/toxicmatters.pdf </p>
-        \n\u2022 <p>Make sure vaccinations/shots are up to date</p>
-        \n\u2022 <p>Manage mental health and stress (see IHS Department of Psychology)</p>
-        \n\u2022 <p>Quit smoking</p><p> Use 1-800-QUIT-NOW (1-800-784-8669) as a resource</p>
-        \n\u2022 <p>Avoid street drugs and other people’s prescription medications</p>
-        \n\u2022 <p>Limit alcohol consumption </p>
-        \n\u2022 <p>Stop partner violence </p>
-        \n\u2022 <p>Talk with doctor/counselor (See Domestic Violence) </p>
-        \n\u2022 <p>Manage any health conditions, such as asthma, diabetes, and being overweight </p>
-        \n\u2022 <p>Learn about your family’s health </p>
-        \n\u2022 <p>Get regular checkups with your doctor</p><p/></Content></b>\n</string>
+    <string name="background_intro_text">\n
+        Women have the unique ability to create and maintain life. Because of this incredible experience, women’s health is extremely important, not only to individual women, but also to future generations. Project Ina is a platform to connect you with your local resources, helpful community members, and other mothers, all while giving you important information on your pregnancy and motherhood experience. While this app is here for you to learn more about your  health and get connected to resources in your area, ultimately you are in charge of your own health and you know what’s best for your future baby.
+        \n\nFocusing on your health begins before the baby is even conceived. (Conception happens when a woman’s egg meets a man’s sperm cell. This is the first step in combining the traits of the woman and man to form a baby). During this time, you should follow an appropriate diet, make sure you have all the proper vaccines, are taking the medications that you need to, and are doing the right amount of physical activity. This sounds like a lot of work to do even before you become pregnant! But making sure that both your mind and body are ready for pregnancy is extremely important for yourself and your future baby. You should have a say in (1) when you want to have kids, (2) how many kids you want, and (3) the spacing between your kids. Family planning methods can help you be in control of these three questions.
+        \n\nIf you decide that it’s the right time for you to have a child, it’s important that you’re in a nurturing environment that has opportunities for social and intellectual growth. Unhealthy environments may include exposure to secondhand smoke (Secondhand smoke occurs if you are near people that smoke and accidentally breathe in their smoke.), environmental toxins (poisonous or cancer-causing substances in the environment), unsafe drugs, and even emotional stress. There are many resources in the SWO community and within this app that can help you to eliminate these harmful elements and promote a healthy environment.
+        \n\nThis app can help you to navigate the medical experience of pregnancy. Doctor appointments can be stressful, especially if you don’t always understand why certain procedures are being done. Through this app, you can learn more about how your baby is developing throughout your pregnancy, pre-natal procedures, complications of pregnancy, and delivery procedures. If you’re the type of person that finds comfort in planning, you can use the “Checklist” feature in this app to make sure you are going to all your appointments, finding a way to pay for pregnancy care, and preparing for delivery. You can even make your own check-lists. The “Events” page will help you to connect with other mothers and community members at SWO events.
+        \n\nThe Project Ina team hopes that this app helps you to have a healthy pregnancy and motherhood experience!
+
+    </string>
+
 
     <!-- Glossary Fragments -->
-    <string name="fetal_dev_title">\n<b>Fetal Development</b>\n</string>
-<string name="fetal_dev_frag"><b>Fertilization after conception (Weeks 0 – 2)</b>
-\n\u2022 For women, an ovum (an “egg”) is released from the ovary usually every month
-\n\u2022 During sex, when sperm from the male enters the fallopian tube through the vagina and cervix, it fertilizes the ovum
-\n\u2022 The fertilized egg, with genes from both parents, begins to rapidly grow and divide in the first two weeks
-\n\n<b>Implantation (Week 3)</b>
-\n\u2022 Protective liquid, called the amniotic fluid, begins to collect in womb of the mother, also called the amniotic sac.
-\n\u2022 The fertilized egg is now a small clump of several hundred rapidly dividing cells
-\n\u2022 Cells of the embryo (the baby) arrange themselves into two layers
-\n\u2022 Cells of the placenta produce a hormone for the baby called human chorionic gonadotrophin
-\n\u2022 The placenta is an organ in the mother that nourishes and maintains the fetus through the umbilical cord
-\n\n<b>Early development (Weeks 4-7)</b>
-\n\u2022 Neural tube develops, beginning with the spine
-\n\u2022 Yolk sac, which generates the baby’s blood cells, develops
-\n\u2022 Arm, leg, tailbone, eyelid, and jaw structures begin to develop
-\n\u2022 The umbilical cord begins to loop into the baby’s intestines
-\n\u2022 The mother will experience increased need for urination due to increased internal fluid volumes
-\n\n<b>Month 2-3 (Week 8 – 13)</b>
-\n\u2022 Earlobes, neural networks in the brain, knees, fingers, wrists, and shoulders begin to develop
-\n\u2022 Uterus has doubled in size
-\n\u2022 Chorionic villi sampling, which is a test that detects early abnormalities in the fetus, occurs at this stage. A tiny tissue sample is taken from the fetus part of the placenta.
-\n\u2022 Bones begin to solidify, and skin remains translucent
-\n\n<b>Month 4 (Week 14 – 17)</b>
-\n\u2022 The baby’s urinary and circulatory systems are operational
-\n\u2022 Limbs continue to grow, and all joints completely develop
-\n\u2022 Toenails, and a thin sheath of hair known as lanugo, have developed
-\n\n<b>Month 5 (Week 18 – 22)</b>
-\n\u2022 Ultrasounds and birth defect screening should occur at this point, check with your doctor
-\n\u2022 Vernix caseosa, a greasy outer cover,  develops over the baby’s skin to protect it from damage within the amniotic fluid
-\n\u2022 The sensory system develops in the brain
-\n\u2022 Eyes develop, but the irises still lack pigmentation
-\n\u2022 Tooth buds and lips begin to become distinct
-\n\u2022 The mother will begin showing, as the uterus enlarges further
-\n\n<b>Month 6 (Week 23 – 27)</b>
-\n\u2022 Uterus pressure can cause edema in the mother, or swelling caused by excess fluid
-\n\u2022 Taste buds and hair texture and color are now recognizable
-\n\u2022 Eyes can now be opened and closed, male genitals and the respiratory system begin to develop
-\n\n<b>Month 7 (Week 28 – 32)</b>
-\n\u2022 The baby has developed eyelashes, taste buds, fingernails, and toenails
-\n\u2022 The baby grows to about 3.75 pounds and 16.7 inches long
-\n\u2022 The skeleton is solidified, and fat cells accumulate under the skin
-\n\u2022 STD testing is critical here for the mother
-\n\u2022 Preeclampsia is more prevalent here, and should be tested for
-\n\n<b>Month 8 (Week 33 – 37)</b>
-\n\u2022 Babies now have temperature regulation, due to fat accumulation, and ~99% can survive outside of the womb at this point
-\n\u2022 Skull bones begin to constrict to make passage through the birth canal easier
-\n\u2022 Protective coverings on the skin and hari, the vernix caseosa and lanugo, are shed
-\n\u2022 Facial muscles are developed enough so that babies can smile
-\n\u2022 The baby will grow about an ounce a day, and should be around 19 inches long
-\n\u2022 Labor, both false and actual, is possible by now and the uterus continues to enlarge
-\n\n<b>Month 9 (Week 38 – 41)</b>
-\n\u2022 Lung maturation is completed, as is initial eye coloration
-\n\u2022 Soft spots in the skull form, and may last up to a year after delivery
-\n\u2022 Hair and nails continue to grow, even past the fingers, scalp, and toes
-\n\u2022 The amniotic fluid can “break,” signifying the start of labor
-\n\u2022 The average baby, by now, is amount 7.5 pounds and 20 inches long
-</string>
+    <string name="fetal_dev_title"><b>Fetal Development</b></string>
+    <string name="fetal_dev_frag">
+        Fertilization after conception (Weeks 0 – 2)
+        \n\u2022 For women, an ovum (an “egg”) is released from the ovary usually every month
+        \n\u2022 During sex, when sperm from the male enters the fallopian tube through the vagina and cervix, it fertilizes the ovum
+        \n\u2022 The fertilized egg, with genes from both parents, begins to rapidly grow and divide in the first two weeks
+        \n\nImplantation (Week 3)
+        \n\u2022 Protective liquid, called the amniotic fluid, begins to collect in womb of the mother, also called the amniotic sac.
+        \n\u2022 The fertilized egg is now a small clump of several hundred rapidly dividing cells
+        \n\u2022 Cells of the embryo (the baby) arrange themselves into two layers
+        \n\u2022 Cells of the placenta produce a hormone for the baby called human chorionic gonadotrophin
+        \n\u2022 The placenta is an organ in the mother that nourishes and maintains the fetus through the umbilical cord
+        \n\nEarly development (Weeks 4-7)
+        \n\u2022 Neural tube develops, beginning with the spine
+        \n\u2022 Yolk sac, which generates the baby’s blood cells, develops
+        \n\u2022 Arm, leg, tailbone, eyelid, and jaw structures begin to develop
+        \n\u2022 The umbilical cord begins to loop into the baby’s intestines
+        \n\u2022 The mother will experience increased need for urination due to increased internal fluid volumes
+        \n\nMonth 2-3 (Week 8 – 13)
+        \n\u2022 Earlobes, neural networks in the brain, knees, fingers, wrists, and shoulders begin to develop
+        \n\u2022 Uterus has doubled in size
+        \n\u2022 Chorionic villi sampling, which is a test that detects early abnormalities in the fetus, occurs at this stage. A tiny tissue sample is taken from the fetus part of the placenta.
+        \n\u2022 Bones begin to solidify, and skin remains translucent
+        \n\nMonth 4 (Week 14 – 17)
+        \n\u2022 The baby’s urinary and circulatory systems are operational
+        \n\u2022 Limbs continue to grow, and all joints completely develop
+        \n\u2022 Toenails, and a thin sheath of hair known as lanugo, have developed
+        \n\nMonth 5 (Week 18 – 22)
+        \n\u2022 Ultrasounds and birth defect screening should occur at this point, check with your doctor
+        \n\u2022 Vernix caseosa, a greasy outer cover,  develops over the baby’s skin to protect it from damage within the amniotic fluid
+        \n\u2022 The sensory system develops in the brain
+        \n\u2022 Eyes develop, but the irises still lack pigmentation
+        \n\u2022 Tooth buds and lips begin to become distinct
+        \n\u2022 The mother will begin showing, as the uterus enlarges further
+        \n\nMonth 6 (Week 23 – 27)
+        \n\u2022 Uterus pressure can cause edema in the mother, or swelling caused by excess fluid
+        \n\u2022 Taste buds and hair texture and color are now recognizable
+        \n\u2022 Eyes can now be opened and closed, male genitals and the respiratory system begin to develop
+        \n\nMonth 7 (Week 28 – 32)
+        \n\u2022 The baby has developed eyelashes, taste buds, fingernails, and toenails
+        \n\u2022 The baby grows to about 3.75 pounds and 16.7 inches long
+        \n\u2022 The skeleton is solidified, and fat cells accumulate under the skin
+        \n\u2022 STD testing is critical here for the mother
+        \n\u2022 Preeclampsia is more prevalent here, and should be tested for
+        \n\nMonth 8 (Week 33 – 37)
+        \n\u2022 Babies now have temperature regulation, due to fat accumulation, and ~99 percent can survive outside of the womb at this point
+        \n\u2022 Skull bones begin to constrict to make passage through the birth canal easier
+        \n\u2022 Protective coverings on the skin and hari, the vernix caseosa and lanugo, are shed
+        \n\u2022 Facial muscles are developed enough so that babies can smile
+        \n\u2022 The baby will grow about an ounce a day, and should be around 19 inches long
+        \n\u2022 Labor, both false and actual, is possible by now and the uterus continues to enlarge
+        \n\nMonth 9 (Week 38 – 41)
+        \n\u2022 Lung maturation is completed, as is initial eye coloration
+        \n\u2022 Soft spots in the skull form, and may last up to a year after delivery
+        \n\u2022 Hair and nails continue to grow, even past the fingers, scalp, and toes
+        \n\u2022 The amniotic fluid can “break,” signifying the start of labor
+        \n\u2022 The average baby, by now, is amount 7.5 pounds and 20 inches long
+    </string>
 
-    <string name="next_steps_title">\n<b>Next Steps</b>\n</string>
+    <string name="next_steps_title"><b>Next Steps</b></string>
     <string name="next_steps_frag"><b>How can I tell if I’m pregnant?</b>
         \nEarly signs of pregnancy may include:
-\n\u2022 Missed period
-\n\u2022 Nausea
-\n\u2022 Unusual tiredness
-\n\u2022 Full, tender breasts
-\n\u2022 Frequent urination
-\n\u2022 Change in appetite
-\n\u2022 Vaginal spotting
-\n\nIf you think you’re pregnant, contact your medical provider to arrange for a pregnancy test. It’s quick and painless, and normally it only requires a urine sample. There are many pregnancy tests that can be purchased for “home use.” Most are accurate. The urine test is considered accurate when a woman is at least 2 weeks late for her expected period (or if her cycle is irregular, 6 weeks after the start of her last period). A sample of blood can also be used to determine if you are pregnant. A physician should also determine if you’re pregnant by giving you an internal exam or perhaps performing an ultrasound examination.
-\n\nIf you are pregnant, don’t panic! There are many sources of advice and assistance.
-\n\u2022 Try talking to parents and family members, your physician, a school nurse or guidance counselor, social service agencies, or youth service agencies.
-Arrange for proper prenatal care to safeguard your and your baby’s health. Make an appointment with your physician or a prenatal care clinic as soon as you know you’re pregnant.
-\n\n\u2022 One unplanned pregnancy doesn’t have to lead to another. Start thinking about birth control now if you’ll continue to have sex.
-\n\n\u2022 Can a woman get pregnant while she still has her period? Yes - it’s less likely but still possible. To be safe, always use a reliable method of birth control. How soon after giving birth can a woman become pregnant again? She can become pregnant again as soon as she starts having sex-even if she hasn’t had a period yet. Use contraception.
-</string>
+        \n\u2022 Missed period
+        \n\u2022 Nausea
+        \n\u2022 Unusual tiredness
+        \n\u2022 Full, tender breasts
+        \n\u2022 Frequent urination
+        \n\u2022 Change in appetite
+        \n\u2022 Vaginal spotting
+        \n\nIf you think you’re pregnant, you can either buy a pregnancy test from the store (available at Shopko for around $40) or contact your medical provider at IHS or elsewhere to arrange for a pregnancy test. It’s quick and painless, and normally it only requires a urine sample, and IHS should do it for free. The urine test is considered accurate if you are at least 2 weeks “late” for her expected period (or 6 weeks after the start of your last period if your cycle is irregular). You can also get a blood test to check if you’re pregnant. The doctor might also give you an internal exam or perform an ultrasound exam to confirm.
+        \n\nIf you’re pregnant, there are many sources of advice and assistance in the SWO community to help you throughout your pregnancy.
+        \n\u2022 Talk with as many people as you are comfortable speaking with to learn about their pregnancy experiences. Speaking with your parents, grandparents, siblings, cousins, and friends can help with understanding what’s normal and what isn’t. Talking with elders about the significance of your pregnancy in the Dakota culture can help you to find a sense of purpose throughout your experience.
+        \n\n\u2022 Arrange for proper prenatal care by calling IHS’s prenatal care clinic if you live close to downtown Sisseton. Prenatal care means you or a doctor prepare for your baby to be born and make sure both you and your baby are healthy.
 
-    <string name="healthy_relationships_title">\n<b>Healthy Relationships</b>\n</string>
-    <string name="healthy_relationships_frag"><b>What is a healthy relationship?</b>
-\n\n\u2022 Safe spaces where partners are able to express feelings. Sharing the joys and pains of life is part of their growth as a couple and as individuals. Neither partner is abusing or being abused by the other.
-\n\n\u2022 Partners support each other in good times and when times are tough. Both partners are determined to work on the relationship and help it succeed. Both partners are committed only to each other in every way, sexually and emotionally.
-\n\n\u2022 Material needs are being met.
-\n\n\u2022 A healthy relationship also encourages positive values. You are together because you have a common vision, share basic values, have the other person’s interests at heart, and are strong individuals. Each person appreciates the other’s unique contributions to the relationship
-\n\n\u2022 You are together because you want to be - not because you fear being alone, want sex, or seek revenge (on an ex-partner).
-\n\n\u2022 Equality is another key to a healthy relationship. This means making decisions together, respecting each other’s boundaries, and being a team.
-\n\n\u2022 Healthy couples avoid competing with each other. Instead, they respect each other’s way of doing things, cooperate with each other, work as equal partners, and help each other reach goals.
-\n\n\n<b>Difference between aggression and assertion in relationships:</b>
-\n\n\u2022 People who are aggressive try to control others. They think in terms of ‘winning and losing’. They tend to make unreasonable demands, threats, or excuses for themselves.
-\n\n\u2022 Being assertive helps relationships by stating your needs and wants without attacking, blaming, or making excuses. It means you stand up for your rights and can say no when you need to. You are direct about your feelings without apologizing for them and respect the rights of others.
-</string>
+    </string>
 
-    <string name="procedures_title">\n<b>Pre-natal Medical Procedures</b>\n</string>
+    <string name="healthy_relationships_title"><b>Healthy Relationships</b></string>
+    <string name="healthy_relationships_frag">
+        If you have a relationship with the baby’s father during pregnancy, the relationship may vary in terms of labels. However, having a healthy relationship with him can help to lower your own stress during pregnancy and make for a better environment for a baby to come into. What is a healthy relationship?
+        \n\n\u2022 A safe space where you and your partner are able to express feelings.
+        \n\n\u2022 Sharing the the joys and pains of life helps you both to grow as a couple and as individuals.
+        \n\n\u2022 No abuse
+        \n\n\u2022 You both support each other in good times and when times are tough.
+        \n\n\u2022 You both are determined to work on the relationship and help it succeed.
+        \n\n\u2022 You’re committed to each other in every way, sexually and emotionally.
+        \n\n\u2022 Both of your material needs (food, water, clothes, shelter) are being met.
+        \n\n\u2022 Encourages positive values
+        \n\n\u2022 You both have a common vision, share basic values, have the other person’s interests at heart, and are strong individuals.
+        \n\n\u2022 Each person appreciates the other’s unique contributions to the relationship.
+        \n\n\u2022 You are together because you want to be - not because you fear being alone, want sex, or seek revenge on an ex-partner.
+        \n\n\u2022 Your relationship is equal, meaning that you make decisions together, respect each other’s boundaries, and are a team.
+        \n\n\u2022 You both avoid competition. Instead you respect each other’s way of doing things, cooperate with each other, work as equal partners, and help each other reach goals.
+        \n\n\u2022 You both are assertive, rather than aggressive, in your communications with each other. The difference between aggression and assertion in relationships is that aggressive people try to control others. They think in terms of ‘winning and losing’. They tend to make unreasonable demands, threats, or excuses for themselves. Being assertive helps relationships by stating your needs and wants without attacking, blaming, or making excuses. It means you stand up for your rights and can say no when you need to. You are direct about your feelings without apologizing for them and respect the rights of others.
+    </string>
 
-    <string name="pregnancy_title">\n<b>Pregnancy</b>\n</string>
+    <string name="teen_pregnancy_title"><b>Teen Pregnancy</b></string>
+    <string name="teen_pregnancy_frag">
+        In high school or college, you may start to explore your sexuality. How you define your own personal boundaries is completely up to you! It’s always important to make sure, though, that you practice safe sex and communicate that with your sexual partner(s). It’s just as much their responsibility as it is yours. If neither you nor our partner are using birth control, there’s a possibility that you’ll become pregnant. While pregnancy can be an amazing experience, if you aren’t on the same page as your partner or if you have other plans for yourself besides being a mother, this experience can be stressful. Waiting to have children can help you to finish high school without interruption, pursue a college degree, and even finding a meaningful job. In other words, you can discover and understand yourself before being responsible for someone else. See the “Family Planning” section to learn how to prevent pregnancy and STI’s while still being sexually active.
+        \n\nHaving a baby can have far-reaching effects for you. It may mean deciding about marriage, changing education and career plans, finding a place to live, and learning how to handle finances. It comes with increased responsibilities, like taking care of all of a baby’s physical needs: feeding, changing, bathing, dressing, etc. It means providing the love and attention a baby needs to thrive and caring for a baby that’s crying, fussy, or sick.
+        \n\nIf you’re a teenager and just found out that you’re pregnant, you may be feeling overwhelmed or helpless. Don’t worry, there are so many resources and people on the reservation that can help you through this experience!
+        \n\u2022 Your parents
+        \n\u2022 Your brothers and sisters
+        \n\u2022 Your other family (aunts, uncles, cousins)
+        \n\u2022 Your friends
+        \n\u2022 Maternal Health resources such as Indian Health Service, Coteau Healthcare System, WIC, and Early Head Start. This app contains more resources and how to navigate them.
 
-    <string name="meds_title">\n<b>Medications and Supplements Considered Safe During Pregnancy</b>\n</string>
+    </string>
 
-    <string name="healthy_diet_title">\n<b>Healthy Diet</b>\n</string>
+    <string name="alcohol_title"><b>Alcohol</b></string>
+    <string name="alcohol_frag">
+        Drinking alcohol during pregnancy can cause a birth defect called Fetal Alcohol Syndrome or FAS. The placenta grows in your uterus (womb) and supplies your baby with food and oxygen through the umbilical cord during pregnancy. If you drink alcohol, it freely passes directly through the placenta and umbilical cord to your baby. The alcohol can affect growing cells, especially those in the baby’s brain. The more you drink, the higher your baby’s risk of developing problems that will last a lifetime. Alcohol can also pass through breast milk to your baby and can harm your baby.
+        \n\nDrinking alcohol during pregnancy can cause:
+        \n\t\u2022 Premature birth (before 37 weeks)
+        \n\t\u2022 Low birthweight (less than 5 pounds, 8 oz.)
+        \n\t\u2022 Heart defects
+        \n\t\u2022 Unusual facial features
+        \n\t\u2022 Reduced IQ
+        \n\t\u2022 Vision and hearing problems
+        \n\t\u2022 Learning and behavior problems
+        \n\t\u2022 Miscarriage (death of baby before 20 weeks of pregnancy)
+        \n\nYou may find it difficult to change your drinking habits during pregnancy. Alcohol is often part of social activities, like parties and sports events. Here are some tips that may help:
+        \n\t\u2022 Think about when you usually drink alcohol. Plan things to have instead, like fruity drinks or water.
+        \n\t\u2022 Tell your friends and family you don’t want to drink alcohol during pregnancy. Ask them to help and support you.
+        \n\t\u2022 Get rid of all the alcohol in your home.
+        \n\t\u2022 Stay away from places where you usually drink alcohol like at parties or bars.
+        \n\t\u2022 We do not know a safe level of alcohol during pregnancy so it is best to avoid drinking any alcohol.
+        \n\nIf you need help to stop drinking alcohol
+        \n\t\u2022 Tell your healthcare  provider
+        \n\t\u2022 Call the National Council on Alcoholism and Drug Dependence or visit their website (1-800-622-2255 or ncadd.org)
+        \n\t\u2022 Call the Alcohol Detox Center in Serenity Hills, Watertown at 605-884-0650
+    </string>
 
-    <string name="domestic_violence_title">\n<b>Domestic Violence and Sexual Assault</b>\n</string>
+    <string name="preconception_title"><b>Pre-Conception Health</b></string>
+    <string name="preconception_frag">
+        It’s important for you to be in a good mental and physical state before you begin to take care of another life within you. The Center for Disease Control suggests that every woman do the following every year, especially if they’re trying to become pregnant:
+        \n\u2022 Eat healthy foods (see Healthy Diet page)
+        \n\u2022 Stay active (Try to get 150 minutes of moderate exercise each week)
+        \n\u2022 Take 400 micrograms (mcg) of folic acid daily, which will help prevent birth defects. You can either eat fortified foods or take a supplement daily, which can be found at Walmart or the local  convenience store.
+        \n\u2022 Maintain a healthy weight, which is about 18.5-24.9. Being both underweight and overweight can mean you are less likely to become pregnant and can also make your pregnancy more risky.
+        \n\u2022 Protect against sexually transmitted infections (STIs). Practice safe sex, and see your OB/Gyn if you think you may have been exposed to a STI. If you do have an STI.
+        \n\u2022 If you find out that you have an STI, take medicine for the full time as directed.
+        \n\u2022 Avoid harmful chemicals, metals, and toxic substances around the home and workplace.
+        \n\u2022 Make sure your vaccinations are up to date
+        \n\u2022 Manage your mental health and stress (see IHS Department of Psychology)
+        \n\u2022 If you smoke or use substances, this could be a good time to quit
+        \n\t\u2022 Use 1-800-QUIT-NOW (1-800-784-8669)
+        \n\t\u2022 Avoid street drugs and other people’s prescription medications
+        \n\t\u2022 Limit alcohol consumption
+        \n\u2022 If you’re in a situation of partner violence, talk to a doctor  or counselor about ways that you can manage the situation. IHS has a Department of Behavioral Health with trained counselors you can talk to.
+        \n\u2022 Be aware of any health conditions, such as asthma, diabetes, or obesity
+        \n\u2022 Learn about your family’s health and ask a doctor about any risks or diseases that you may be worried about passing onto your baby.
+        \n\u2022 Get regular check-ups with your doctor. Below are all of the doctors present at Coteau Hospital, where you must make arrangements to deliver your baby
+        \n\t\u2022 Dr. Judy Beumer
+        \n\t\u2022 Dr. David Oey
+        \n\t\u2022 Dr. Linda Peterson, OB/GYN
+        \n\t\u2022 Dr. Stanley Gallagher
+        \n\t\u2022 Bradley Gallagher, PA-C
+        \n\t\u2022 Jackie Bartlett, PA-C
+        \n\t\u2022 Angie Gaikowski, NCP
+        \n\t\u2022 Dr. David Meadows
+        \n\t\u2022 Dr. Shira Tomboulian
+        \n\n\t\u2022 Nate Tiedeman, DNCP
+        \n\t\u2022 Call 605-698-7681 to schedule an appointment at the Coteau Hospital.
+
+
+    </string>
+
+    <string name="healthy_diet_title"><b>Healthy Diet</b></string>
+    <string name="healthy_diet_frag">
+        When you’re pregnant, everything that you eat affects both you and your baby, so it can sometimes be stressful to find foods that are nutritious for the both of you. When you’re pregnant, you also need more of certain vitamins and minerals. You can take vitamin supplements while also maintaining a healthy diet. You can talk to the SWO Health Education Department, the Coteau Young at Heart Weight Management Program, and IHS General Care for more information on a healthy diet. The U.S. Department of Agriculture has excellent advice (www.choosemyplate.gov) to help pregnant women and new mothers. On this website, you can add information about you, like your age, height, and weight, and find a diet plan for you for your three trimesters and through breastfeeding (https://www.choosemyplate.gov/MyPlate-Daily-Checklist-input). This website is based on the 5 food groups grains, fruits, vegetables, protein, and dairy. Oils and fats are also important, because they provide important nutrients, but solid fats from animals should be limited. If you’re expecting more than one baby, talk to your doctor  about what is healthy for you.
+        \n\nA general healthy diet for pregnant moms are below, but you can get personalized diet from either your doctor or from the daily checklist on the USDA website (https://www.choosemyplate.gov/MyPlate-Daily-Checklist-input).
+        \n\nGrains
+        \n\t6-8 ounces
+        \n\tAim for whole grains for at least half of daily grain choices
+        \n\nVegetables
+        \n\t2.5-3.5 cups
+        \n\nFruits
+        \n\t2 cups
+        \n\nMilk/Milk Products
+        \n\t4 cups
+        \n\nProteins
+        \n\t5-6.5 ounces
+        \n\nOils
+        \n\t6-7 teaspoons
+        \n\nWater
+        \n\t8-10 cups
+        \n\nVitamins
+        \n\tPrenatal vitamin every day
+        \n\tVitamin D (from milk or being in the sun): helps to build your baby’s teeth and bones
+        \n\tCalcium (from milk-products): helps to build your baby’s teeth and bones
+	    \n\tIron: helps to make red blood cells, which carry oxygen to your baby
+        \n\nFish/Shellfish
+        \nOmega-3 fatty acids are found naturally in many kinds of fish. 2 servings should eaten each week during pregnancy to help develop the baby’s brain. You should avoid fish that might contain mercury, such as shark, swordfish, king mackerel or tilefish. You should also limit white tuna to 6 ounces per week.
+    </string>
+
+    <string name="domestic_violence_title"><b>Domestic Violence and Sexual Assault</b></string>
+    <string name="domestic_violence_frag">
+        During pregnancy, it’s important for your physical and mental health that you keep yourself safe from abuse. If you are being abused in your relationship, remember that abuse is never your fault.
+        \n\nSo what is partner abuse?
+        \nThere are many types of abuse, but the most common are physical, emotional or sexual mistreatment by a partner.
+        \n\u2022 Physical: can involve pushing, slapping, punching, kicking, using a weapon, or using force that causes pain or injury.
+        \n\u2022 Emotional: uses threats of harm to you or your family members, friends, or possessions; deprives you of money, sleep, or affection; harasses you at work or at home; insults or verbally abuses you; uses any type of behavior to cause you emotional pain
+        \n\u2022 Sexual mistreatment: forcing you to perform sexual acts that you have not consented to
+        \n\nSometimes you can be unsure of when something is abuse. Some warning signs and common characteristics of abusers include:
+        \n\u2022 Having a poor self-image and may be unable to control their own lives
+        \n\u2022 Acting “bossy” and controlling
+        \n\u2022 Controlling your access to money
+        \n\u2022 Have witnessed abuse as children or were abused themselves
+        \n\u2022 Viewing violence as a natural part of family life
+        \n\u2022 Abusing alcohol or other drugs, and even using it as an excuse for abuse
+        \n\u2022 Not communicating well and having trouble expressing feelings
+        \n\u2022 Feeling intense jealousy
+        \n\u2022 Having a violent temper
+        \n\u2022 Ignoring or mocking your needs and ideas
+        \n\nIf don’t think your situation is abusive, but are worried that it might lead to abuse in the future, you can play a part in preventing partner abuse at home by:
+        \n\u2022 Setting an example for your children by following a “no violence” rule
+        \n\u2022 Resolving problems by talking things over in an understanding, empathetic way
+        \n\u2022 Getting help if you and your partner can’t resolve problems
+                \n\nThe cycle of abuse follows a 3-stage pattern for many couples:
+        \n(1) Tension building: This is a time of minor conflicts and, possibly, some physical abuse. This stage may last from a few hours to many months. The victim is aware of the building tension and tries to please and humor the abuse.
+        \n(2) A major episode of violence: This may be triggered by a small quarrel. Once an attack starts, there’s usually little the victim can do to stop it. Apologizing or reasoning with the abuser seldom works.
+        \n(3) A period of remorse: The abuser feels ashamed and guilty, promising it will never happen again. The abuser may be on best behavior for a while and treat the victim with great kindness and generosity. But sooner or later, the cycle starts again. However, some abusers may never apologize or feel remorse. They may create an atmosphere of constant tension and abuse.
+        \n\nIf you’re in an abusive relationship, you may feel trapped. You may find it hard to leave due to fear of more violence or of isolation. You may also be financially dependent on your abuser and may find it difficult to come up with the funds to leave. You may have to choose between staying in the abusive relationship or leaving your children to your abuser. You may not believe it’s right to leave your husband under any circumstances. You may hope that your abuser will change his ways.
+        \n\nAsk yourself the following questions to decide whether or not your abuser has changed and if your home is safe for you:
+        \n\u2022 Is he still jealous?
+        \n\u2022 Has he stopped being violent or threatening?
+        \n\u2022 Has he stopped criticizing?
+        \n\u2022 Am I still afraid when I’m with him?
+        \n\u2022 Can he be angry without yelling or hitting?
+        \n\u2022 Can I express anger toward him without being attacked?
+        \n\u2022 Can he hear and respect what I say?
+        \n\nNo matter your obstacles, always remember that abuse is never your fault and that there are many people  in the SWO community that can help you.
+        \n\nWhat you can do if you are a victim of abuse:
+        \n\u2022 Talk about the situation with someone can help (a friend, relative, therapist, crisis  center counselor, priest or minister, or other trained professional). Asking for help is the first and biggest step to stopping the violence .
+        \n\u2022 Try to have as much control over money as you can. Having your own money can make it easier to control some of the family income. Try to keep all property, including house and cars, in both your names.
+        \n\u2022 Make a list of your skills and strengths as a person. These skills are yours, and your abuser can’t take them away from you. Find ways to use these skills and strengths in your everyday tasks to find a sense of control. If possible, find a job  that allows you to use your unique skills.
+        \n\nMake a safety plan if you are a victim of abuse so that you will be able to escape under extreme circumstances.
+        \n\u2022 Think of a safe place you can go, and figure out how you will get there.
+        \n\u2022 Keep important items handy. You may want to store some of these things with a person you can trust.
+        \n\t\u2022 Money
+        \n\t\u2022 Clothes
+        \n\t\u2022 An extra set of house and car keys
+        \n\t\u2022 Needed medications
+        \n\t\u2022 Important papers, such as driver’s license, birth certificates and medical records
+        \n\t\u2022 Important telephone numbers
+        \n\u2022 Change your phone number, and ask everyone not to give out your new number or address
+        \n\u2022 Vary your routine (travel different routes to work, use different stores, etc.)
+        \n\u2022 If the abuser has left, change locks on all doors and make sure windows lock
+        \n\nWhat to do during an attack:
+        \n\u2022 Get away if you can, or defend yourself as best you can.
+        \n\u2022 Call 911 if possible. Write down officer’s names and badge numbers in case a record of the attack is needed.
+        \n\u2022 Leave the house and, if you have children, take them with you.
+        \n\u2022 Seek medical  help. Injuries may be more serious than they seem. Also, if you decide to press charges, having a record of the injuries can help.
+        \n\u2022 Where to get help
+        \n\t\u2022 Disaster  Distress Hotline:  1-800-985-5990. Administered by the Substance Abuse and Mental Health Administration. Offers support coping methods, and counseling, during, before, and after disasters.
+        \n\t\u2022 Native Youth Crisis Line: 1-877-209-1266. National Suicide Prevention Lifeline has specific resources for Native American Youth, and their 24-hour hotline acknowledges the particular struggles of Native Youth battling with depression and suicide.
+        \n\t\u2022 Women’s Circle: 605-698-4129. Domestic Violence Shelter in Sisseton. 605 is their daytime number, 24/7 hotline is 888-200-4459
+        \n\t\u2022 Sisseton Police: 605-698-3932. Working to protect and serve the Sisseton community. Keeps a sex offender registry, makes arrests, intervenes in cases of harm.
+        \n\t\u2022 Roberts County Sheriff: 605-698-7667. South Dakota State official, designated with apprehending on behalf of the courts and enforcing warrants.
+        \n\t\u2022 SWO Tribal Police: 605-698-7661. Contracted and supported through tribal funds, defend both the tribal constitution and the constitution of the United States.
+        \n\t\u2022 Women of Nations Eagle Shelter: 1-877-209-1266. 24-hour crisis hotline for battered American Indian women and legal counsel support.
+        \n\t\u2022 Woodrow Wilson Keeble Healthcare Center: 605-698-7606. Local IHS building, emergency service and psychological counseling.
+        \n\t\u2022 Coteau Des Prairies Clinic: 605-698-7681. General health care, open 9-5pm Monday through Friday.
+        \n\t\u2022 Coteau Des Prairies Hospital: 605-698-7647. Widest variety of services available in the area including emergency room, OBG and gynecology, and fitness programs.
+        \n\t\u2022 SWO Child Protection Program: 605-698-3992. Tribal run program that seeks to protect vulnerable children while keeping families intact.
+        \n\t\u2022 Volunteers of America-Family Crisis Intervention: 605-380-8023. Prevention and early intervention program for South Dakota, diverts youth and family involvement in the Juvenile Justice System.
+        \n\t\u2022 Dakota Pride: 605-698-3917. Local resource for drug and substance abuse prevention, intervention, and recovery.
+        \n\t\u2022 National BIA Child Abuse Hotline: 1-800- 633-5166. Information, intervention, social services, counseling, and referrals 24/7.
+    </string>
+
+    <string name="substance_abuse_title"><b>Substance Abuse During Pregnancy</b></string>
+    <string name="substance_abuse_frag">
+        <b>Smoking:</b>
+        \nWhen you smoke, your baby is exposed to the same chemicals that you inhale in the cigarette smoke. Smoking during pregnancy can cause miscarriage, low birth weight babies, and Sudden Infant Death Syndrome (SIDS) (Sudden infant death syndrome (SIDS) is the unexplained death, usually during sleep, of a seemingly healthy baby less than a year old).
+
+        \n\nSome moms start smoking again after the baby is born, but infants who are exposed to secondhand smoke (Secondhand smoke is smoke that has been breathed out by the person smoking) after birth are also at a greater risk of SIDS. Kids exposed to secondhand smoke get sick more often with illnesses like bronchitis, pneumonia, wheezing, coughing, and ear infections. Remember, there is no risk-free level of exposure to secondhand smoke. Smoking is also harmful to your own health. If you need help quitting, you can call 1-866-SD-QUITS .
+
+        \n\n<b>Methamphetamine (Meth ):</b>
+        \nThe Dakota Pride Center is the main resource on the reservation to seek help from serious drug addiction like meth.
+        \n\nMeth, an extremely addictive drug, can damage brain cells, affect memory, cause hallucinations, and decrease your appetite If you use meth, you may feel angry and violent, especially when the drug wears off. You may do things that you normally wouldn’t do. Meth may make you stay awake for long periods of time, and feel anxious, afraid, paranoid, or depressed when it wears off. Other effects of using meth may include:
+        \n\t\u2022 high fevers
+        \n\t\u2022 stomach cramps
+        \n\t\u2022 weight loss
+        \n\t\u2022 raised blood pressure
+        \n\t\u2022 breathing problems
+        \n\t\u2022 convulsions (seizures)
+        \n\t\u2022 bleeding in the brain (stroke)
+        \n\t\u2022 heart failure and death
+
+        \n\nSmoking and inhaling meth can damage your lungs and nose. Sharing needles or syringes when injecting meth puts you at risk for HIV and hepatitis C. Using meth regularly may cause the teeth to turn black and start to crumble.
+
+        \n\nUsing meth while you’re pregnant can cause your baby to be delivered before it’s fully developed (premature delivery) and the separation of your placenta from your uterus. Once your baby is born, your baby can become lethargic and even develop heart and brain abnormalities. Using meth during pregnancy impacts your child’s entire life. Children whose mothers used meth during pregnancy have trouble with attention, are more stressed and less aroused.
+
+        \n\nMeth is an illegal drug, and you could be arrested for possession of meth. If you are convicted, you could go to prison - even if you are pregnant. However, if you seek help at Dakota Pride, their number one goal is to ensure your health and the health of the baby. They keep your situation confidential and will never turn you into the police for seeking help.
+    </string>
+
+    <string name="mental_health_title"><b>Mental Health Issues During and After Pregnancy</b></string>
+    <string name="mental_health_frag">
+        Many new mothers get the ‘baby blues’. While you may feel joyous, it’s normal to also feel tired from the hard work of childbirth and caring for a newborn, or isolated because you’re not with friends or doing your usual activities. The ‘baby blues’ can start a few days after birth. They usually go away in a couple of weeks. Post-partum depression (PPD) is a mental health condition that some women have after childbirth-sometimes starting up to a year later. It is more serious and lasts longer than the ‘baby blues’.
+
+        \n\nWhat causes PPD?
+        \n\u2022 No one really knows for sure. Changes in hormone levels after birth play a role as well as a personal or family history of depression, the demands of taking care of a baby, and a more difficult birth.
+        \n\u2022 Stress can play a role, especially when there is a lack of support from family or friends. Relationship or money problems, other big life changes, lack of sleep, changes in work or home schedules can cause stress. The belief that you can ‘do it all’ is also stressful. You may also be at higher risk if you’ve had severe Premenstrual Syndrome in the past.
+
+        \n\nEffects of PPD:
+        \n\u2022 PPD can affect how you bond with your baby. You may have little desire to care for your baby and avoid holding or playing with your baby. You may feel angry with your baby and even think about hurting him or her.
+        \n\u2022PPD can affect how your baby grows. Your baby needs your love and care to grow and thrive. Without proper care and bonding, your baby may have delays in language development or problems with learning and good behavior.
+        \nIf you have any of the following thoughts often or lasting for 2 weeks or more, call your healthcare provider or talk to a trusted nurse or prenatal doctor. You can call the Sisseton IHS Mental Health Department at 605-698-7606 or 605-742-3808 to schedule an appointment. They may suggest counseling or medication (ask what is safe to take if you are breastfeeding):
+        \n\t\u2022 “I feel very sad and helpless”
+        \n\t\u2022 “I have trouble sleeping”
+        \n\t\u2022 “I want to sleep all the time”
+        \n\t\u2022 “I don’t feel like eating”
+        \n\t\u2022 “I feel confused and distracted”
+        \n\t\u2022 “I don’t think I can be a good mother”
+        \n\t\u2022 “I feel anxious and get angry easily”
+        \n\t\u2022 “I’m not interested in my baby”
+        \n\t\u2022 “I don’t want to get dressed or do daily tasks”
+        \n\t\u2022 “I’m constantly worried about my baby”
+        \n\t\u2022 “I don’t want to see friends and family”
+        \n\u2022 Get help right away if you have thoughts of harming your baby or yourself. Call a child abuse hotline (1-800-633-5155), a mental health crisis hotline (1-800-444-3989), or 911
+        \n\u2022 For more information, visit PPD Hope www.ppdhope.org and Postpartum Support International www.postpartum.net (1-800-944-4PPD). Your doctors and nurses at IHS, the WIC, and Coteau are all there to help and can point you to the right resource.
+
+        \n\nPPD can be treated! Take steps to help keep yourself and your new baby healthy. Asking for help can be hard, but the sooner you get help, the sooner you can start feeling better. PPD is not your fault. Remember, PPD is an illness. Your feelings don’t mean you are a ‘bad’ person or did something wrong.
+
+        \n\nTake care of yourself. There’s a lot you can do on your own to feel better.
+        \n\u2022 Share your feelings with a friend or family member
+        \n\u2022 Get proper rest and nutrition: try to sleep when your baby sleeps. Eat healthy meals and snacks. Stay healthy so you can give your baby the best!
+        \n\u2022 Enjoy fresh air and sunshine. Try to spend some time outside every day. Even a short walk can make a difference
+        \n\u2022 Rely on family and friends. You don’t have to do it all. Ask for help with chores and housework
+    </string>
+
+    <string name="meds_title"><b>Medications and Supplements Considered Safe During Pregnancy</b></string>
+    <string name="meds_frag">
+        While these medications are generally considered safe in pregnancy, it is important to discuss them with your pre-natal doctor before taking, and always follow the guidelines on the label. Only take them in the prescribed quantities.
+        \n\n<u>Antacids:</u>
+        \n\u2022 Maalox
+        \n\u2022 Mylanta
+        \n\u2022 Nexium
+        \n\u2022 Pepcid
+        \n\u2022 Prevacid
+        \n\u2022 Prilosec OTC
+        \n\u2022 Rolaids
+        \n\u2022 Tums
+        \n\u2022 Zantac
+
+        \n\n<u>Antibiotics:</u>
+        \n\u2022 Amoxicillin
+        \n\u2022 Ampicillin
+        \n\u2022 Augmentin
+        \n\u2022 Biaxin
+        \n\u2022 Ceclor
+        \n\u2022 E-Mycin
+        \n\u2022 Macrobid (Macrodantin)
+        \n\u2022 Metronidazole (Flagyl)
+        \n\u2022 Penicillin
+        \n\u2022 Zithromax
+
+        \n\n<u>Anti-yeast</u>
+        \n\u2022 Gynelotrimin
+        \n\u2022 Monistat
+        \n\u2022 Mycelex
+        \n\u2022 Terazol
+
+        \n\n<u>Cold and Allergy</u>
+        \n\u2022 Afrin nasal spray (saline only)
+        \n\u2022 Allegra
+        \n\u2022 Benadryl
+        \n\u2022 Chlortrimetron
+        \n\u2022 Claritin, Claritin D
+        \n\u2022 Dimetapp
+        \n\u2022 Flonase/Beconase
+        \n\u2022 Mucinex
+        \n\u2022 Robitussin Cough Syrup – DM
+        \n\u2022 Throat Lozenges
+        \n\u2022 Zyrtec
+
+        \n\n<u>Constipation</u>
+        \n\u2022 Citrucil
+        \n\u2022 Colace (Docusate)
+        \n\u2022 Fibercon Tablet
+        \n\u2022 Metamucil
+        \n\u2022 Milk of Magnesia
+        \n\u2022 Miralax
+
+        \n\n<u>Diarrhea</u>
+        \n\u2022 Imodium
+        \n\u2022 Kaopectate
+        \n\u2022 Lomotil
+
+        \n\n<u>Hemorrhoids</u>
+        \n\u2022 Anusol
+        \n\u2022 Preparation H
+        \n\u2022 Tucks
+
+        \n\n<u>Pain</u>
+        \n\u2022 Tylenol
+        \n\u2022 Tylenol Extra Strength
+        \n\u2022 Tylenol Sinus
+        \n\u2022 Tylenol #3
+
+        \n\n<u>Sleep</u>
+        \n\u2022 Ambien
+        \n\u2022 Tylenol PM
+        \n\u2022 Unisom
+
+        \n\n<u>Topical Agents</u>
+        \n\u2022 Calamine Lotion
+        \n\u2022 Cortaid Cream
+        \n\u2022 Hydrocortisone Cream
+        \n\u2022 Neosporin Ointment
+
+        \n\n<u>Miscellaneous</u>
+        \n\u2022 Bug Spray w/ DEET
+        \n\u2022 Emetrol
+        \n\u2022 Flu Shot
+        \n\u2022 Hair Color
+        \n\u2022 Manicures
+        \n\u2022 Pedicures
+        \n\u2022 Perms
+        \n\u2022 Unisom w/ B6 for nausea
+        \n\u2022 Sunscreen
+        \n\u2022 TB Skin Test
+    </string>
+
+    <string name="breastfeeding_title"><b>Breastfeeding</b></string>
+    <string name="breastfeeding_frag1">
+        Breastfeeding your baby is both physically and psychologically good for your newborn child. However, there may be a number of reasons that breastfeeding is not the best option for you. It doesn’t make you a bad mother to use alternatives to breastfeeding. Talking with a doctor or family member can help you make this personal decision.
+
+        \n\nPros
+        \n\u2022 Breastmilk provides baby with antibodies to fight diseases and prevents allergies
+        \n\u2022 Economical and efficient (no bottle to prepare, etc.)
+        \n\u2022 Whole nutrition
+        \n\u2022 Burns calories
+        \n\u2022 Helps uterus contract to normal size after delivery
+        \n\u2022 Can delay the return of periods
+
+        \n\nCons
+        \n\u2022 Time-consuming
+        \n\u2022 Breastfeeding moms must maintain a healthy diet.  You must be careful about the types of medications you can take and pay attention to the food you eat, because harmful components in food or medicine can be passed to the baby.
+        \n\u2022 May be painful to some mothers
+        \n\u2022 May be stressful and feel like an additional burden
+
+        \n\n“Latching on” is how your baby breastfeeds. The following step can help you to obtain a good latch.
+        \n1. Position nipple with thumb on top and fingers underneath breast
+        \n2. Make sure your baby is stomach-to-stomach with you and has his or her chin tilted back from the chest
+        \n3. Touch your nipple to your baby’s upper lip until the mouth opens very wide
+        \n4. Insert the entire nipple into your baby’s mouth and pull your baby close to your body (but don’t lean into your baby)
+        \n5. Both lips should “pout out” and cover almost the entire areola (the areola is the portion of pigmented skin surrounding your nipple).
+        \n\t\u2022 If your baby’s lips are not “pouting”, you can use your finger to pull them into the proper position
+        \n\t\u2022 Your baby’s tongue should be down and the cheeks should be rounded
+        \n6. Keep your baby’s body in alignment to help swallowing
+        \n\t\u2022 You should hear swallowing, not smacking noises when your baby is feeding
+        \n7. If your baby is moving his or her jaw circularly when feeding, it’s a good
+        sign.
+        \n8. Your nipple shouldn’t be flattened or misshapen at end of feeding
+
+        \n\nPositioning yourself and the baby is also an important step in breastfeeding.
+    </string>
+    <string name="breastfeeding_frag2">
+        \n\u2022 Lean back in a comfortable, supportive chair
+        \n\u2022 Use a pillow or place feet up on stool
+        \n\u2022 Pick the position that is most comfortable for you (Reclining may be your best option if you are recovering from a C-section)
+
+        \n\n What is your let-down reflex? This happens several seconds or a couple minutes into breastfeeding when milk flows more easily and quickly. The quick release of milk may cause your baby to cough. To prevent this, before beginning feeding, rub you breast until milk begins to drip so that let-down happens before your baby has latched on. It can also happen if feeding is overdue or if your baby is crying. In these cases, milk may drip from unused breast or you may feel a tingle. If you’re having trouble with let-down, it means that you may be stressed or rushed. It can help, in these cases, to hold something that smells like or reminds you of your baby
+
+
+        \n\nThe amount of milk you produce can vary based on you and your situation. Talk with your doctor, a nurse at the WIC’s Breastfeeding Peer Counselor program, or other family members if you are worried at all.
+
+
+        \n\nYou may have some soreness, dryness, or discomfort associated with breastfeeding. Limiting feeding time may not necessarily help and may even lead to further discomfort. Here are some ways that you can reduce this pain.
+        \n\u2022 Proper latching: Start over if not properly latched (Release suction by putting your finger in corner of your baby’s mouth).
+        \n\u2022 Apply crushed ice or cold compress before feeding
+        \n\u2022 Position any sore part of nipple in corner of baby’s mouth
+        \n\u2022 Change positions
+        \n\u2022 Allow nipples to air dry between feedings
+        \n\u2022 Avoid lotions or soaps that may have alcohol in them.
+        \n\u2022 Avoid bra pads lined with plastic.
+        \n\u2022 Nipple cream can ease soreness immediately (short-term)
+        \n\u2022 Express milk until let-down (see above). Sometimes, your milk ducts may not fully empty, leading to swelling and discomfort
+
+        \n\nIf you aren’t able to produce enough milk or your schedule doesn’t allow for breastfeeding, you may consider using a breast pump. If you decide to bottle feed your baby, it may cause “nipple confusion.” This occurs when your baby uses the same techniques from bottle feeding on breasts, causing difficulty in latching on. So, it can be more difficult to switch back to breastfeeding after bottle feeding.
+        \n\u2022 Start pumping a couple weeks before going back to work
+        \n\u2022 Electric vs. Manual pumps
+        \n\u2022 Manual: cheaper but more physical exertion
+        \n\u2022 Electric: more expensive, but can pump both breasts at once
+        \n\u2022 May be better for moms with busy schedules
+        \n\u2022 Noise of electric pump may be annoying to some women
+        \n\u2022 Avoid used pumps unless it is sterilized
+        \n\u2022 Make sure your pump fits your breast
+
+        \n\nYou can also use formula feeding if you are not able to breastfeed or pump your breastmilk. The WIC provides assistance with formula, both financially for those who qualify and through education.
+
+        \n\nWhen breastfeeding or using a pump to bottle-feed, it’s important to pay attention to your diet. Many of the things you consume will be given to your baby through your breast milk.
+        \n\u2022 Stay hydrated
+        \n\u2022 Eat a well-balanced diet—whole grains, fruits, vegetables, and good fats
+        \n\u2022 Eat fish, which contain omega-3, DHA, and EPA. Avoid fish, like tuna, that may have a high mercury content.
+        \n\u2022 Eat lean meats, which have a relatively low content of harmful chemicals
+        \n\u2022 Avoid fruits and vegetables with high levels of pesticides
+        \n\u2022 Try not to diet while breastfeeding. During this time, your body will need about 500 more calories a day than normal
+        \n\u2022 Do not drink alcohol, smoke, use marijuana, illicit drugs, or misuse prescription drugs, because these substances can be passed onto your baby through milk. If you are planning on drinking alcohol, wait 2-3 hours to feed or pre-pump
+        \n\u2022 Avoid caffeine
+        \n\u2022 Take vitamins (DHA, vitamin D, and calcium)
+
+        \n\nYou may be concerned about different medications you may be taking and how it will affect your breastmilk. LactMed (https://toxnet.nlm.nih.gov/newtoxnet/lactmed.htm) is a good resource where you can search for your medication and find its effect on breastmilk and possible alternatives.
+    </string>
+
+    <string name="delivery_title"><b>Preparation for Delivery</b></string>
+    <string name="delivery_frag">
+        Getting ready for your hospital visit can make it less stressful when the time actually comes to deliver your baby, and allow you to focus more on your experience. Here are some things to know prior to delivery:
+        \n\u2022 Know when to go to the hospital
+        \n\u2022 Be pre-registered at the hospital where you plan to give birth
+        \n\u2022 Have your preferences for labor and delivery
+        \n\u2022 Know day and night phone numbers for your health care provider\'s office and the labor and delivery unit
+        \n\u2022 Have transportation to the hospital
+        \n\u2022 Know where to go when you get to the hospital (including the after-hours entrance)
+        \n\u2022 Have arrangements made if you plan to donate your cord blood
+
+        \n\nWhat to pack for the hospital:
+        \n\u2022 Medical coverage information
+        \n\u2022 Gift for sibling(s) from the baby
+        \n\u2022 Support or nursing bra and breast pads
+        \n\u2022 Socks and slippers
+        \n\u2022 Lip balm
+        \n\u2022 Snacks for labor partner
+        \n\u2022 Music CDs that you would like to listen to during labor
+        \n\u2022 Loose fitting clothes to wear home
+        \n\u2022 Toothbrush, toothpaste, and hairbrush or comb
+        \n\u2022 Telephone numbers of family and friends
+        \n\u2022 Infant sleeper with legs (sacs or kimonos won\'t fit in the car seat), or T-shirt and a diaper for baby to wear home
+        \n\u2022 Baby blanket
+        \n\u2022 Infant car seat
+        \n\u2022 Camera
+
+        \n\nRegular contractions usually mean you are beginning labor. False labor is commonly characterized by
+        \n\u2022 Contractions that stop if you move around or on their own
+        \n\u2022 Irregular contractions
+        \n\u2022 Contractions that don’t get stronger or closer together over time
+        \n\nContact your doctor if
+        \n\u2022 Your contractions are very strong or painful
+        \n\u2022 You think you may be experiencing pre-term labor
+        \n\u2022 Your contractions are 5-10 minutes apart
+        \n\u2022 Your water breaks, especially if fluid is stained dark greenish brown
+        \n\u2022 You experience vaginal bleeding
+        \n\u2022 You cannot walk or talk during contractions
+        \n\nIf you need help getting to the hospital, arrange rides with a family member, partner, or friend ahead of time. Inquire at the Maternal Child Health program (MCH) to see if they still offer transportation. You’ll need to go to Coteau de Prairies Healthcare System for delivery, since IHS only has prenatal clinics. Some families at Sisseton choose to deliver in Sioux Falls in order to guarantee access to emergency care. No matter where you choose to deliver, arrange ahead of time and come up with a plan with your partner, family members, or a trusted nurse.
+    </string>
+
+    <string name="complications_title"><b>Pregnancy Complications</b></string>
+    <string name="complications_frag">
+        Being familiar with the signs of pregnancy complications can allow you to catch diseases in the early stages, which can help improve your outcome. Here is an overview of common and/or severe pregnancy complications, their symptoms, and screening and treatment procedures available.
+
+        \n\nTypical experiences in pregnancy include:
+        \n\u2022 Nausea
+        \n\u2022 Vomiting
+        \n\u2022 Dizziness
+        \n\nIf you are experiencing the following, however, you should take note and speak to a doctor.
+        \n\u2022 Bleeding/leaking vaginal fluid
+        \n\u2022 Blurred vision or seeing flashes/spots of light
+        \n\u2022 Unusual or severe abdominal pain or backaches
+        \n\u2022 Strong cramps
+        \n\u2022 Frequent, severe, or continuous headaches
+        \n\u2022 Contractions
+        \n\u2022 Decrease in the baby’s movements
+        \n\u2022 Fainting
+        \n\u2022 Excessive vomiting or diarrhea
+        \n\u2022 Fever about 100 F/38 C
+        \n\u2022 Pain or burning during urination
+        \n\u2022 Inability to urinate
+        \n\u2022 Chills
+        \n\u2022 Severe or sudden swelling of the hands, face, or feet
+        \n\u2022 Inability to tolerate food or liquid
+        \n\u2022 Muscular convulsions
+
+
+        \n\n<u>Gestational Diabetes</u>
+        \nThere are three types of diabetes:
+        \n\u2022 Gestational
+        \n\u2022 Type 1
+        \n\u2022 Type 2
+        \nGestational diabetes is characterized by elevated blood sugar that begins or is first recognized in pregnancy. This condition occurs in approximately 2-5 percent of pregnancies
+        \nThis condition can raise the risk for the following conditions, if you have it:
+        \n\u2022 Birth defects
+        \n\u2022 High blood pressure
+        \n\u2022 Pre-eclampsia
+        \n\u2022 Loss of pregnancy
+        \n\u2022 Needing a C-section
+        \n\u2022 Infections
+        \n\u2022 Development of type 2 diabetes post-partum
+        \nIn your baby, gestational diabetes can cause:
+        \n\u2022 Rapidly fluctuating blood sugar levels
+        \n\u2022 Jaundice
+        \n\u2022 Breathing problems
+        \n\u2022 Higher risk of developing type 2 diabetes
+        \nThe risk factors for this condition are:
+        \n\u2022 Overweight (BMI of 25+) (pop-up of image https://cdn.vertex42.com/ExcelTemplates/Images/bmi-chart.gif).
+        \n\u2022 25+ years old
+        \n\u2022 Native American
+        \n\u2022 History of high blood sugar during pregnancy
+        \n\u2022 Lack of exercise/general inactivity
+        \n\u2022 Previous delivery of a large infant (over 8 lbs., 13 oz.)
+        \n\u2022 History of stillbirth, previous miscarriage, and/or birth defects
+        \n\u2022 Current pregnancy of unexplained polyhydramnios (an excess of amniotic fluid in the bag of waters), persistent glycosuria (abnormal amount of sugar in urine)
+        \n\u2022 Familial history (parent or sibling) of diabetes
+        \nScreening
+        \n\u2022 If you have a familial history of diabetes or gestational diabetes, you should ask your doctor to be screened. Screening involves drinking a glucose solution and the doctor measuring your blood glucose levels after an hour.
+        \nTo maintain lower weight during pregnancy:
+        \n\u2022 Monitor blood glucose levels and blood pressure frequently
+        \n\u2022 Take prenatal vitamins
+        \n\u2022 Eating a proper, balanced diet
+        \n\u2022 Regularly visit physician/doctor
+
+        \n\n<u>Premature Birth</u>
+        \nDefinition: birth prior to 37 weeks of pregnancy
+        \n\u2022 Birth prior to 32 weeks of pregnancy can result in the most severe complications
+        \nRisk factors
+        \n\u2022 In vitro fertilization
+        \n\u2022 Low age of pregnancy
+        \n\u2022 High age of pregnancy
+        \n\u2022 Infection
+        \n\u2022 Prior pre-term birth
+        \n\u2022 Carrying multiple babies (twins, triplets, etc)
+        \n\u2022 High blood pressure during pregnancy
+        \n\u2022 Tobacco use
+        \n\u2022 Alcohol use
+        \n\u2022 Use of illicit drugs or alcohol
+        \n\u2022 High stress
+        \n\u2022 Substance abuse
+        \n\u2022 Fetal anomalies
+        \nHarmful effects of pre-term birth for infant
+        \n\u2022 Leading cause of infant death among children born 32 weeks into pregnancy or earlier
+        \n\u2022 Leading cause of neurological disorders
+        \n\u2022 Breathing problems
+        \n\u2022 Feeding difficulties
+        \n\u2022 Cerebral palsy (CP) (A disease in which the part of the brain controlling voluntary movement is damaged. This disease may not be detected until the child is a few months or years old. CP is generally characterized by uncoordinated or exaggerated movement, spasms, and can also lead to seizures, hearing or vision loss, pain and bladder or bowel control issues).
+        \n\u2022 Developmental delay
+        \n\u2022 Vision problems
+        \n\u2022 Hearing impairment
+        \nWarning signs
+        \n\u2022 Contractions every 10 minutes or less
+        \n\u2022 Change in vaginal discharge (increase in fluid, discharge, or blood)
+        \n\u2022 Pelvic pressure (as if the baby is pushing down)
+        \n\u2022 Dull lower backache
+        \n\u2022 Cramps like menstrual period
+        \n\u2022 Abdominal cramps without diarrhea
+        \nWays to help prevent pre-term births:
+        \n\u2022 Stop smoking
+        \n\u2022 Avoid alcohol, illegal drugs, and misuse of prescription drugs
+        \n\u2022 Keep up with prenatal care appointments and regimens and begin prenatal care as early as possible
+        \n\u2022 Progesterone medications (17-alpha hydroxyprogesterone caproate, or 17P) may reduce the risk of premature birth in women who have already had pre-term babies
+        \n\u2022 C-section birth should not be scheduled prior to 39 weeks of pregnancy
+        \n\u2022 Seek medical help immediately if you believe that you are experiencing symptoms of pre-term labor
+        \nEmotional support for parents of pre-term babies :
+        \n\u2022 http://www.marchofdimes.org/baby/becoming-a-parent-in-the-nicu.aspx
+        \nThere is no Neonatal Intensive Care Unit (NICU) for pre-term babies at IHS or Coteau in Sisseton, and you will have to arrange for care in Sioux Falls or Minneapolis.
+
+        \n\n<u>Pre-eclampsia</u>
+        \nDefinition
+        \n\u2022 Hypertension (high blood pressure) present before pregnancy (chronic) or develops during (gestational, pregnancy-induced)
+        \n\u2022 Identified by the presence of excess protein in the urine, which is caused by kidney problems
+        \n\u2022 Development of preeclampsia can cause serious and potentially life-threatening complications during labor
+        \nRisk factors
+        \n\u2022 Personal/familial history of preeclampsia
+        \n\u2022 Pregnant with first child
+        \n\u2022 Younger than 20 or older than 40
+        \n\u2022 Previously obese
+        \n\u2022 Carrying multiple fetuses
+        \n\u2022 Chronic high blood pressure
+        \n\u2022 Diabetes
+        \n\u2022 Kidney disease
+        \n\u2022 Rheumatoid arthritis
+        \n\u2022 Lupus
+        \nSigns and symptoms
+        \n\u2022 More obvious symptoms include
+        \n\u2022 Sudden, rapid weight gain
+        \n\u2022 Swelling of the face or hands
+        \n\u2022 Severe or constant headaches
+        \n\u2022 Vision problems, including blurred vision
+        \n\u2022 Pain in the upper part of the abdomen, especially on the right side
+        \n\u2022 Decreased urine output
+        \nScreening and diagnosis
+        \n\u2022 Regular visits are the best way to track blood pressure and protein concentration in urine
+        \nPotential complications
+        \n\u2022 Decrease the amount of air/nutrients that the baby receives
+        \n\u2022 Causes low birth weight, premature birth, or even stillbirth
+        \n\u2022 Placental abruption
+        \n\u2022 Placenta separates from the uterine wall before delivery
+        \n\u2022 Rare, but potentially life-threatening for mother and baby
+        \n\u2022 Heart, kidney, liver, brain, and eye damage
+        \n\u2022 Problems with blood clotting
+        \n\u2022 Eclampsia
+        \n\u2022 Can induce seizures
+        \nTreatment
+        \n\u2022 Delivery is the only “cure”
+        \n\u2022 If pre-eclampsia develops early, the mother may need to remain in the hospital for sustained monitoring
+        \n\u2022 Regular prenatal care will help prevent severe complications
+        \nAsk your doctor if you are at risk for pre-eclampsia. Complications resulting from this may mean emergency medical transportation to Sioux Falls.
+    </string>
+
+    <string name="family_planning_title"><b>Family Planning</b></string>
+    <string name="family_planning_frag">
+        It’s important for both men and women to be sexually responsible. Couples who don’t use any form of contraception have an 80 percent chance of becoming pregnant each year. If you’re not ready for sex or if you don’t feel like it’s right for your relationship, you always have the right to say “no” to sex. It’s your choice, and it shouldn’t be based on pressure from peers or your partner. You also decide (1) when you want to have kids, (2) how many kids you want, and (3) the spacing between your kids. Remember that if you have unprotected sex, you can get pregnant even if you are on your period or just gave birth. If you decide to have sex, but don’t want kids or want to have kids at a later time, there are many ways to prevent getting pregnancy. Before choosing a birth control method, talk to your doctor about advantages, disadvantages, and possible health risks of each one or consult a reliable online resource.
+        \nTo understand birth control, it’s important to first understand how your body prepares for pregnancy.
+        \nThe menstrual cycle is usually 21-35 days, and it begins with the shedding of your uterine lining. After this stage, which is normally called your “period,” a hormone in your body, follicle-stimulating hormone, helps to develop an egg in your ovary. This egg is released when another hormone, luteinizing hormone, spikes in your body. The released egg waits in your fallopian tube to meet a sperm cell (the cell from a male that fertilizes a female egg to create a baby). If the sperm cell, from the male, combines with the egg, from the female, the egg is fertilized in the first step to creating a baby. If the egg is not fertilized, it’s shed along with some of your uterine lining during your period. The following birth control methods can help to prevent your eggs from being fertilized if you don’t want to become pregnant. These methods focus on prevention of pregnancy, which means these methods are focused on being safe during vaginal sex rather than oral sex. You can find more information on the best ways to prevent STI’s during oral sex by talking to your OB/Gyn or primary care doctor.
+        \n\nAbstinence (avoiding vaginal sex):
+        \nPros: 100 percent effective, no cost
+        \nCons: difficult to practice continuously
+        \n\nThe Pill: Several types are available, all containing certain hormones that either keep your egg from being released or prevent your egg from attaching to your uterine wall. Available as either (1) estrogen and progestin or (2) progestin only. If you decide to take the pill, you should take it every day. It might help to have a certain period/hour/time of day to take the pill.
+        \nPros:
+        \n\u2022 Very effective (~99 percent)
+        \n\u2022 Requires no preparation before sex
+        \n\u2022 Benefits include lighter/shorter periods, improved acne, protection against some cancers and Pelvic Inflammatory Disease (PID)
+        \nCons:
+        \n\u2022 May be less effective if you are overweight, take certain antibiotics/antifungals, or have had GI issues like diarrhea or vomiting
+        \n\u2022 Side effects include bleeding, breast tenderness, nausea/vomiting, weight gain, reduced libido (sex drive)
+        \n\u2022 May cause mood changes if you have a history of anxiety or depression
+        \n\u2022 If you smoke, the Pill should be used with caution
+        \n\nDiaphragm and cervical cap  and prevent sperm from fertilizing the egg): Before inserting the cap over the cervix, a cream or jelly is used inside the cup to kill sperm, and it can be inserted up to six hours before sex. The diaphragm has a 6 percent chance of failure. In other words, if you use the diaphragm to avoid pregnancy, there’s a 6 percent chance that you could become pregnant.
+        \nPros:
+        \n\u2022 Can be used be almost all women
+        \n\u2022 May protect against some sexually transmitted infections (STIs)
+        \nCons:
+        \n\u2022 May cause side effects, such as discomfort
+        \n\u2022 Must be inserted before sex
+        \n\nFemale condom (lines the vagina).The female condom has a 5 percent chance of failure.
+        \nPros:
+        \n\u2022 Reduces STI’s
+        \n\u2022 Easy to get
+        \nCons:
+        \n\u2022 Must be inserted immediately before sex
+        \n\nMale condom (fits over the penis to stop the sperm from entering the vagina): The failure rate for a condom can vary between 2 and 18 percent based on how well you and your partner use this method. Some condoms are coated with spermicide, which kills male sperm. This can help to prevent pregnancy.
+        \nPros:
+        \n\u2022 Protects against STIs
+        \n\u2022 Easy to get
+        \nCons:
+        \n\u2022 Must be put on immediately before sex
+        \n\nChemical barriers (A sperm-killing foam, cream, or tablet is inserted into the vagina before sex). The failure rate ranges from 18 to 28 percent, but this method is more effective when used with a male or female condom.
+        \nPro:
+        \n\u2022 Easy to get
+        \n\u2022 Reduces STI’s
+        \nCons:
+        \n\u2022 Must use immediately before sex
+        \n\u2022 May cause side-effects
+        \n\u2022 Not effective
+        \n\nImplant (a small implantable rods inserted under the skin in the upper arm): The implant, called Nexplanon, slowly releases a hormone (progestin) that prevent your egg from being released. Implants have a failure rate of less than 1 percent each year.
+        \nPros:
+        \n\u2022 Reversible
+        \n\u2022 Can be effective for 3 - 5 years
+        \n\u2022 Effective (>99 percent)
+        \n\u2022 “Invisible” (no preparation required before sex)
+        \nCons:
+        \n\u2022 Can be expensive
+        \n\u2022 May cause irregular periods and other side effects
+        \n\u2022 Can only get an implant by making an appointment and seeing a doctor
+        \n\nContraceptive injection (injection of a hormone (progestin)). The injection, commonly known as Depo-Provera, prevents your egg from being released. It has a failure rate of less than 1 percent. You can go to a provider to get the shot or buy SubQ Depo and give yourself the shot.
+        \nPros:
+        \n\u2022 Effective (>99 peercent)
+        \n\u2022 Lasts for 3 months
+        \nCons:
+        \n\u2022 Side effects
+        \n\u2022 The method itself may be painful
+        \n\u2022 Must remember every three months to get another shot
+        \n\nFertility awareness methods (modifying your sexual activity based on observing your physical changes): There are different ways that you can tell when you’re fertile, including the texture of your cervical mucus and your basal body temperature. You can ask your doctor about these methods or use a reliable online source. Since it can be difficult to use this method, it has a failure rate of up to 25 percent.
+        \nPros:
+        \n\u2022 No special equipment or prescriptions required
+        \n\u2022 Effective if used correctly
+        \n\u2022 No preparation before sex
+        \nCons:
+        \n\u2022 Must avoid sex for at least 8 days every month
+        \n\u2022 Can be difficult to use this method perfectly
+        \n\u2022 Can be time consuming - must observe bodily changes everyday
+        \n\u2022 Patch (hormones (estrogen and progestin) delivered through a patch on the skin). The hormones prevent an egg from being released from your ovaries. To use this method, you place a patch on your skin each week for three weeks, then have no patch the following week. It has similar side effects and benefits as the pill.
+        \nPros:
+        \n\u2022 Don’t need to remember to take every day
+        \n\u2022 Predictable periods
+        \nCons:
+        \n\u2022 Less effective if you are overweight or on certain medications
+        \n\u2022 Side effects, which can be made worse if you’re over 35 and smoke
+        \n\nVaginal Ring (hormones (estrogen and progestin) delivered through a flexible plastic ring, inserted in the vagina). To use the ring, also called the NuvaRing, you insert and leave it in for three weeks, then take it out for the fourth week. The failure rate is about 1 percent.
+        \nPros:
+        \n\u2022 May reduce anemia (which happens if you have low iron in your blood) and PMS
+        \n\u2022 Don’t need to remember to take every day
+        \n\u2022 Has a lower dose of hormones, which may mean less side effects
+        \nCons:
+        \n\u2022 Side effects, including bleeding between your periods
+        \n\nIntrauterine devices (IUDs) (a device that is inserted into uterus by a qualified healthcare provider): IUDs can either be hormonal or non-hormonal. Hormonal IUD’s release a small amount of progestin to thicken your cervical mucus. You will still release an egg, but it will be difficult for sperm to reach this egg. Non-hormonal IUD’s, made of plastic and copper, kill sperm within the uterus so that it can’t fertilize your egg. The failure rate is less than 1 percent.
+        \nPros:
+        \n\u2022 Effective for 3-6 years (hormonal) and up to 12 years (non-hormonal)
+        \nCons:
+        \n\u2022 Side effects include cramps, heavy periods, bleeding between periods, and a greater risk of STI’s
+        \n\u2022 Can only get an IUD by making an appointment and seeing a doctor
+        \n\nPermanent sterilization or your partner’s reproductive organs): You can get a tubal ligation, which requires surgery, or implant, which are insertions placed in your fallopian tubes to block them. Your partner can get a vasectomy to block sperm from leaving the penis. These methods are permanent and have a 1 percent rate of failure.
+        \nPros:
+        \n\u2022 Effective indefinitely
+        \nCons:
+        \n\u2022 Cannot regain fertility if you change your mind
+        \n\u2022 May require surgery
+        \n\nIf you have unprotected sex or you think your contraceptive method may have failed, you can take the morning-after pill or have a doctor insert an IUD within 5 days to prevent pregnancy.
+    </string>
+
+
+    <string name="procedures_title"><b>Pre-natal Medical Procedures</b></string>
+    <string name="procedures_frag">
+        \n<u>First prenatal check up</u>
+        \nNorthern Plains and IHS both offer pre-natal visits. When you schedule an appointment, be sure to ask about what other information you will need.
+        \n\nYour provider will gather general health information and information that may have an effect on your pregnancy:
+        \n\u2022 Date of your last menstrual period (This helps your provider to determine your due date.)
+        \n\u2022 Health problems, like diabetes, high blood pressure or sexually transmitted infections STIs
+        \n\u2022 Past pregnancies (for example, if you had a preterm birth or miscarriage before)
+        \n\u2022 Past hospital stays
+        \n\u2022 Medicines you’re taking or if you’re allergic to any medicines
+        \n\u2022 Lifestyle, such as if you drink alcohol, smoke or use street drugs like marijuana or ecstasy
+        \n\u2022 Exercise or other activities you do
+        \n\u2022 Stress you feel
+        \n\u2022 Safety of your environment
+        \n\u2022 Your family health history (Talk to your family members related to you by blood to learn about any diseases or illnesses that run in your family.)
+        \n\u2022 Your partner’s family health history
+        \nSome routine tests and exams will be done
+        \n\u2022 Your weight will be determined
+        \n\u2022 Your blood pressure will be taken
+        \n\u2022 You will have a physical exam and a pelvic (internal) exam
+        \n\u2022 Your urine will be checked for infection
+        \n\u2022 You will have various blood tests to check for anemia and to see if you have certain infections. You will be offered a blood test for HIV, the virus that causes AIDS, but you have a right to say “no”
+        \n\u2022 You may have a Pap smear to check for cervical cancer and other tests for vaginal infections
+        \n\u2022 You will also receive a prescription for a prenatal vitamin with 600 micrograms of folic acid
+        \n\n<u>In later prenatal check-ups, a doctor or nurse will</u>
+        \n\u2022 Check your weight
+        \n\u2022 Take your blood pressure
+        \n\u2022 Measure your belly to see how your baby is growing (second and third trimesters)
+        \n\u2022 Check your hands, feet and face for swelling
+        \n\u2022 Listen for the baby\'s heartbeat (after the 12th week of pregnancy)
+        \n\u2022 Feel your belly to find your baby\'s position (later in pregnancy)
+        \n\u2022 You may have other blood tests, or ultrasound examinations as needed
+        \n\u2022 Talks to you about your questions or concerns
+
+        \n\n<u>Reasons for having an ultrasound</u>
+        \n\u2022 To confirm you’re pregnant and make sure that the pregnancy is in the right place.
+        \n\u2022 To check your baby’s age and growth. This helps your provider figure out your due date.
+        \n\u2022 To check your baby’s heartbeat, muscle tone, movement and overall development
+        \n\u2022 To check to see if you’re pregnant with twins, triplets or more (also called multiples)
+        \n\u2022 To screen for birth defects, like spina bifida or heart defects. Screening means seeing if your baby is more likely than others to have a health condition; it doesn’t mean finding out for sure if your baby has the condition. After an ultrasound, your provider may want to do more tests, called diagnostic tests, to see for sure if your baby has a birth defect. Birth defects are health conditions that a baby has at birth.
+        \n\u2022 To help with other optional prenatal tests like amniocentesis
+        \n\u2022 To examine your ovaries (Ovaries are where eggs are stored in your body) and uterus (womb).
+        \n\u2022 To check for pregnancy complications such as a miscarriage
+        \nTypes of ultrasound include…
+        \nTransabdominal ultrasound:
+        \n\u2022 The most common type of an ultrasound
+        \n\u2022 You lie on your back and your provider covers your stomach in a thin layer of gel. Then, your provider will move a wand across your abdomen, called a transducer. The transducer sends sound waves through you skin and an image of the baby can then be seen on a TV monitor.
+        \nTransvaginal ultrasound:
+        \n\u2022 This ultrasound is done through the vagina
+        \n\u2022 A thin transducer will be inserted into your vagina
+        \n\u2022 You may feel pressure from the transducer, but it should not be painful
+        \n\u2022 This type of ultrasound is usually done early in pregnancy or if the baby is difficult to see.
+        \nA couple of other specialized ultrasounds may be used under special circumstances
+        \nUltrasound is safe for you and your baby. It is safer than X-ray since sound waves are used instead of radiation to detect your baby.
+
+        \n\n<u>First trimester prenatal tests</u>
+        \nThese tests can be preformed at the IHS prenatal clinic, or with other prenatal healthcare providers, but be sure to request them if they’re not immediately offered.
+        \n\nChorionic villus sampling (also called CVS)
+        \nA test that uses a small piece of tissue from the placenta (The placenta is the structure that provides oxygen and nutrients to your growing baby and removes waste products from your baby\'s blood. The placenta attaches to the wall of your uterus, and your baby\'s umbilical cord arises from it.) to see if a baby has a genetic condition, like Down syndrome.
+        \nCVS is usually performed between 11 and 13 weeks of pregnancy.
+        \n\u2022 Your provider may offer you to have CVS if:
+        \n\u2022 You are 35 or older
+        \n\u2022 You have a genetic condition that “runs in your family.”
+        \n\u2022 Your first-trimester screening shows that your baby is at increased risk for birth defects
+        \nCystic fibrosis (CF is a disease that affects breathing and digestion. It is a lifelong disease that cannot be cured, but can be treated.) (also called CF) carrier screening.
+        \nA blood test to see if you are carrier of a gene for CF
+        \nCarriers of the gene are not affected with CF, but can pass that gene to a baby. If the father is also a carrier, there is a possibility that you both will pass on the gene for CF and the baby will have the disease.
+        \nCystic fibrosis is more common in Caucasians but is found in all ethnic groups
+        \nYou and your partner can have this test any time during pregnancy
+        \n<u>First-trimester screening</u>
+        \n\u2022 Done between 11 to 14 weeks of pregnancy
+        \n\u2022 A test to see if your baby may be at risk for some birth defects, like Down syndrome.
+        \n\u2022 It is a two-part test that includes a blood test and an ultrasound.
+        \n<u>Second trimester prenatal tests</u>
+        \nMaternal blood screening (also called Quad screen)
+        \n\u2022 Done at 15 to 22 weeks of pregnancy
+        \n\u2022 Tests your blood to see if your baby is at risk for three birth defects: Down syndrome, spina bifida and trisomy 18.
+        \n\u2022 It is called a Quad screen because it measures four substances in the mother\'s blood: alpha-fetoprotein (AFP), estriol, human chorionic gonadotropin (hCG) and inhibin A
+        \n<u>Amniocentesis (also called amnio)</u>
+        \n\u2022 Usually done at 15 to 20 weeks of pregnancy
+        \n\u2022 Tests the amniotic fluid from around your baby to see if he/she has a genetic condition, like Down syndrome
+        \n\u2022 Your provider may offer you an amniocentesis for the same reasons as you might have a CVS (see above)
+        \n<u>Glucose screening</u>
+        \nA test to see if you have gestational diabetes (see “Pregnancy Complications”) This is a kind of diabetes that some women get during pregnancy
+        \nGestational diabetes is a type of diabetes that generally resolves after the end of pregnancy. It’s caused by too much glucose in the blood and too little insulin, which helps to absorb your blood glucose.
+        \nThis condition can lead to:
+        \n\u2022 Pre-eclampsia
+        \n\u2022 Premature birth
+        \n\u2022 Your baby may be heavier, increasing the risk of injury to your baby during labor/birth.
+        \n\u2022 Your baby may be more likely to develop diabetes and be overweight later in life
+        \n\u2022 You get this test at 24 to 28 weeks of pregnancy.
+
+        \n\n<u>Third trimester prenatal tests:</u>
+        \n\u2022 Group B strep (also called GBS)
+        \n\u2022 Done at 35 to 37 weeks of pregnancy.
+        \n\u2022 Group B strep is an infection you can pass to your baby during birth. GBS is usually not serious for adults, but can be for newborns. Many adults carry GBS without every showing symptoms, but in newborns, it can cause meningitis, sepsis, and pneumonia.
+        \n\u2022 The test checks fluid from your cervix to see if you have GBS
+        \n\u2022 If your test is positive, your doctor will administer a treatment (generally an intravenous dose of an antibiotic like penicillin) during birth to prevent your baby from becoming infected. It’s not necessary or helpful to take an antibiotic before beginning labor
+        \n\u2022 GBS infection can lead to preterm labor, premature rupture of the amniotic sack (your water breaks early), and still-birth
+    </string>
+
+    <string name="pregnancy_title"><b>Pregnancy</b></string>
+
+
+    <!--Resources Fragments-->
+    <string name="coteau_title"><b>Coteau</b></string>
+    <string name="coteau_frag">
+        Provides: clinic, hospital, emergency room, cardiac rehabilitation, dietician, home health, laboratory, pharmacy, and radiology.
+        \n\nPrimary care providers include
+        \n\t\u2022 Dr. Judy Beumer (1988)
+        \n\t\u2022 Dr. David Oey (1974)
+        \n\t\u2022 Dr. Linda Peterson, OB/GYN (2003)
+        \n\t\u2022 Dr. Stanley Gallagher (2011)
+        \n\t\u2022 Bradley Gallagher, PA-C (2011)
+        \n\t\u2022 Jackie Bartlett, PA-C (2014)
+        \n\t\u2022 Angie Gaikowski, NCP (2015)
+        \n\t\u2022 Dr. David Meadows (2016)
+        \n\t\u2022 Dr. Shira Tomboulian (2016)
+        \n\t\u2022 Nate Tiedeman, DNCP (2016)
+        \n\nEligibility: all ages, no eligibility requirements
+        \n\nPayment: Private Insurance
+        \n\nContact: 605-698-7681
+
+    </string>
+
+    <string name="gptchb_title"><b>GPTCHB Northern Plains Healthy Start</b></string>
+    <string name="gptchb_frag">
+        Provides: community based program utilizing paraprofessional Community Health Workers to deliver a variety of services to women and childbearing age, their partners, and children from birth to 24 months.
+        \n\n<b>1. Case Management: </b>Your case manager can help you design an individualized case plan to meet your needs. Some of the things your case manager can help you with include: assessment to determine your needs and identify potential barriers to a healthy pregnancy, help to meet those needs and reduce the barriers, support to complete paperwork and apply for services you are eligible for, advocacy to help you get the services you need, help to find resources in your community, job search counseling, help with budgeting, and encouragement to help you reach your goals.
+        \n<b>2. Health and Life Skills Education:</b>  The Community Health Workers are trained to provide you with the latest information on prenatal and post-partum care, family planning, child development, and infant and toddler care. They can also help you with basic life skills such as organization, cooking, meal planning, budgeting, and more.
+        \n<b>3. Screening and Referral: </b>Are you struggling with depression, addiction, relationship problems? Do you want to complete your education? Want to stop smoking? The Community Health Workers can help you identify problems and provide you with referrals to professionals who can help you and your baby thrive!
+        \n<b>4. Home Visiting: </b>Do you want services, but don/’t know how you will get there? The Community Health Workers provide home visiting services to bring first class Health and Life Skills education right into your home, using the Family Spirit curriculum. Culturally appropriate education modules make learning easy interesting, and fun.
+        \n<b>5. Enabling Services:</b> Is it difficult to get to prenatal, postpartum, or well child appointments? They can provide transportation services to help you get to appointments. Does visiting the doctor make you nervous? We provide accompaniment services.  Your community health worker may be able to attend appointments with you. (Accompaniment and transportation services may be limited by funding or staff availability).
+
+        \n\nEligibility: Live in one of the 7 Healthy Start communities in ND and SD
+
+        \n\nPayment: Free
+
+        \n\nContact: 605-742-3820
+
+    </string>
+
+    <string name="midwest_title"><b>MidWest Special Ed Coop</b></string>
+    <string name="midwest_frag">
+        Provides: special education services to children ages birth through 21, in conjunction with member school districts
+
+        \n\nPayment: Should be covered by school but third parties can apply for additional funding - http://media.wix.com/ugd/1ad0bd_58f07b8fe0994cfa87a424d1b3529fcd.pdf
+        Also seems to just be localized to Minnesota schools
+
+        \n\nContact: 320-589-4248
+
+    </string>
+
+    <string name="nesd_title"><b>NESD Head Start</b></string>
+    <string name="nesd_frag">
+        <b>Provides:</b>
+        \n<i>Assistance through education, training, awareness and support:</i> Support families in their efforts to improve the quality of family life, through Family Partnership building, assisting families in accessing community services and resources, providing opportunities for parent education and serving as a family advocate.
+        \n<i>Family Services:</i> organizes parent group/meetings and informational speakers who can provide insight about parenting issues, family relationships, child development and budgeting
+
+        \n\n<i>Coordinate health and wellness screenings (dental, vision, hearing, etc.)</i>
+
+        \n\n<b>Eligibility:</b> Child must be 3 or 4 years old by September 1 to be considered for the program. 90% of the Head Start enrollment must be children of families who meet federally regulated income guidelines determined by the Department of Health and Human Services.
+
+        \n\n<b>Payment:</b>
+
+        \n\n<b>Contact: </b>605-698-4228
+
+    </string>
+
+    <string name="roberts_title"><b>Roberts County Community Health - WIC</b></string>
+    <string name="roberts_frag_1">
+        <b>Provides:</b> services to help improve the health of residents of Roberts County, South Dakota
+        \nWIC, Family Planning, Immunizations, Cribs for Kids, ASQ/ASQ:SE Screening, Breastfeeding Support, Baby Care (Case Management for Pregnant Women), Reach Out and Read
+
+        \n\n<i>WIC:</i>
+        \n\u2022 Patient population: Pregnant women, Postpartum women (up to 6 months) and breastfeeding women up to 1 year, children aged 0-5
+        \n\u2022 Immunizations: children age 0 up until 19 birthday, and all ages for flu vaccines
+        \n\u2022 Family Planning: Adolescent and Adult men and women
+        \n\u2022 Case Management: Pregnant women
+        \n\u2022 Cribs for Kids: A care provider in need of a safe place for infant to sleep that participates in any assistance program including but not limited to Medicaid, Energy Assistance, SNAP, WIC, etc.
+        \n<i>Oral Health:</i> Education on dental health/oral care, provide toothbrushes/toothpaste, quick screenings and referrals
+        \n<i>Mental Health:</i> Discuss client/’s concerns about depression/anxiety, provide contact information to referral sources.
+        \n<i>Well Child:</i>
+        \n\u2022 Discuss healthy nutrition, dental care, exercise, life style choices
+        \n\u2022 Complete ASQ (Ages and Stages Questionnaire) and ASQ:SE (Ages and Stages Questionnaire: Social-Emotional) screenings
+        \n\u2022 Provide immunizations
+        \n\u2022 Check hemoglobins
+        \n\u2022 Take height and weight measurements and make referrals as appropriate to dental, health, mental health, schools etc.
+        \n\u2022 Provide children with books through the reach out and read program and discuss the importance of reading to child.
+        \n<i>Prenatal Care:</i>
+        \n\u2022 Monthly visits for pregnant women that discusses healthy habits during pregnancy
+        \n\u2022 Monitor blood pressure and weight
+        \n\u2022 Assess substance use
+        \n\u2022 Monitor for signs of preterm labor or warning signs
+        \n\u2022 Discuss fetal kick counts
+        \n\u2022 Referrals for car seats, prenatal care, oral care, etc.
+        \n<i>Labor and Giving Birth:</i>
+        \n\u2022 Discuss at case management and prenatal health review appointments, signs of labor, warning signs, etc.
+        \n\u2022 Referrals made to hospital and clinic as appropriate, also to prenatal classes at Sanford Watertown, IHS and CDP.
+        \n<i>Family Planning:</i>
+        \n\u2022 Provide services on a sliding scale fee which includes annual exams, birth control pills, injections or devices.
+        \n\u2022 Provide education on STI, pregnancy prevention, safe sex practices. Screening for STIs, and pregnancy tests done. Available for teens and adults.
+        \n<i>Home Visiting:</i>
+        \n\u2022 Complete risk assessment on pregnant women, and, depending on needs found, referrals made to Bright Start or Healthy Start Programs
+        \n\u2022 Offer postpartum women and infants home visits following delivery, which include wellness checks, health assessment, and weight/length measurements
+        \n\u2022 Advocacy: Referrals as needed
+        \n<i>Special Needs:</i>
+        \n\u2022 ASQ (Ages and Stages Questionnaire) and ASQ:SE (Ages and Stages Questionnaire: Social-Emotional) completed; when needs are identified referrals are made to Early Childhood Intervention, Birth to Three or local school district
+        \n\u2022 Education Setting: Assess for needs/concerns by completing ASQ and ASQ:SEs. Referrals made to Head Start, preschools, and local school districts.
+        \n\u2022 Referrals also made to GED programs when pregnant or postpartum women verbalize a desire to complete GED.
+        \n<i>Breastfeeding Support:</i>
+        \n\u2022 Hands-on assistance with latch or breastfeeding problems
+        \n\u2022 Referrals to lactation consultants as needed
+        \n\u2022 Weighted feedings
+        \n\u2022 Breastpumps including manual, hospital grade double electric, and single user pumps.
+        \n<i>Child Development:</i>
+        \n\u2022 Education, and assessment by completing ASQ (Ages and Stages Questionnaire) and ASQ:SE (Ages and Stages Questionnaire: Social-Emotional)
+        \n\u2022 Referrals to Early Childhood Intervention, Schools, and Birth to Three as needed
+        \n\u2022 Parenting: Assess needs of parents at WIC appointments, such as stressors, need for support, child care resources, etc., and referrals made as needed.
+        \n<i>Hardship Assistance:</i>
+        \n\u2022 Provide vouchers through the WIC program for food
+        \n\u2022 Provide pack n/’ plays for infants to sleep through the Cribs for Kids program
+        \n\u2022 Assess needs of families at each appointment and referrals made to social services, the "kitchen", homeless shelter, women/’s shelters, etc.
+
+        \n\n<b>Payment/Eligibility:</b>
+        \n\u2022 Applicants must meet residency guidelines
+        \n\u2022 Must have a health or nutrition risk
+        \n\u2022 Must meet familial income guidelines: Must be recipient of SNAP, Medicaid, TANF, or FDPIR OR fit into the following income brackets:
+
+    </string>
+
+    <string name="roberts_frag_2">
+        \n<b>Contact: </b>605-698-4183
+    </string>
+
+    <string name="sd_breastfeeding_title"><b>SD Department of Health Breastfeeding Peer Counselor</b></string>
+    <string name="sd_breastfeeding_frag">
+        <b>Provides:</b>
+        \n\u2022 Breast feeding education prenatally and postpartum via face to face meetings
+        \n\u2022 Breastfeeding classes, phone calls, text messages, and mailings
+        \n\u2022 Hospital visits also provided
+
+        \n\n<b>Eligibility:</b> For Roberts county WIC participants
+
+        \n\n<b>Payment:</b> see WIC
+
+        \n\n<b>Contact:</b> 605-698-4183
+
+    </string>
+
+    <string name="sd_home_visiting_title"><b>SD Department of Helath Bright Start Home Visiting</b></string>
+    <string name="sd_home_visiting_frag">
+        <b>Provides:</b> Maternal Child Health Home Visitation Program
+        \nOral: Provide toothbrushes, toothpaste, dental floss
+        \nMental Health: EPDS (Edinburgh Postnasal Depression Scale) screening; GAD-7 (General Anxiety Disorder) screening and Domestic Violence screening Well Child: Provide direct nursing assessments such as Height, Weight, head circumference, temperature, Screen for nutrition and immunization status; Provide Reach Out andRead books, conduct ASQ (Ages and Stages Questionnaire) and ASQ-Social Emotional screenings
+        \nWell Child: Provide direct nursing assessments such as height, weight, head circumference, temperature
+        \n\u2022 Screen for nutrition and immunization status
+        \n\u2022 Provide Reach Out and Read books
+        \n\u2022 Conduct ASQ (Ages and Stages Questionnaire) and ASQ-Social Emotional screenings
+        \nLabor and Birth: Height, Weight, Blood Pressure, Temperature
+        \nPost-partum: Breastfeeding support
+        \nInfant care: Provide Pack n Plays for safe sleep
+        \nHome visiting services provided by a registered nurse using the Nurse Family Partnership curriculum. RN visits the families until child turns 2 years old.
+        \n\n<b>Eligibility: </b>First-time moms only; must be 28 weeks or less in pregnancy and low resources
+        \n\n<b>Payment: </b>see WIC
+        \nReceipts: https://doh.sd.gov/local-offices/child-family-services/
+        \n\nContact: 605-698-4183
+    </string>
+
+    <string name="sd_social_title"><b>SD Department of Social Services</b></string>
+    <string name="sd_social_frag">
+        <b>Provides:</b> programs such as Supplemental Nutrition Assistance Program (SNAP), Temporary Assistance for Needy Families (TANF), Medicaid and Children/’s Health Insurance Program (CHIP).
+
+        \n\n<b>Payment:</b> SNAP, TANF, Medicaid, CHIP
+
+    </string>
+
+    <string name="sisseton_clinic_title"><b>Sisseton IHS Clinic</b></string>
+    <string name="sisseton_clinic_frag">
+        <b><i>Woodrow Wilson Keeble Healthcare Center</i></b>
+        <b>Provides:</b>
+        \n\u2022 Pediatrics and OB/GYN
+        \n\t\tM-F 8:00 am-8:00 pm
+        \n\t\tS-S 1:00 pm–5:00 pm
+        \n\u2022 We see patients in a clinical setting for chronic and acute conditions
+        \n\u2022 Clinical nursing staff are patient advocates, assisting the patient in getting the care they need through referrals, counseling, or hands-on care
+
+        \n\n<b>Eligibility:</b> enrolled American Indians of federally recognized tribes, like SWO, due to treaty negotiations in the past. Non-Indian women who are pregnant with an Indian child are eligible to receive pre-natal services.  IHS Caveat:
+        \n\u2022 Direct health care services are services provided at an IHS/Tribal/Urban facilities
+        \n\u2022 Purchased/Referred Care (PRC) are services that the IHS is unable to provide in its own facilities. PRC are provided by non-IHS health care providers and facilities. PRC payments are authorized based on clearly defined guidelines and are subject to availability of funds. The Indian Health Service cannot always guarantee that funds are always available.
+
+        \n\n<b>Payment:</b> Free to enrolled American Indians
+
+        \n\n<b>Contact:</b> 605-698-7606
+
+    </string>
+
+    <string name="sisseton_dental_title"><b>Sisseton IHS Dental</b></string>
+    <string name="sisseton_dental_frag">
+        <b>Provides:</b>
+        \nChildren 0-5: Provide oral examinations, operative services (fillings/crowns), dental cleanings, sealants, fluoride treatments, oral hygiene instructions, oral health education. Also provide in hospital sedation services for small children during complex dental treatment. Prenatal: oral examinations, radiographs, fillings, root canal therapy, extractions, cleanings, periodontal therapy, sealants, oral hygiene instructions, oral health education, fluoride treatments, partial denture and dentures, crown and bridge.
+        \nProvide oral health screenings, sealants and fluoride treatments for Early Head Start and Head Start children.
+        \n\n<b>Payment:</b> If through Head Start, must meet WIC payment guidelines; IHS provides free services to tribe members
+
+        \n\n<b>Contact:</b> 605-742-3857
+
+    </string>
+
+    <string name="sisseton_nurse_title"><b>Sisseton IHS Public Health Nurse</b></string>
+    <string name="sisseton_nurse_frag">
+        <b>Provides:</b>
+        \n\u2022 Providers: Certified Lactation Counselor (CLC), Certified Childbirth Educator
+        \n\u2022 Home visits and office visits, offering education, physical assessments for prenatal, postpartum and newborns. Focus on high-risk prenatal patients, and offer home visits for all postpartum and newborns.
+        \n\u2022 Individual and group breastfeeding and childbirth classes. Offer hands on support with breastfeeding after delivery at hospital and/or home as requested through out the time the child is breastfed
+        \n\u2022 Immunizations to infants and adults
+        \n\u2022 Offer presentations in community as requested
+        \n\u2022 Go into the daycares, Early Head Start and Head Start programs and offer immunizations and hearing screenings.
+
+        \n\n<b>Eligibility:</b> Will see children 0-5 based on need and/or referral from medical provider.
+
+        \n\n<b>Payment:</b> If through Head Start, must meet WIC payment guidelines; IHS provides free services to tribe members
+
+        \n\n<b>Contact:</b> 605-742-3766
+    </string>
+
+    <string name="sisseton_school_title"><b>Sissteon School District SPED</b></string>
+    <string name="sisseton_school_frag">
+        <b>Provides: </b>
+        \n\u2022 Child find/assessment for service eligibility/provision of services
+        \n\u2022 Therapies (physical, occupational, and speech)
+        \n\u2022 Educational services to individuals from birth to school age as determined eligible for services
+
+        \n\n<b>Payment:</b> Free
+
+        \n\n<b>Contact:</b> 605-698-7613 ext. 221
+
+    </string>
+
+    <string name="swo_benefits_title"><b>SWO Benefits Coordinator</b></string>
+    <string name="swo_benefits_frag">
+        <b>Provides:</b>
+        \n\u2022 Assistance with applying for Medicaid and other alternate resources
+        \n\u2022 Explain how IHS Purchased/Referred care program interacts with Medicaid or other alternate resources
+        \n\u2022 Explain how selection of a Primary Care Provider (PCP) other than WWKHCC through SD Medicaid can or may influence decision to approve payments for emergency room visits, hospitalization, and Purchased and Referred Care (PRC) referrals.
+
+        \n\n<b>Payment:</b> Free
+
+        \n\n<b>Contact:</b> 605-698-7606
+    </string>
+
+    <string name="swo_cavity_title"><b>SWO Cavity Free</b></string>
+    <string name="swo_cavity_frag">
+        <b>Provides:</b>
+        \n\u2022 Sight screening for risk assessment and possible referral to a dentist
+        \n\u2022 Application of Fluoride Varnish
+        \n\u2022 Oral health supplies (brushes, toothpaste, floss, timers) and education
+        \n\u2022 Oral health education, oral health screening and referral (if needed)
+        \n\u2022 Home visits for all above and community events
+        \n\u2022 Referrals to dental services and assistance with accessing said services; assessment of needs and referrals to appropriate services along with advocacy and support
+        \n\u2022 Provide partial dental clinic in area schools, daycares, and other
+
+        \n\n<b>Payment:</b> Free
+
+        \n\n<b>Contact:</b> 605-742-3653
+
+    </string>
+
+    <string name="swo_child_title"><b>SWO Child Protection</b></string>
+    <string name="swo_child_frag">
+        <b>Provides:</b>
+        \n\u2022 Case management
+        \n\u2022 Child protection services
+        \n\t\t\u2022 Specialty in child abuse/neglect
+        \n\t\t\u2022 Foster care recruitment
+        \n\u2022 Advocacy for child wellness and child abuse/neglect.
+
+        \n\n<b>Eligibility:</b> requires participants to be federally recognized tribe members
+
+        \n\n<b>Contact:</b> 605-698-8309
+
+
+    </string>
+
+    <string name="swo_health_ed_title">SWO Community Health Ed</string>
+    <string name="swo_health_ed_frag">
+        <b>Provides:</b>
+        \n\u2022 Education on a variety of health related topics
+        \n\u2022 Provide information via brochures, PSA/’s, and email blasts on mental health issues such as depression and stress
+        \n\u2022 Coordinate mental health screening events in the community for the HIS Behavioral Health department
+        \n\u2022 Give a prenatal education packet and a small gift to pregnant women before their first prenatal appointment
+        \n\u2022 Provide car seats and child passenger safety education
+        \n\u2022 Smoking cessation program
+
+        \n\n<b>Payment:</b> Free
+
+        \n\n<b>Contact:</b> 605-742-3651
+
+    </string>
+
+    <string name="swo_health_rep_title">SWO Community Health Representative</string>
+    <string name="swo_health_rep_frag">
+        <b>Purpose:</b> To restore and sustain the basic self-sufficiency, dignity and integrity of Indian families on the Lake Traverse Reservation through the prevention and reduction of disease.
+
+        \n\n<b>Provides:</b>
+        \n\u2022 Monitor patients: Provide outreach and follow-up care to patients with known health problems, or who otherwise are at risk for developing problems, to monitor and assess their status
+        \n\u2022 Case Find/Screen: Carry out activities for the early detection of patients with diseases or conditions requiring medical attention, (i.e., hypertension, tuberculosis, pregnancy, etc.)
+        \n\u2022 Collaborate with other health care providers to deliver comprehensive, holistic services
+        \n\u2022 Provide transportation as needed in areas indicated in eligibility
+
+        \n\n<b>Eligibility:</b> Serves all seven district communities on the Lake Traverse Reservation, as well as the towns of Browns Valley, MN, Claire City, New Effington, Rosholt, Ortley, Peever, Sisseton, Summit, Waubay, Wilmot and Veblen, SD
+
+        \n\n<b>Payment:</b> HIS sub-service, therefore funded via HIS provisions
+
+        \n\n<b>Contact:</b> 605-698-3531
+
+    </string>
+
+    <string name="swo_pride_title">SWO Dakotah Pride Center</string>
+    <string name="swo_pride_frag">
+        <b>Provides:</b> Comprehensive services for the treatment of substance abuse and addiction diagnoses. Includes:
+        \n\u2022 Evaluations to determine substance/addiction diagnosis and placement in appropriate treatment.
+        \n\u2022 Provide for Level 3.7 Inpatient Treatment and 2.1 Intensive Outpatient Program
+        \n\u2022 Referral to other treatment programs as necessary.
+
+        \n\n<b>Eligibility:</b> Adolescents age 12 -17; Adults age 18 and above
+
+        \n\n<b>Payment:</b> Free for IHS recipients, non-IHS recipients pay through self-pay or insurance. No fee for those determined to meet IHS requirements for direct and Purchased and Referred (PRC) services. Verification of Tribal Membership may also be required.
+
+        \n\n<b>Contact:</b> 605-698-3917
+
+    </string>
+
+    <string name="swo_intervention_title">SWO Early Child Intervention Program</string>
+    <string name="swo_intervention_frag">
+        <b>Provides:</b>
+        \n\u2022 Registration of children
+        \n\u2022 Developmental screening
+        \n\u2022 Interventions and Family Liaison: Home visits and Intervention services for children on IEP/IFS; Screening and referrals Intervention services for children on IEP/IFSP; Home visits for family Liaison service
+        \n\u2022 Assistance for medical/dental appointments and referrals
+        \n\u2022 Layettes for newborns
+        \n\u2022 Parent training
+        \n\u2022 Provide resources to parents on assistance available from other programs
+        \n\u2022 Articles in local newspaper on children/’s health and well-being
+
+        \n\n<b>Payment:</b> Free, eligible for all children from birth to 5 years of age residing in SWO reservation
+
+        \n\n<b>Contact:</b> 605-698-4400
+
+    </string>
+
+    <string name="swo_education_title"><b>SWO Education</b></string>
+    <string name="swo_education_frag">
+        <b>Purpose:</b> To provide a comprehensive network of services for quality lifelong learning
+        \n\u2022 Work collaboratively with a network of partners to educate and promote cultural awareness
+        \n\u2022 Preserve the Dakota language
+        \n\u2022 Strive for excellence in education standards that meet or exceed state and federal standards
+        \n\u2022 Develop strategies to increase persistence, retention, and graduation rates at all levels of education.
+
+        \n\nIncludes:
+        \n\u2022 The Dakotah Language Institute
+        \n\u2022 Early Childhood Intervention Program
+        \n\u2022 SWO Head Start and Early Head Start Program
+        \n\u2022 Johnson O/’Malley Program
+        \n\u2022 Sisseton-Wahpeton College
+        \n\u2022 Tiospa Zina Tribal School
+        \n\u2022 Enemy Swim Day School
+        \n\u2022 And public schools
+        \nRegarding Indian Children/’s Education, JOM, Impact Aid, Title IX, and other Native American resources, programs and concerns.
+
+        \n\n<b>Payment:</b> Free
+
+        \n\n<b>Contact:</b> 605-698-8298
+
+    </string>
+
+    <string name="swo_food_title"><b>SWO Food Pantry</b></string>
+    <string name="swo_food_frag">
+        <b>Provides:</b> food for families in need; specialties in senior (65+) program
+
+        \n\n<b>Eligibility:</b> Tribal ID required. Need income verification; Single: $1800 per month
+
+        \n\n<b>Payment:</b> Free food packages, provided certain income guidelines are met.
+
+        \n\n<b>Contact:</b> 605-698-3643
+
+    </string>
+
+    <string name="swo_ehs_title"><b>SWO Head Start/EHS</b></string>
+    <string name="swo_ehs_frag">
+        <b>Provides:</b> Early Head Start (ages 0-3) and Head Start (ages 3-5)
+        \nEarly Head Start 7:30am-5:00pm Mon-Thurs. and 8:00am-4:30 Fri
+        \nHead Start 8:00 am-4:30pm
+        \n\u2022 Early Childhood Education and Development: promote school readiness through a structured curriculum based on Head Start and state education standards
+        \n\u2022 Child Health and Wellness: all students are screened for vision, hearing, dental, and cognitive wellness. Students that are found to have a need are referred for further services.
+        \n\u2022 Family Service Workers: assigned to all Head Start and Early Head Start families to assist them with needs and goals through screening, direct services, and referrals.
+
+        \n\n<b>Eligibility:</b> Enrollment scoring is based on income and the U.S. poverty guidelines, whether or not the child has a diagnosed or suspected disability, and other factors. There are 134 slots at the Head Start in Agency Village, 20 at the Head Start in Enemy Swim, and 40 at the Early Head Start in Agency Village
+
+        \n\n<b>Payment:</b> see WIC
+
+        \n\n<b>Contact:</b> 605-698-3103
+
+    </string>
+
+    <string name="swo_daycare_title"><b>SWO Little Steps Daycare</b></string>
+    <string name="swo_daycare_frag">
+        <b>Provides:</b> childcare services for newborns to children13 years of age
+        \n\u2022 7:30 am-5:00 pm M-F
+
+        \n\n<b>Payment:</b>
+        \n\u2022 Babies (0-18 mos.): $2.25 p/h
+        \n\u2022 Toddlers (18 mos.-3 YOA): $2.25 p/h
+        \n\u2022 3-6 YOA: $1.00 p/h
+        \n\u2022 6-13 YOA: $1.00 p/h
+
+        <b>Contact:</b> 605-742-0280
+
+    </string>
+
+    <string name="swo_mch_title"><b>SWO Maternal/Child Health (MCH)</b></string>
+    <string name="swo_mch_frag">
+        <b>Provides:</b>
+        \nFamily planning information and support to the prenatal and post-natal
+        \nServes women considered “high risk” as indicated by their age, parity, reproductive history, and marital status
+        \nAides…
+        \n\u2022 Conduct home-visits
+        \n\u2022 Provide education and counseling in family planning
+        \n\u2022 Make referrals for female health care needs
+        \n\u2022 Provide guidance in appropriate birth control methods or procedures
+        \n\u2022 Provide follow-up services such as, transportation to prenatal, post-partum and well-child appointments, and resource agencies
+
+        \n\n<b>Payment:</b> It seems like it/’s free, but limited based on how much grant money the tribe receives???
+
+        \n\n<b>Contact:</b> 605-698-3531
+        \n\n<b>Link:</b> https://mchb.hrsa.gov/maternal-child-health-topics/perinatalinfant-health
+
+    </string>
+
+    <string name="finance_frag_1">
+        To apply for Medicaid in the state of South Dakota, print and fill out this application  (http://dss.sd.gov/formsandpubs/docs/MEDELGBLTY/FSSA.pdf). Mail, fax, or deliver your application to a Department of Social Services local office. You can also call 1-800-305-3064 to request that an application be sent to you. You don’t need an interview to apply for Medicaid, but you can request one. The start date of medical coverage depends on the date that the application is received. You may be covered up to three months before the month the application is received if you have unpaid medical bills and meet eligibility requirements. In this case, you should provide proof of your income from the three months prior to the month you submitted the application. If you’re having trouble navigating the application or have more questions, you can contact Marsha Renville, the SWO Benefits Coordinator, at 605-742-3628 or 605-698-7606 or by visiting her office at the IHS building. Here are specific medical programs, what they entail, and their eligibility. The SNAP, Medicaid, CHIP, TANF, and Child Protection Services are located at 10 E. Hickory St, Sisseton, SD 57262-1425 in the same building as the WIC. You can call them at 605-698-7673 or 1-888-747-0017.
+        \n\n<b><u>Medicaid</u></b>
+        \n<i>Low-Income Families</i>
+    </string>
+
+    <string name="finance_frag_2">
+        \n<b><u>Medicaid for Pregnant Woman</u></b>
+        \nEligibility:
+    </string>
+
+    <string name="finance_frag_3">
+        \n<b><u>Medicaid for Certain Newborns</u></b>
+        \nCoverage for your baby from birth until the end of the month of your baby’s first birthday.
+        \nEligibility:  You must be eligible and receiving South Dakota Medicaid on the date of your baby’s birth
+        \n\n<b><u>Children\'s Health Insurance Program (CHIP)</u></b>
+        \nProvides quality health care (including regular check-ups, Well-Child Care exams, dental and vision care) for children and youth.
+        \nEligibility:  Children must be under the age of 19 and current residents of South Dakota. Children who are uninsured or already have health insurance may be eligible for CHIP based on income and eligibility guidelines (below).
+    </string>
+
+    <string name="finance_frag_4">
+        \n<b><u>Supplemental Nutrition Assistance Program (SNAP)</u></b>
+        \nProvides an EBT (electronic benefit transfer) card, which is loaded with benefits once a month.  Household members may use it to purchase food at one of the 261,000 retailers authorized to participate in the program. SNAP cannot be used to purchase alcoholic beverages, cigarettes, vitamin supplements, non-food grocery items such as household supplies, or hot foods.
+        \nRetailers in Sisseton that accept EBT (Check online for stores in nearby towns that accept EBT):
+        \n\u2022 ALCO Discount Store 211
+        \n\u2022 Family Dollar Store 7227
+        \n\u2022 Hortons Processing
+        \n\u2022 Huber Family Bakery
+        \n\u2022 Jemms Fuel Max
+        \n\u2022 Pamida 652
+        \n\u2022 Teal’s Market
+        \n\nFill out application here  (http://dss.sd.gov/formsandpubs/docs/GEN/301Application.pdf)
+        \nIncome eligibility (more detailed eligibility requirements can be found on the application)
+    </string>
+
+    <string name="finance_frag_5">
+        \n<b><u>Temporary Assistance for Needy Families (TANF)</u></b>
+        \nDesigned to provide temporary assistance and encourage economic self-sufficiency for children and families. An adult may not receive for more than 60 months (5 years). These months of assistance don’t need to be consecutive or within the same state. Can qualify for monthly payments if you are in serious financial need. Talk to your local TANF office at 10 E. Hickory Street or at 605-698-7673.
+
+        \n\nEligibility:
+        \n\u2022 Children under the age of 18 (or under 19 if the child is in high school)
+        \n\u2022 Need financial support because of: a death of a parent, a parent is absent from the home, or physical or mental incapacity or unemployment of a parent
+
+
+        \n\n\n<b><u>Breast and Cervical Cancer Program</u></b>
+        \nProvides treatment for breast or cervical cancer, including pre-cancerous conditions and early stage cancer
+
+        \n\nEligibility:
+        \n\u2022 You must have screened for breast and cervical cancer under the Breast and Cervical Cancer Control Program, administered by the Department of Health.
+        \n\u2022 You must be uninsured.
+        \n\u2022 You must meet age requirements (under 65 years old).
+        \n\u2022 Your yearly income can be up to $23,544.
+
+
+        \n\n\n<b><u>MAWD (Medicaid for Workers with Disabilities)</u></b>
+        \nThis program allows individuals with disabilities to return to work or remain working
+        \n\nEligibility:
+        \n\u2022 You must be employed.
+        \n\u2022 You must have a significant disability.
+        \n\u2022 You must have resources less than $8000.
+        \n\u2022 You must have less than $755 of monthly unearned income (money such as VA or SSDI, which is not earned from your job or business.
+        \n\n\n<b><u>Family Support Services</u></b>
+        \nProvides Medicaid for individuals with developmental disability such as Down\’s Syndrome, autism or cerebral palsy. Services include: standard Medicaid services, service coordination respite care, specialized medical and adaptive equipment and supplies, nutritional supplements, personal care, companion care, and environmental accessibility adaptations.
+
+        \n\nEligibility (for your baby):
+        \n\u2022 Your baby is found disabled by the Social security Administration or the Department of Social Services
+        \n\u2022 Your baby lives in the family home with natural family, adopted family, stepfamily, or relatives
+
+        \n\n\nDisabled Children\'s Program
+
+        \nProvides Medicaid for children with disabilities who have medically fragile conditions, requiring skilled nursing care in a medical facility.
+
+        \n\nEligibility:
+        \n\u2022 Your baby/child must be under the age of 19
+        \n\u2022 Your baby/child must be found disabled by the Social security Administration or the Department of Social Services
+        \n\u2022 Your child/baby must require medical care in the home comparable to a level of care needed in a hospital, nursing facility or intermediate care facility. A child who is medically stable (doesn’t require care in a medical institution), even though disabled, is not considered in need of a level of care.
+        \n\u2022 Health care services received in the home must have been ordered by a physician and could only be performed by a physician or nurse if the child were in a medical facility.
+        \n\u2022 Cost of the child’s monthly health care services at home must be the same or less than the cost of treating the child within a medical facility.
+        \n\u2022 The child’s monthly income must be less than 300 percent of the SSI Standard Benefit Amount ($2,205) and resources must be less than $2,000. (Resources include items such as checking and savings accounts and certificates of deposit.) Income and resources of the parents are not considered to determine eligibility.
+
+    </string>
+
     <string name="title_activity_background_intro">Introduction Information</string>
+    <string name="title_activity_calendar">Calendar</string>
+    <string name="title_activity_calendar2">Calendar2</string>
+    <string name="title_activity_cell">Cell</string>
+    <string name="title_activity_calendar_view">CalendarView</string>
+    <string name="title_activity_calendar_monthly">CalendarMonthly</string>
+    <string name="title_activity_calendar_agenda">CalendarAgenda</string>
+    <string name="title_activity_resources">Resources</string>
 </resources>

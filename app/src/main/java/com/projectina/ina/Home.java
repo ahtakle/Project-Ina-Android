@@ -1,9 +1,10 @@
 package com.projectina.ina;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
 
 public class Home extends AppCompatActivity {
 
@@ -25,18 +26,21 @@ public class Home extends AppCompatActivity {
         startActivity(intent);
     }
 
-    // Start Trimester Activity
-    public void dispatchTrimesterIntent(View view) {
-        Intent intent = new Intent(this, Trimesters.class);
-        /*EditText editText = (EditText) findViewById(R.id.edit_message);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);*/
+    // Start Resources Activity
+    public void dispatchResourcesIntent(View view) {
+        Intent intent = new Intent(this, Resources.class);
         startActivity(intent);
     }
 
     //Start Glossary Activity
     public void dispatchGlossaryIntent(View view) {
         Intent intent = new Intent(this, Glossary.class);
+        startActivity(intent);
+    }
+
+    //Start Calendar Activity
+    public void dispatchCalendarIntent(View view) {
+        Intent intent = new Intent(this, Calendar.class);
         startActivity(intent);
     }
 

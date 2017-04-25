@@ -9,6 +9,11 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <!-- For calendar?? -->
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -87,6 +92,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.projectina.ina.Home" />
         </activity>
+        <activity
+            android:name=".Calendar"
+            android:label="@string/title_activity_calendar2"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".CalendarMonthly"
+            android:label="@string/title_activity_calendar_monthly"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".CalendarAgenda"
+            android:label="@string/title_activity_calendar_agenda"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Resources"
+            android:label="@string/title_activity_resources"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

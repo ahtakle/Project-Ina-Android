@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#795548</color>
+    <!--Old Color Scheme-->
+    <!--<color name="colorPrimary">#795548</color>
     <color name="colorPrimaryDark">#4E342E</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="background">#D7CCC8</color>
+    <color name="background">#D7CCC8</color>-->
+
+    <!--Old Color Scheme #2-->
+    <!--<color name="colorPrimaryDark">#71A2B6</color>
+    <color name="colorAccent">#7C8483</color>
+    <color name="background">#982649</color>-->
+
+
+    <color name="colorPrimary">#7C8483</color>
+    <color name="background">#f8bbd0</color>
+    <color name="colorButtons">#DDDDDD</color>
+    <color name="colorAccent">#b2ebf2</color>
+    <color name="colorPrimaryDark">#222222</color>
+    <color name="colorText">#222222</color>
+
     <!--Glossary Term Colors-->
     <color name="info">#999999</color>
     <color name="term">#222222</color>
+
     <!-- MapFragHostActivity Tab Colors -->
     <color name="tab_background_selected">#795548</color>
     <color name="tab_background_unselected">#BCAAA4</color>
+
+    <!--Pop up colors-->
+
 </resources>

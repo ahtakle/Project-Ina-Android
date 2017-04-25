@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.projectina.ina.Resources"
+    android:id="@+id/content_resources">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.projectina.ina.Resources"
+        tools:showIn="@layout/activity_resources"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Click on a resource to learn more!"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:text="@string/coteau_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonCoteau"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/gptchb_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonGPTCHB"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/midwest_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonMidwest"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/nesd_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonNESD"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/roberts_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonRoberts"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/sd_breastfeeding_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSDBreastfeeding"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/sd_home_visiting_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSDHomeVisiting"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/sd_social_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSDSocial"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/sisseton_clinic_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSissetonClinic"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/sisseton_dental_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSissetonDental"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/sisseton_nurse_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSissetonNurse"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/sisseton_school_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSissetonSchool"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/swo_benefits_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSWOBenefits"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/swo_cavity_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSWOCavity"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/swo_child_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSWOChild"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/swo_health_ed_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSWOHealthEd"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/swo_health_rep_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSWOHealthRep"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/swo_pride_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSWOPride"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/swo_intervention_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSWOIntervention"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/swo_education_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSWOEducation"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/swo_food_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSWOFood"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/swo_ehs_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSWOEHS"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/swo_daycare_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSWODaycare"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="@string/swo_mch_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSWOMCH"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:text="Financial Resources"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonFinances"
+                    android:layout_marginTop="10dp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

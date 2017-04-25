@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.projectina.ina.GlossaryFragments.BreastfeedingFrag"
+    android:id="@+id/breastfeeding_frag"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/breastfeeding_title"
+        android:textSize="20sp"
+        android:background="@color/background"
+        android:layout_margin="10dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:keepScreenOn="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/breastfeeding_frag1"
+                android:textSize="16sp"
+                android:background="@color/background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@mipmap/cradle_position"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="Cradle position"
+                android:id="@+id/cradle" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@mipmap/crossover_hold"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="Crossover hold"
+                android:id="@+id/crossover_hold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@mipmap/clutch_hold"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="Clutch or football hold"
+                android:id="@+id/clutch_hold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@mipmap/reclining"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="Reclining"
+                android:id="@+id/reclining" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/breastfeeding_frag2"
+                android:textSize="16sp"
+                android:background="@color/background" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
