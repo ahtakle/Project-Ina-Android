@@ -12,21 +12,17 @@
     <color name="background">#982649</color>-->
 
 
-    <color name="colorPrimary">#7C8483</color>
-    <color name="background">#f8bbd0</color>
+    <color name="colorPrimary">#9c27b0</color>
+    <color name="background">#e0e0e0</color>
     <color name="colorButtons">#DDDDDD</color>
-    <color name="colorAccent">#b2ebf2</color>
-    <color name="colorPrimaryDark">#222222</color>
-    <color name="colorText">#222222</color>
+    <color name="colorAccent">#69EFAD</color>
+    <color name="colorPrimaryDark">#6a0080</color>
+    <color name="colorPrimaryLight">#d05ce3</color>
+    <color name="colorText">#FFFFFF</color>
+    <color name="colorTextDark">#000000</color>
 
     <!--Glossary Term Colors-->
-    <color name="info">#999999</color>
-    <color name="term">#222222</color>
-
-    <!-- MapFragHostActivity Tab Colors -->
-    <color name="tab_background_selected">#795548</color>
-    <color name="tab_background_unselected">#BCAAA4</color>
-
-    <!--Pop up colors-->
+    <color name="info">#000000</color>
+    <color name="term">#000000</color>
 
 </resources>

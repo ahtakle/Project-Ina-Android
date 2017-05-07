@@ -23,6 +23,8 @@ public class SubstanceAbuseFrag extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        getActivity().setTitle("Substance Abuse");
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_substance_abuse, container, false);
     }

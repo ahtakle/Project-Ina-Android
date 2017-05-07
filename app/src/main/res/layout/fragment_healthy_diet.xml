@@ -9,13 +9,6 @@
     android:orientation="vertical"
     android:background="@color/background">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/healthy_diet_title"
-        android:textSize="20sp"
-        android:background="@color/background"
-        android:layout_margin="10dp" />
 
     <ScrollView
         android:layout_width="match_parent"

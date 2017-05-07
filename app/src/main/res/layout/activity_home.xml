@@ -1,106 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.projectina.ina.Home">
 
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height="200dp"
-        app:srcCompat="@mipmap/mother_and_baby"
-        android:alpha="0.8" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="?android:dividerHorizontal"
+        android:showDividers="middle"
+        android:orientation="vertical">
 
-    <Button
+        <LinearLayout
+            android:id="@+id/dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".3"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:text="DASHBOARD"
+                android:textColor="@color/colorText"
+                android:textSize="30sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".35"
+            android:divider="?android:dividerVertical"
+            android:showDividers="middle"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/layout_map"
+                android:layout_width="0dp"
+                android:layout_weight=".50"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true">
+
+                <ImageButton
+                    android:id="@+id/imageButton_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="dispatchMapIntent"
+                    android:background="@color/background"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/ic_map_white_48dp"
+                    android:tint="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/textView_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageButton_map"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:textSize="20sp"
+                    android:text="Map"
+                    android:textColor="@color/colorPrimary"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_calendar"
+                android:layout_width="0dp"
+                android:layout_weight=".50"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true">
+
+                <ImageButton
+                    android:id="@+id/imageButton_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="dispatchCalendarIntent"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/ic_date_range_white_48dp"
+                    android:background="@color/background"
+                    android:tint="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/textView_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageButton_calendar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:textSize="20sp"
+                    android:text="Calendar"
+                    android:textColor="@color/colorPrimary"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".35"
+            android:divider="?android:dividerVertical"
+            android:showDividers="middle"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/layout_glossary"
+                android:layout_width="0dp"
+                android:layout_weight=".50"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true">
+
+                <ImageButton
+                    android:id="@+id/imageButton_glossary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="dispatchGlossaryIntent"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/ic_view_list_white_48dp"
+                    android:background="@color/background"
+                    android:tint="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/textView_glossary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageButton_glossary"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:textSize="20sp"
+                    android:text="Glossary"
+                    android:textColor="@color/colorPrimary"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_resources"
+                android:layout_width="0dp"
+                android:layout_weight=".50"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true">
+
+                <ImageButton
+                    android:id="@+id/imageButton_resources"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="dispatchResourcesIntent"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/ic_assignment_white_48dp"
+                    android:background="@color/background"
+                    android:tint="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/textView_resources"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageButton_resources"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:textSize="20sp"
+                    android:text="Resources"
+                    android:textColor="@color/colorPrimary"/>
+            </RelativeLayout>
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/toGlossary"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight=".50"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:onClick="dispatchGlossaryIntent"-->
+                <!--android:text="Glossary"-->
+                <!--android:textSize="25sp"-->
+                <!--android:background="@drawable/home_buttons"-->
+                <!--android:scaleType="center"-->
+                <!--android:src="drawable/ic_menu_camera"-->
+                <!--style="?android:buttonBarStyle"/>-->
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/toTrimesters"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight=".50"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:onClick="dispatchResourcesIntent"-->
+                <!--android:text="Resources"-->
+                <!--android:textSize="25sp"-->
+                <!--android:background="@drawable/home_buttons"-->
+                <!--android:scaleType="center"-->
+                <!--android:src="drawable/ic_menu_camera"-->
+                <!--style="?android:buttonBarStyle"/>-->
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:id="@+id/toIntroduction"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:width="300dp"
-        android:height="100dp"
+        app:layout_anchor="@id/dashboard"
+        app:layout_anchorGravity="bottom|right|end"
         android:onClick="dispatchBackgroundIntent"
-        android:text="Introduction"
-        android:textSize="25sp"
-        android:textStyle="italic"
-        android:background="@color/colorButtons" />
+        android:src="@drawable/ic_info_outline_black_24dp"
+        app:elevation="4dp" />
 
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal">
-
-            <Button
-                android:id="@+id/toMap"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="20dp"
-                android:width="155dp"
-                android:height="100dp"
-                android:onClick="dispatchMapIntent"
-                android:text="Map"
-                android:textSize="25sp"
-                android:textStyle="italic"
-                android:background="@color/colorButtons" />
-
-            <Button
-                android:id="@+id/toCalendar"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="20dp"
-                android:width="155dp"
-                android:height="100dp"
-                android:onClick="dispatchCalendarIntent"
-                android:text="Calendar"
-                android:textSize="25sp"
-                android:textStyle="italic"
-                android:background="@color/colorButtons" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal">
-
-            <Button
-                android:id="@+id/toGlossary"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="20dp"
-                android:width="155dp"
-                android:height="100dp"
-                android:onClick="dispatchGlossaryIntent"
-                android:text="Glossary"
-                android:textSize="25sp"
-                android:textStyle="italic"
-                android:background="@color/colorButtons" />
-
-            <Button
-                android:id="@+id/toTrimesters"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="20dp"
-                android:width="155dp"
-                android:height="100dp"
-                android:onClick="dispatchResourcesIntent"
-                android:text="Resources"
-                android:textSize="25sp"
-                android:textStyle="italic"
-                android:background="@color/colorButtons" />
-        </TableRow>
-
-    </TableLayout>
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
 
 
     <!--width: 300dp; height: 100dp-->

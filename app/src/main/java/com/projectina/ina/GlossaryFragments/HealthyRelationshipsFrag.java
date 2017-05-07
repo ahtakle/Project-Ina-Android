@@ -28,6 +28,8 @@ public class HealthyRelationshipsFrag extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        getActivity().setTitle("Healthy Relationships");
+
         v = inflater.inflate(R.layout.fragment_healthy_relationships, container, false);
         openFragment("abuse", new ViolenceFrag());
 

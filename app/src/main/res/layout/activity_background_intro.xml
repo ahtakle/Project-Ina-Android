@@ -31,17 +31,10 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="@color/background"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context="com.projectina.ina.BackgroundIntro"
         tools:showIn="@layout/activity_background_intro">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/background_intro_title"
-            android:textSize="20sp"
-            android:background="@color/background"
-            android:layout_margin="10dp" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -53,9 +46,8 @@
             android:layout_height="wrap_content"
             android:text="@string/background_intro_text"
             android:textSize="16sp"
-            android:background="@color/background"
             android:id="@+id/background_text"
-            android:textColor="@color/colorText" />
+            android:textColor="@color/colorTextDark" />
 
         </ScrollView>
 

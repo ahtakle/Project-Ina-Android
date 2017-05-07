@@ -68,15 +68,6 @@
             android:label="@string/title_activity_help"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Trimesters"
-            android:label="@string/title_activity_trimesters"
-            android:parentActivityName=".Home"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.projectina.ina.Home" />
-        </activity>
-        <activity
             android:name=".Map"
             android:label="@string/title_activity_map">
             <meta-data
@@ -85,7 +76,7 @@
         </activity>
         <activity
             android:name=".BackgroundIntro"
-            android:label="@string/title_activity_background_intro"
+            android:label="@string/background_intro_title"
             android:parentActivityName=".Home"
             android:theme="@style/AppTheme">
             <meta-data
@@ -94,20 +85,20 @@
         </activity>
         <activity
             android:name=".Calendar"
-            android:label="@string/title_activity_calendar2"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".CalendarMonthly"
-            android:label="@string/title_activity_calendar_monthly"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".CalendarAgenda"
-            android:label="@string/title_activity_calendar_agenda"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_calendar"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.projectina.ina.Home" />
+        </activity>
         <activity
             android:name=".Resources"
             android:label="@string/title_activity_resources"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.projectina.ina.Home" />
+        </activity>
     </application>
 
 </manifest>

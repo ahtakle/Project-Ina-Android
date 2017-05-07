@@ -1,32 +1,106 @@
-//https://caughtinthemobileweb.wordpress.com/2011/06/20/how-to-implement-calendarview-in-android/
-
 package com.projectina.ina;
 
 import android.content.Intent;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
+import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.webkit.WebView;
 
 public class Calendar extends AppCompatActivity {
-    /**
-     * Called when the activity is first created.
-     */
+    private WebView wv;
+
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calendar);
+        setContentView(R.layout.activity_calendar_monthly);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        //load webpage with calendar html code into app
+        wv = (WebView) findViewById(R.id.webView);
+        final String mimeType = "text/html";
+        final String encoding = "UTF-8";
+        wv.getSettings().setJavaScriptEnabled(true);
+        wv.measure(WebView.LayoutParams.WRAP_CONTENT, WebView.LayoutParams.WRAP_CONTENT);
+
+        Point point = new Point();
+        getWindowManager().getDefaultDisplay().getSize(point);
+        int width = (int) (100.0 * point.x / 360);
+        int height = (int) (100.0 * point.y / 425);
+
+        //This logic allows to fit screen exactly, but then the text is super small.... :(
+        //DO NOT DELETE YET!
+
+//        int actionBarHeight = 0;
+//
+//        // Calculate ActionBar height
+//        TypedValue tv = new TypedValue();
+//        if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true))
+//        {
+//            actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data,getResources().getDisplayMetrics());
+//        }
+//
+//        DisplayMetrics displayMetrics = new DisplayMetrics();
+//        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+//        int height = displayMetrics.heightPixels - (actionBarHeight+20);
+//        int width = displayMetrics.widthPixels-10;
+
+        String html = "<iframe src='https://calendar.google.com/calendar/embed?src=" +
+                "svttqkqr143jcadd858a3da8u8%40group.calendar.google.com&ctz=America/New_York' style='border: 0'" +
+                "width='" + width + "' height='" + height + "' frameborder='0' scrolling='no'></iframe>";
+
+        wv.loadDataWithBaseURL("", html, mimeType, encoding, "");
+        //This fits it to the exact screen size, but then text is too small :(
+//        wv.getSettings().setLoadWithOverviewMode(true);
+//        wv.getSettings().setUseWideViewPort(true);
 
     }
 
-    public void openCalendarAgenda(View view) {
-        Intent intent = new Intent(this, CalendarAgenda.class);
-        startActivity(intent);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
     }
 
-    public void openCalendarMonthly(View view) {
-        Intent intent = new Intent(this, CalendarMonthly.class);
-        startActivity(intent);
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        //popUpWindow = new PopupWindow(this);
+
+        if (id == R.id.action_settings) {
+            //TODO: Make settings activity... but what do we have??
+            //Intent intent = new Intent(this, SettingsActivity.class);
+            //startActivity(intent);
+            return true;
+        } else if (id == R.id.action_about_me) {
+            Intent intent = new Intent(this, AboutMe.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.action_help) {
+            Intent intent = new Intent(this, Help.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.action_feedback) {
+            Intent intent = new Intent(this, Feedback.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.action_resources) {
+            //TODO: Come up with some contact info thing.
+            //Note: Aditi has some good code on her original branch for this :)
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
 }

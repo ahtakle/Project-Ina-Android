@@ -27,6 +27,7 @@ import com.projectina.ina.GlossaryFragments.MentalHealthFrag;
 import com.projectina.ina.GlossaryFragments.NextStepsFrag;
 import com.projectina.ina.GlossaryFragments.PreConceptionFrag;
 import com.projectina.ina.GlossaryFragments.PrenatalFrag;
+import com.projectina.ina.GlossaryFragments.SecondhandSmokeFrag;
 import com.projectina.ina.GlossaryFragments.SubstanceAbuseFrag;
 import com.projectina.ina.GlossaryFragments.TeenFrag;
 import com.projectina.ina.GlossaryFragments.ViolenceFrag;
@@ -104,7 +105,7 @@ public class GlossaryAdapter extends RecyclerView.Adapter<GlossaryAdapter.MyView
                     fragment = new PreConceptionFrag();
                 } else if (term2.getTitle().equals("Breastfeeding")) {
                     fragment = new BreastfeedingFrag();
-                } else if (term2.getTitle().equals("Pre-natal Medical Procedures")) {
+                } else if (term2.getTitle().equals("Prenatal Medical Procedures")) {
                     fragment = new PrenatalFrag();
                 } else if (term2.getTitle().equals("Preparation for Delivery")) {
                     fragment = new DeliveryFrag();
@@ -116,7 +117,10 @@ public class GlossaryAdapter extends RecyclerView.Adapter<GlossaryAdapter.MyView
                     fragment = new ViolenceFrag();
                 } else if (term2.getTitle().equals("Alcohol")) {
                     fragment = new AlcoholFrag();
+                } else if (term2.getTitle().equals("Secondhand Smoke")) {
+                    fragment = new SecondhandSmokeFrag();
                 }
+
                 Log.d("change fragment", " to " + term2.getTitle());
                 fragmentManager.beginTransaction()
                         .replace(R.id.glossary_frame_layout, fragment).addToBackStack(null).commit();

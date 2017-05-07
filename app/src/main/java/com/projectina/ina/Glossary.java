@@ -14,6 +14,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -33,6 +34,8 @@ public class Glossary extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        setTitle("Glossary");
+
         //Following lines of code are where we prepare the recyclerView
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         mAdapter = new GlossaryAdapter(glossaryList, getSupportFragmentManager());
@@ -43,18 +46,6 @@ public class Glossary extends AppCompatActivity {
         //This is to add the dividers in the list
         recyclerView.addItemDecoration(new GlossaryTermDivider(this, LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(mAdapter);
-
-        //When a glossary term gets clicked!
-        /*recyclerView.addOnItemTouchListener(new GlossaryTouchListener(getApplicationContext(), recyclerView, new ClickListener() {
-            @Override
-            public void onClick(View view, int position) {
-                GlossaryTerm term = glossaryList.get(position);
-                Toast.makeText(getApplicationContext(), term.getTitle() + " is selected!", Toast.LENGTH_SHORT).show();
-            }
-            @Override
-            public void onLongClick(View view, int position) {
-            }
-        }));*/
 
         prepareGlossaryData();
     }
@@ -100,6 +91,14 @@ public class Glossary extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            setTitle("Glossary");
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
 
     //Here is where we prepare the Glossary Data
     private void prepareGlossaryData() {
@@ -142,7 +141,7 @@ public class Glossary extends AppCompatActivity {
         GlossaryTerm term12 = new GlossaryTerm("Breastfeeding", "", "");
         glossaryList.add(term12);
 
-        GlossaryTerm term13 = new GlossaryTerm("Pre-natal Medical Procedures", "", ""); //
+        GlossaryTerm term13 = new GlossaryTerm("Prenatal Medical Procedures", "", ""); //
         glossaryList.add(term13);
 
         GlossaryTerm term14 = new GlossaryTerm("Preparation for Delivery", "", ""); //
@@ -150,6 +149,9 @@ public class Glossary extends AppCompatActivity {
 
         GlossaryTerm term15 = new GlossaryTerm("Pregnancy Complications", "", ""); //
         glossaryList.add(term15);
+
+        GlossaryTerm term16 = new GlossaryTerm("Secondhand Smoke", "", ""); //
+        glossaryList.add(term16);
 
         mAdapter.notifyDataSetChanged();
     }
