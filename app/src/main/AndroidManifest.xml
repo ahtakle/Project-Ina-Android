@@ -99,6 +99,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.projectina.ina.Home" />
         </activity>
+        <activity android:name=".DueDate"></activity>
     </application>
 
 </manifest>

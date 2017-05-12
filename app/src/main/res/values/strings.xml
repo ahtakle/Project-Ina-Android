@@ -1588,4 +1588,7 @@
     <string name="title_activity_calendar_monthly">CalendarMonthly</string>
     <string name="title_activity_calendar_agenda">CalendarAgenda</string>
     <string name="title_activity_resources">Resources</string>
+
+    <string name="title_activity_due_date">DueDate</string>
+    <string name="due_date_btn">Select Due Date</string>
 </resources>

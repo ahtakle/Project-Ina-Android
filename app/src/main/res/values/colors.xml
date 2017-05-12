@@ -25,4 +25,6 @@
     <color name="info">#000000</color>
     <color name="term">#000000</color>
 
+    <color name="black_overlay">#66000000</color>
+
 </resources>

@@ -74,15 +74,16 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
         mMap = googleMap;
 
         // Add some markers to the map, and add a data object to each marker.
-        mHeadStart = mMap.addMarker(new MarkerOptions().position(HeadStart).title("Head Start").snippet("Some infor will go here, it can be a few lines?"));
+        //mHeadStart = mMap.addMarker(new MarkerOptions().position(HeadStart).title("Head Start").snippet("Some infor will go here, it can be a few lines?"));
+        mHeadStart = mMap.addMarker(new MarkerOptions().position(HeadStart).title("Head Start"));
         mHeadStart.setTag(0);
-        mTribalAdminBuilding = mMap.addMarker(new MarkerOptions().position(TribalAdminBuilding).title("Tribal Administration Building").snippet("Some infor will go here, it can be a few lines?"));
+        mTribalAdminBuilding = mMap.addMarker(new MarkerOptions().position(TribalAdminBuilding).title("Tribal Administration Building"));
         mTribalAdminBuilding.setTag(1);
-        mIHS = mMap.addMarker(new MarkerOptions().position(IHS).title("IHS").snippet("Some infor will go here, it can be a few lines?"));
+        mIHS = mMap.addMarker(new MarkerOptions().position(IHS).title("IHS"));
         mIHS.setTag(2);
-        mRCHealthNurse = mMap.addMarker(new MarkerOptions().position(RCHealthNurse).title("Roberts County Health Nurse").snippet("Some infor will go here, it can be a few lines?"));
+        mRCHealthNurse = mMap.addMarker(new MarkerOptions().position(RCHealthNurse).title("Roberts County Health Nurse"));
         mRCHealthNurse.setTag(3);
-        mDakotaPrideCenter = mMap.addMarker(new MarkerOptions().position(DakotaPrideCenter).title("Dakota Pride Center").snippet("Some infor will go here, it can be a few lines?"));
+        mDakotaPrideCenter = mMap.addMarker(new MarkerOptions().position(DakotaPrideCenter).title("Dakota Pride Center"));
         mDakotaPrideCenter.setTag(4);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(TribalAdminBuilding, 10));

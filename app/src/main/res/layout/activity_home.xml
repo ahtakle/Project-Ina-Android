@@ -22,12 +22,13 @@
             android:background="@color/colorPrimary">
 
             <TextView
-                android:layout_width="300dp"
+                android:id="@+id/due_date_title"
+                android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_centerHorizontal="true"
                 android:text="DASHBOARD"
-                android:textColor="@color/colorText"
-                android:textSize="30sp"/>
+                android:textColor="@color/colorAccent"
+                android:textSize="35sp"/>
         </LinearLayout>
 
         <LinearLayout
