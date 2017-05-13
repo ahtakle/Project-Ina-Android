@@ -86,7 +86,7 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
         mDakotaPrideCenter = mMap.addMarker(new MarkerOptions().position(DakotaPrideCenter).title("Dakota Pride Center"));
         mDakotaPrideCenter.setTag(4);
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(TribalAdminBuilding, 10));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(TribalAdminBuilding, 12));
 
         // Set a listener for info window events.
         mMap.setOnInfoWindowClickListener(this);

@@ -80,7 +80,7 @@ public class GlossaryAdapter extends RecyclerView.Adapter<GlossaryAdapter.MyView
         holder.title.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("onclicklistener", "something was clicked!");
+                //Log.d("onclicklistener", "something was clicked!");
                 GlossaryTerm term2 = glossaryList.get(position);
                 holder.title.setText(term2.getTitle());
 
@@ -121,7 +121,7 @@ public class GlossaryAdapter extends RecyclerView.Adapter<GlossaryAdapter.MyView
                     fragment = new SecondhandSmokeFrag();
                 }
 
-                Log.d("change fragment", " to " + term2.getTitle());
+                //Log.d("change fragment", " to " + term2.getTitle());
                 fragmentManager.beginTransaction()
                         .replace(R.id.glossary_frame_layout, fragment).addToBackStack(null).commit();
             }
