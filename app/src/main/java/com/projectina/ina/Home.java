@@ -47,7 +47,7 @@ public class Home extends AppCompatActivity {
 
     //Start Glossary Activity
     public void dispatchGlossaryIntent(View view) {
-        Intent intent = new Intent(this, Glossary.class);
+        Intent intent = new Intent(this, Glossary2.class);
         startActivity(intent);
     }
 

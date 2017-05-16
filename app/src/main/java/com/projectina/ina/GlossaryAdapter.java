@@ -6,9 +6,10 @@ package com.projectina.ina;
  */
 
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,15 +35,15 @@ import com.projectina.ina.GlossaryFragments.ViolenceFrag;
 
 import java.util.List;
 
-public class GlossaryAdapter extends RecyclerView.Adapter<GlossaryAdapter.MyViewHolder> {
+public class GlossaryAdapter extends RecyclerView.Adapter<GlossaryAdapter.ViewHolder> {
 
     private List<GlossaryTerm> glossaryList;
-    private android.support.v4.app.FragmentManager fragmentManager;
+    private android.support.v4.app.FragmentManager mFragmentManager;
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView title, year, genre;
 
-        public MyViewHolder(View view) {
+        public ViewHolder(View view) {
             super(view);
             title = (TextView) view.findViewById(R.id.title);
             genre = (TextView) view.findViewById(R.id.genre);
@@ -50,39 +51,53 @@ public class GlossaryAdapter extends RecyclerView.Adapter<GlossaryAdapter.MyView
         }
     }
 
+    // Store the context for easy access
+    public Context mContext;
 
-    public GlossaryAdapter(List<GlossaryTerm> glossaryList, android.support.v4.app.FragmentManager fragManager) {
-        this.glossaryList = glossaryList;
-        fragmentManager = fragManager;
+
+    // Pass in the contact array into the constructor
+    public GlossaryAdapter(Context context, FragmentManager fragmentManager, List<GlossaryTerm> list) {
+        glossaryList = list;
+        mContext = context;
+        mFragmentManager = fragmentManager;
     }
 
-    @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.glossary_term_row, parent, false);
-
-        return new MyViewHolder(itemView);
+    // Easy access to the context object in the recyclerview
+    private Context getContext() {
+        return mContext;
     }
 
+//    public GlossaryAdapter(List<GlossaryTerm> glossaryList, android.support.v4.app.FragmentManager fragManager) {
+//        this.glossaryList = glossaryList;
+//        fragmentManager = fragManager;
+//    }
+
+//    @Override
+//    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+//        View itemView = LayoutInflater.from(parent.getContext())
+//                .inflate(R.layout.glossary_term_row, parent, false);
+//
+//        return new MyViewHolder(itemView);
+//    }
+
     @Override
-    public void onBindViewHolder(final MyViewHolder holder, final int position) {
-        GlossaryTerm term = glossaryList.get(position);
-        holder.title.setText(term.getTitle());
-        holder.genre.setText(term.getGenre());
-        holder.year.setText(term.getYear());
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        Context context = parent.getContext();
+        LayoutInflater inflater = LayoutInflater.from(context);
 
-        //int textColor = R.color.colorText;
-        holder.title.setTextColor(term.getColor());
+        // Inflate the custom layout
+        final View contactView = inflater.inflate(R.layout.glossary_term_row, parent, false);
+        //Holder instance to be returned
+        final ViewHolder viewHolder = new ViewHolder(contactView);
 
 
-        //add onclicklistener here to update the fragment manager based on position
-
-        holder.title.setOnClickListener(new View.OnClickListener() {
+        contactView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                //Log.d("onclicklistener", "something was clicked!");
+            public void onClick(final View view) {
+                final int position = viewHolder.getAdapterPosition();
+                //add onclicklistener here to update the fragment manager based on position
+
                 GlossaryTerm term2 = glossaryList.get(position);
-                holder.title.setText(term2.getTitle());
 
                 Fragment fragment = new Fragment();
                 if (term2.getTitle().equals("Family Planning")) {
@@ -121,12 +136,25 @@ public class GlossaryAdapter extends RecyclerView.Adapter<GlossaryAdapter.MyView
                     fragment = new SecondhandSmokeFrag();
                 }
 
-                //Log.d("change fragment", " to " + term2.getTitle());
-                fragmentManager.beginTransaction()
+                fragment = new Glossary2Frag();
+                mFragmentManager.beginTransaction()
                         .replace(R.id.glossary_frame_layout, fragment).addToBackStack(null).commit();
             }
         });
-        /**/
+
+        // Return a new holder instance
+        return viewHolder;
+    }
+
+    @Override
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
+        GlossaryTerm term = glossaryList.get(position);
+        holder.title.setText(term.getTitle());
+        holder.genre.setText(term.getGenre());
+        holder.year.setText(term.getYear());
+
+        //int textColor = R.color.colorText;
+        holder.title.setTextColor(term.getColor());
 
     }
 

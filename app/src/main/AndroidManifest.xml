@@ -20,6 +20,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -99,7 +100,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.projectina.ina.Home" />
         </activity>
-        <activity android:name=".DueDate"></activity>
+        <activity android:name=".DueDate" />
+        <activity
+            android:name=".Glossary2"
+            android:label="@string/title_activity_glossary2"
+            android:parentActivityName=".Home"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.projectina.ina.Home" />
+        </activity>
     </application>
 
 </manifest>

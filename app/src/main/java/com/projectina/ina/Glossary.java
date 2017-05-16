@@ -38,7 +38,8 @@ public class Glossary extends AppCompatActivity {
 
         //Following lines of code are where we prepare the recyclerView
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        mAdapter = new GlossaryAdapter(glossaryList, getSupportFragmentManager());
+        mAdapter = new GlossaryAdapter(this, getSupportFragmentManager(), glossaryList);
+        //mAdapter = new GlossaryAdapter(glossaryList, getSupportFragmentManager());
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
