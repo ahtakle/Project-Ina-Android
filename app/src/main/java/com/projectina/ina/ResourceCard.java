@@ -17,6 +17,7 @@ public class ResourceCard {
         this.photoId = photoId;
     }
 
+    //Create Cards for RecyclerView
     public static ArrayList<ResourceCard> initializeData() {
         ArrayList<ResourceCard> persons = new ArrayList<>();
         persons.add(new ResourceCard("Coteau", "Coteau Clinic", R.mipmap.coteau));

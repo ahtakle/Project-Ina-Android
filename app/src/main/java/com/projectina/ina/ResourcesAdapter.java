@@ -51,93 +51,13 @@ public class ResourcesAdapter extends RecyclerView.Adapter<ResourcesAdapter.Reso
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cardview, viewGroup, false);
         final ResourceViewHolder pvh = new ResourceViewHolder(v);
 
-
         v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 final int i = pvh.getAdapterPosition();
-                //Fragment fragment = null;
-//                switch (i) {
-//                    case 0:
-//                        fragment = new CoteauFrag();
-//                        break;
-//                    case 1:
-//                        fragment = new GPTCHBFrag();
-//                        break;
-//                    case 2:
-//                        fragment = new NESDFrag();
-//                        break;
-//                    case 3:
-//                        fragment = new RobertsCountyFrag();
-//                        break;
-//                    case 4:
-//                        fragment = new SDBreastfeedingFrag();
-//                        break;
-//                    case 5:
-//                        fragment = new SDHomeVisitingFrag();
-//                        break;
-//                    case 6:
-//                        fragment = new SDSocialFrag();
-//                        break;
-//                    case 7:
-//                        fragment = new SissetonClinicFrag();
-//                        break;
-//                    case 8:
-//                        fragment = new SissetonDentalFrag();
-//                        break;
-//                    case 9:
-//                        fragment = new SissetonNurseFrag();
-//                        break;
-//                    case 10:
-//                        fragment = new SissetonSchoolFrag();
-//                        break;
-//                    case 11:
-//                        fragment = new SWOBenefitsFrag();
-//                        break;
-//                    case 12:
-//                        fragment = new SWOCavityFrag();
-//                        break;
-//                    case 13:
-//                        fragment = new SWOChildFrag();
-//                        break;
-//                    case 14:
-//                        fragment = new SWOHealthEdFrag();
-//                        break;
-//                    case 15:
-//                        fragment = new SWOHealthRepFrag();
-//                        break;
-//                    case 16:
-//                        fragment = new SWOPrideFrag();
-//                        break;
-//                    case 17:
-//                        fragment = new SWOInterventionFrag();
-//                        break;
-//                    case 18:
-//                        fragment = new SWOEducationFrag();
-//                        break;
-//                    case 19:
-//                        fragment = new SWOFoodFrag();
-//                        break;
-//                    case 20:
-//                        fragment = new SWOEHSFrag();
-//                        break;
-//                    case 21:
-//                        fragment = new SWODaycareFrag();
-//                        break;
-//                    case 22:
-//                        fragment = new SWOMCHFrag();
-//                        break;
-//                    case 23:
-//                        fragment = new FinancesFrag();
-//                        break;
-//
-//                }
-//
+
                 String fragTitle = persons.get(i).name;
                 Fragment fragment = PDFViewerFrag.newInstance(fragTitle);
-                //mFragmentManager.beginTransaction()
-                //.replace(R.id.glossary_frame_layout, fragment).addToBackStack(null).commit();
 
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.fragment_resources, fragment).addToBackStack("");

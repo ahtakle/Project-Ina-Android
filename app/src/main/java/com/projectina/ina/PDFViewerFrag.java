@@ -43,10 +43,11 @@ public class PDFViewerFrag extends Fragment implements OnPageChangeListener, OnL
         View rootview = inflater.inflate(R.layout.fragment_pdf_viewer, container, false);
 
         //Get the parameters from glossaryList
-        //String title = "test3";
         GLOSSARY_FILE = fragTitle + ".pdf";
 
         pdfView = (PDFView) rootview.findViewById(R.id.pdfView);
+
+
         displayFromAsset(GLOSSARY_FILE);
 
         return rootview;
@@ -55,16 +56,31 @@ public class PDFViewerFrag extends Fragment implements OnPageChangeListener, OnL
     private void displayFromAsset(String assetFileName) {
         pdfFileName = assetFileName;
 
-        pdfView.fromAsset(GLOSSARY_FILE)
-                .defaultPage(pageNumber)
-                .enableSwipe(true)
+        //Try-Catch used to display error.pdf if incorrect filename occurs
+        try {
+            pdfView.fromAsset(GLOSSARY_FILE)
+                    .defaultPage(pageNumber)
+                    .enableSwipe(true)
 
-                .swipeHorizontal(false)
-                .onPageChange(this)
-                .enableAnnotationRendering(true)
-                .onLoad(this)
-                .scrollHandle(new DefaultScrollHandle(getContext()))
-                .load();
+                    .swipeHorizontal(false)
+                    .onPageChange(this)
+                    .enableAnnotationRendering(true)
+                    .onLoad(this)
+                    .scrollHandle(new DefaultScrollHandle(getContext()))
+                    .load();
+        } catch (Exception e) {
+            //error.pdf contains a pdf that gives error description to user
+            pdfView.fromAsset("error.pdf")
+                    .defaultPage(pageNumber)
+                    .enableSwipe(true)
+
+                    .swipeHorizontal(false)
+                    .onPageChange(this)
+                    .enableAnnotationRendering(true)
+                    .onLoad(this)
+                    .scrollHandle(new DefaultScrollHandle(getContext()))
+                    .load();
+        }
     }
 
     @Override
