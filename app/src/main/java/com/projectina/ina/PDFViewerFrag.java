@@ -16,32 +16,38 @@ import com.shockwave.pdfium.PdfDocument;
 
 import java.util.List;
 
-public class Glossary2Frag extends Fragment implements OnPageChangeListener, OnLoadCompleteListener {
+public class PDFViewerFrag extends Fragment implements OnPageChangeListener, OnLoadCompleteListener {
 
+    private static String fragTitle;
 
-    public Glossary2Frag() {
+    public PDFViewerFrag() {
         // Required empty public constructor
     }
 
-    public static Glossary2Frag newInstance() {
-        Glossary2Frag fragment = new Glossary2Frag();
+    public static PDFViewerFrag newInstance(String title) {
+        PDFViewerFrag fragment = new PDFViewerFrag();
+        fragTitle = title;
         return fragment;
     }
 
-    private static final String TAG = Glossary2.class.getSimpleName();
-    public static final String SAMPLE_FILE = "test.pdf";
-    PDFView pdfView;
-    Integer pageNumber = 0;
-    String pdfFileName;
+    private static final String TAG = Glossary.class.getSimpleName();
+    private String GLOSSARY_FILE;
+    private PDFView pdfView;
+    private Integer pageNumber = 0;
+    private String pdfFileName;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootview = inflater.inflate(R.layout.fragment_glossary3, container, false);
+        View rootview = inflater.inflate(R.layout.fragment_pdf_viewer, container, false);
+
+        //Get the parameters from glossaryList
+        //String title = "test3";
+        GLOSSARY_FILE = fragTitle + ".pdf";
 
         pdfView = (PDFView) rootview.findViewById(R.id.pdfView);
-        displayFromAsset(SAMPLE_FILE);
+        displayFromAsset(GLOSSARY_FILE);
 
         return rootview;
     }
@@ -49,7 +55,7 @@ public class Glossary2Frag extends Fragment implements OnPageChangeListener, OnL
     private void displayFromAsset(String assetFileName) {
         pdfFileName = assetFileName;
 
-        pdfView.fromAsset(SAMPLE_FILE)
+        pdfView.fromAsset(GLOSSARY_FILE)
                 .defaultPage(pageNumber)
                 .enableSwipe(true)
 
@@ -64,7 +70,8 @@ public class Glossary2Frag extends Fragment implements OnPageChangeListener, OnL
     @Override
     public void onPageChanged(int page, int pageCount) {
         pageNumber = page;
-        getActivity().setTitle(String.format("%s %s / %s", pdfFileName, page + 1, pageCount));
+        String activityTitle = pdfFileName.substring(0, pdfFileName.length() - 4);
+        getActivity().setTitle(String.format(activityTitle));
     }
 
 

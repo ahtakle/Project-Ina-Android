@@ -7,10 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import static com.projectina.ina.GlossaryFragments.TeenFrag.PREFS_NAME;
-
 
 public class Home extends AppCompatActivity {
+
+    public static final String PREFS_NAME = "InaPrefsFile";
 
     private TextView due_date;
 
@@ -47,7 +47,7 @@ public class Home extends AppCompatActivity {
 
     //Start Glossary Activity
     public void dispatchGlossaryIntent(View view) {
-        Intent intent = new Intent(this, Glossary2.class);
+        Intent intent = new Intent(this, Glossary.class);
         startActivity(intent);
     }
 

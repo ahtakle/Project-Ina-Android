@@ -2,16 +2,17 @@ package com.projectina.ina;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-import static com.projectina.ina.GlossaryFragments.TeenFrag.PREFS_NAME;
 
 /*
 *  Splash Activity that leads to Home activity while app loads
 */
 
 public class SplashActivity extends AppCompatActivity {
+
+    public static final String PREFS_NAME = "InaPrefsFile";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

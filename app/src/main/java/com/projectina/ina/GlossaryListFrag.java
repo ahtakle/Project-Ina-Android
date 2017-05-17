@@ -13,13 +13,13 @@ import java.util.ArrayList;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class Glossary2Fragment extends Fragment {
+public class GlossaryListFrag extends Fragment {
 
-    public Glossary2Fragment() {
+    public GlossaryListFrag() {
     }
 
-    public static Glossary2Fragment newInstance() {
-        Glossary2Fragment fragment = new Glossary2Fragment();
+    public static GlossaryListFrag newInstance() {
+        GlossaryListFrag fragment = new GlossaryListFrag();
         return fragment;
     }
 
@@ -46,5 +46,11 @@ public class Glossary2Fragment extends Fragment {
 
 
         return rootview;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        getActivity().setTitle(String.format("Glossary"));
     }
 }

@@ -101,15 +101,6 @@
                 android:value="com.projectina.ina.Home" />
         </activity>
         <activity android:name=".DueDate" />
-        <activity
-            android:name=".Glossary2"
-            android:label="@string/title_activity_glossary2"
-            android:parentActivityName=".Home"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.projectina.ina.Home" />
-        </activity>
     </application>
 
 </manifest>
