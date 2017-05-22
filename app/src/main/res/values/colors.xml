@@ -21,6 +21,8 @@
     <color name="colorText">#FFFFFF</color>
     <color name="colorTextDark">#000000</color>
 
+    <color name="colorTextOverlay">#ededed</color>
+
     <!--Glossary Term Colors-->
     <color name="info">#000000</color>
     <color name="term">#000000</color>

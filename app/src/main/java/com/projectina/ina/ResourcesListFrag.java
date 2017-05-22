@@ -22,10 +22,11 @@ import java.util.List;
 public class ResourcesListFrag extends Fragment {
 
     private List<ResourceCard> persons;
+    private static int listOption;
 
-
-    public static ResourcesListFrag newInstance() {
+    public static ResourcesListFrag newInstance(int optionChoice) {
         ResourcesListFrag fragment = new ResourcesListFrag();
+        listOption = optionChoice;
         return fragment;
     }
 
@@ -41,7 +42,7 @@ public class ResourcesListFrag extends Fragment {
 
         final View rootview = inflater.inflate(R.layout.cardview_list_fragment, container, false);
 
-        persons = ResourceCard.initializeData();
+        persons = ResourceCard.initializeData(listOption);
 
         RecyclerView rv = (RecyclerView)rootview.findViewById(R.id.my_recycler_view);
         ResourcesAdapter adapter = new ResourcesAdapter(persons, getFragmentManager());

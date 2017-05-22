@@ -2,6 +2,8 @@ package com.projectina.ina;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -17,10 +19,39 @@ public class Resources extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ResourcesListFrag f = ResourcesListFrag.newInstance();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_resources, f).commit();
+        BottomNavigationView bottomNavigationView = (BottomNavigationView)
+                findViewById(R.id.bottom_navigation);
 
+        bottomNavigationView.setOnNavigationItemSelectedListener
+                (new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        ResourcesListFrag selectedFragment = null;
+                        switch (item.getItemId()) {
+                            case R.id.all_resources:
+                                selectedFragment = ResourcesListFrag.newInstance(1);
+                                break;
+                            case R.id.pregnancy_resources:
+                                selectedFragment = ResourcesListFrag.newInstance(2);
+                                break;
+                            case R.id.after_birth_resources:
+                                selectedFragment = ResourcesListFrag.newInstance(3);
+                                break;
+                            case R.id.young_child_resources:
+                                selectedFragment = ResourcesListFrag.newInstance(4);
+                                break;
+                            case R.id.money_resources:
+                                selectedFragment = ResourcesListFrag.newInstance(5);
+                                break;
+                        }
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_resources, selectedFragment).commit();
+                        return true;
+                    }
+                });
 
+        //Display the default fragment (ALL)
+        ResourcesListFrag selectedFragment = ResourcesListFrag.newInstance(1);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_resources, selectedFragment).commit();
     }
 
     @Override

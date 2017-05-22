@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/all_resources"
+        android:enabled="true"
+        android:icon="@mipmap/ic_all_resource"
+        android:title="All"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/pregnancy_resources"
+        android:enabled="true"
+        android:icon="@mipmap/ic_pregnancy_resource"
+        android:title="Pregnancy"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/after_birth_resources"
+        android:enabled="true"
+        android:icon="@mipmap/ic_afterbirth_resource"
+        android:title="After Birth"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/young_child_resources"
+        android:enabled="true"
+        android:icon="@mipmap/ic_youngchild_resource"
+        android:title="Young Child"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/money_resources"
+        android:enabled="true"
+        android:icon="@mipmap/ic_money_resource"
+        android:title="Finances"
+        app:showAsAction="ifRoom" />
+</menu>

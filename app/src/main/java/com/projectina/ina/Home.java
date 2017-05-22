@@ -19,11 +19,11 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        String due_date_str = settings.getString("due_date", "");
-
-        due_date = (TextView) findViewById(R.id.due_date_title);
-        due_date.setText("Due Date: " + due_date_str);
+//        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+//        String due_date_str = settings.getString("due_date", "");
+//
+//        due_date = (TextView) findViewById(R.id.due_date_title);
+//        due_date.setText("Due Date: " + due_date_str);
 
     }
 
