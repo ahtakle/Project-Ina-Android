@@ -50,7 +50,7 @@
                     android:id="@+id/imageButton_babyprogress"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:onClick="dispatchMapIntent"
+                    android:onClick="dispatchBabyProgressIntent"
                     android:background="@color/background"
                     android:layout_centerHorizontal="true"
                     android:src="@mipmap/ic_map_white_48dp"

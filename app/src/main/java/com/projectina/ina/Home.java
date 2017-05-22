@@ -10,9 +10,9 @@ import android.widget.TextView;
 
 public class Home extends AppCompatActivity {
 
-    public static final String PREFS_NAME = "InaPrefsFile";
-
-    private TextView due_date;
+//    public static final String PREFS_NAME = "InaPrefsFile";
+//
+//    private TextView due_date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class Home extends AppCompatActivity {
         startActivity(intent);
     }
 
-    //Start MapFragHostActivity Activity
+    //Start Map Activity
     public void dispatchMapIntent(View view) {
         Intent intent = new Intent(this, Map.class);
         startActivity(intent);
@@ -53,8 +53,13 @@ public class Home extends AppCompatActivity {
 
     //Start Calendar Activity
     public void dispatchCalendarIntent(View view) {
+        Intent intent = new Intent(this, Calendar.class);
+        startActivity(intent);
+    }
+
+    //Start BabyProgress Activity
+    public void dispatchBabyProgressIntent(View view) {
         Intent intent = new Intent(this, BabyProgress.class);
-        //Intent intent = new Intent(this, Calendar.class);
         startActivity(intent);
     }
 
