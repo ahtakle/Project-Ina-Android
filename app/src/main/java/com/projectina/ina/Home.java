@@ -7,10 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import static com.projectina.ina.GlossaryFragments.TeenFrag.PREFS_NAME;
-
 
 public class Home extends AppCompatActivity {
+
+    public static final String PREFS_NAME = "InaPrefsFile";
 
     private TextView due_date;
 

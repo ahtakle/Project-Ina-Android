@@ -1591,4 +1591,5 @@
 
     <string name="title_activity_due_date">DueDate</string>
     <string name="due_date_btn">Select Due Date</string>
+    <string name="title_activity_glossary2">Glossary2</string>
 </resources>
