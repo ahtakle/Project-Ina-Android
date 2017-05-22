@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -65,14 +64,15 @@ public class BabyProgress extends AppCompatActivity {
             Date dueDate = new Date(due_year, due_month, due_day);
             final int millisInDay = 1000 * 60 * 60 * 24;
             int diffInDays = (int) ((dueDate.getTime() - currDate.getTime()) / millisInDay);
-            Log.e("difference in days", diffInDays + "");
+            int progress = pregnancyLength - diffInDays;
+            progressBar.setProgress(progress);
 
-
-            progressBar.setProgress(pregnancyLength - diffInDays);
-
+            int percentDone = (int) ((100.0 * progress) / pregnancyLength);
+            TextView percentDoneText = (TextView) findViewById(R.id.percent_done);
+            percentDoneText.setText("You are " + percentDone + "% done with your pregnancy:");
 
             TextView weekText = (TextView) findViewById(R.id.progress_weeks);
-            int weeksCompleted = (pregnancyLength - diffInDays) / 7;
+            int weeksCompleted = (progress) / 7;
             weekText.setText("You are in week " + weeksCompleted + "!\n");
 
             TextView trimText = (TextView) findViewById(R.id.trimester);

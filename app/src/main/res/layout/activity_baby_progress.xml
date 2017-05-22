@@ -41,13 +41,19 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/progress_weeks" />
+                android:id="@+id/percent_done" />
 
             <ProgressBar
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:id="@+id/progressBar2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/progress_weeks" />
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -61,17 +67,12 @@
                 android:layout_height="wrap_content"
                 android:text="@string/change_due_date" />
 
-            <ScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <ExpandableListView
-                    android:layout_width="match_parent"
-                    android:layout_height="500dp"
-                    android:dividerHeight="0.5dp"
-                    android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
-                    android:id="@+id/expandableListView" />
-            </ScrollView>
+            <ExpandableListView
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:dividerHeight="0.5dp"
+                android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+                android:id="@+id/expandableListView" />
         </LinearLayout>
     </ScrollView>
 

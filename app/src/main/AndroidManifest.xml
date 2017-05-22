@@ -103,7 +103,11 @@
         <activity
             android:name=".BabyProgress"
             android:label="@string/title_activity_baby_progress"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.projectina.ina.Home" />
+        </activity>
     </application>
 
 </manifest>
