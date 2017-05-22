@@ -25,6 +25,7 @@ public class DueDate extends AppCompatActivity {
     private String due_date;
 
     private Button submit_duedate;
+    private Button select_later;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +50,6 @@ public class DueDate extends AppCompatActivity {
             }
         });
 
-        due_date = mMonth + "/" + mDay + "/" + mYear;
 
         submit_duedate = (Button) findViewById(R.id.due_date_btn);
         submit_duedate.setOnClickListener(new View.OnClickListener() {
@@ -57,12 +57,31 @@ public class DueDate extends AppCompatActivity {
             public void onClick(View v) {
                 SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
                 SharedPreferences.Editor editor = settings.edit();
+                due_date = (mMonth + 1) + "/" + mDay + "/" + mYear;
+                editor.putString("due_date", due_date);
+                editor.putString("due_month", mMonth + "");
+                editor.putString("due_day", mDay + "");
+                editor.putString("due_year", mYear + "");
+                editor.commit();
+                Intent intent = new Intent(DueDate.this, Home.class);
+                startActivity(intent);
+            }
+        });
+
+        select_later = (Button) findViewById(R.id.select_later_btn);
+        select_later.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                SharedPreferences.Editor editor = settings.edit();
+                due_date = "not selected";
                 editor.putString("due_date", due_date);
                 editor.commit();
                 Intent intent = new Intent(DueDate.this, Home.class);
                 startActivity(intent);
             }
         });
+
 
     }
 }

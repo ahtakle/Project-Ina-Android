@@ -53,7 +53,8 @@ public class Home extends AppCompatActivity {
 
     //Start Calendar Activity
     public void dispatchCalendarIntent(View view) {
-        Intent intent = new Intent(this, Calendar.class);
+        Intent intent = new Intent(this, BabyProgress.class);
+        //Intent intent = new Intent(this, Calendar.class);
         startActivity(intent);
     }
 
