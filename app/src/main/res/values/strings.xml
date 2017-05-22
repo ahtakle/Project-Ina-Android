@@ -1580,6 +1580,8 @@
 
     </string>
 
+    <string name="Week_28">\u2022 Your baby is as large as corn.\n\u2022 Your baby weighs four pounds.\n\u2022 Your baby is starting to grow hair and finalizing organ formation.</string>
+
     <string name="title_activity_background_intro">Introduction Information</string>
     <string name="title_activity_calendar">Calendar</string>
     <string name="title_activity_calendar2">Calendar2</string>
@@ -1591,5 +1593,9 @@
 
     <string name="title_activity_due_date">DueDate</string>
     <string name="due_date_btn">Select Due Date</string>
+    <string name="select_later_btn">Select Date Later</string>
     <string name="title_activity_glossary2">Glossary2</string>
+    <string name="title_activity_baby_progress">Baby Progress</string>
+
+    <string name="change_due_date">Change or remove due date</string>
 </resources>
