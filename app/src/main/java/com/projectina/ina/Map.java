@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +20,7 @@ import com.google.android.gms.maps.GoogleMapOptions;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -73,7 +75,22 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        //Stylize the Map
+//        try {
+//            boolean success = googleMap.setMapStyle(
+//                    MapStyleOptions.loadRawResourceStyle(
+//                            this, R.raw.styles_json));
+//            if (!success) {
+//                Log.e("LastNightMap", "Style parsing failed.");
+//            }
+//        } catch (Exception e) {
+//            Log.e("LastNightMap", "Can't find style. Error: ", e);
+//        }
+
         // Add some markers to the map, and add a data object to each marker.
+        //******************************************************************************************
+        //NOTE: The marker titles have to be the same as the resource!!!!
+        //******************************************************************************************
         //mHeadStart = mMap.addMarker(new MarkerOptions().position(HeadStart).title("Head Start").snippet("Some infor will go here, it can be a few lines?"));
         mHeadStart = mMap.addMarker(new MarkerOptions().position(HeadStart).title("Head Start"));
         mHeadStart.setTag(0);
@@ -81,12 +98,12 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
         mTribalAdminBuilding.setTag(1);
         mIHS = mMap.addMarker(new MarkerOptions().position(IHS).title("IHS"));
         mIHS.setTag(2);
-        mRCHealthNurse = mMap.addMarker(new MarkerOptions().position(RCHealthNurse).title("Roberts County Health Nurse"));
+        mRCHealthNurse = mMap.addMarker(new MarkerOptions().position(RCHealthNurse).title("Roberts"));
         mRCHealthNurse.setTag(3);
         mDakotaPrideCenter = mMap.addMarker(new MarkerOptions().position(DakotaPrideCenter).title("Dakota Pride Center"));
         mDakotaPrideCenter.setTag(4);
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(TribalAdminBuilding, 12));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(TribalAdminBuilding, 9));
 
         // Set a listener for info window events.
         mMap.setOnInfoWindowClickListener(this);
@@ -112,17 +129,14 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
     }
 
     /**  Called when the user clicks an info window
-     *   TODO: Customize this as necessary for what we want
+     *   We will bring them to the resource page for the specific resource
      */
     @Override
     public void onInfoWindowClick(Marker marker) {
-        Toast.makeText(this, "I will pull up the information for this service", Toast.LENGTH_SHORT).show();
-
-        //Set up correct data to map to each marker
-//        Uri gmmIntentUri = Uri.parse("google.navigation:q=Taronga+Zoo,+Sydney+Australia");
-//        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-//        mapIntent.setPackage("com.google.android.apps.maps");
-//        startActivity(mapIntent);
+        //Go to glossary intent passing the marker's title to go to the specific resource
+        Intent goToResource = new Intent(getBaseContext(), Resources.class);
+        goToResource.putExtra("GO_TO_SPECIFIC_RESOURCE", marker.getTitle());
+        startActivity(goToResource);
     }
 
 

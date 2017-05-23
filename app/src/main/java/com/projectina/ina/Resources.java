@@ -49,9 +49,15 @@ public class Resources extends AppCompatActivity {
                     }
                 });
 
-        //Display the default fragment (ALL)
-        ResourcesListFrag selectedFragment = ResourcesListFrag.newInstance(1);
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_resources, selectedFragment).commit();
+        String initialDestination = getIntent().getStringExtra("GO_TO_SPECIFIC_RESOURCE");
+        if(initialDestination != null) {
+            PDFViewerFrag fragment = PDFViewerFrag.newInstance(initialDestination);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_resources, fragment).commit();
+        } else {
+            //Display the default fragment (ALL)
+            ResourcesListFrag selectedFragment = ResourcesListFrag.newInstance(1);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_resources, selectedFragment).commit();
+        }
     }
 
     @Override
