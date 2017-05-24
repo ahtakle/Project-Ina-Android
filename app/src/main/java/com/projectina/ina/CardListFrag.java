@@ -17,15 +17,21 @@ import java.util.List;
 
 /**
  * Created by nanditakannapadi on 5/6/17.
+ *
+ * NOTE: This class works for both the stories and resources. Which one displayed is defined by
+ * resourceORstory parameter passed into instantiation of class
  */
 
-public class ResourcesListFrag extends Fragment {
+public class CardListFrag extends Fragment {
 
-    private List<ResourceCard> persons;
+    private List<CardTerm> persons;
+    private static int RorS;
     private static int listOption;
 
-    public static ResourcesListFrag newInstance(int optionChoice) {
-        ResourcesListFrag fragment = new ResourcesListFrag();
+    public static CardListFrag newInstance(int resourceORstory, int optionChoice) {
+        CardListFrag fragment = new CardListFrag();
+        //1 if Resource, 2 if Story
+        RorS = resourceORstory;
         listOption = optionChoice;
         return fragment;
     }
@@ -42,10 +48,15 @@ public class ResourcesListFrag extends Fragment {
 
         final View rootview = inflater.inflate(R.layout.cardview_list_fragment, container, false);
 
-        persons = ResourceCard.initializeData(listOption);
+        if(RorS == 1) {
+            persons = CardTerm.initializeResources(listOption);
+        } else  {
+            persons = CardTerm.initializeStories();
+        }
+
 
         RecyclerView rv = (RecyclerView)rootview.findViewById(R.id.my_recycler_view);
-        ResourcesAdapter adapter = new ResourcesAdapter(persons, getFragmentManager());
+        CardAdapter adapter = new CardAdapter(persons, getFragmentManager());
 
         LinearLayoutManager llm = new GridLayoutManager(this.getContext(), 2);
         rv.setLayoutManager(llm);
@@ -104,11 +115,5 @@ public class ResourcesListFrag extends Fragment {
         DisplayMetrics displaymetrics = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, displaymetrics));
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        getActivity().setTitle(String.format("Resources"));
     }
 }

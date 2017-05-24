@@ -16,7 +16,7 @@ import com.shockwave.pdfium.PdfDocument;
 
 import java.util.List;
 
-public class PDFViewerFrag extends Fragment implements OnPageChangeListener, OnLoadCompleteListener {
+public class PDFViewerFrag extends Fragment implements OnLoadCompleteListener {
 
     private static String fragTitle;
 
@@ -61,9 +61,7 @@ public class PDFViewerFrag extends Fragment implements OnPageChangeListener, OnL
             pdfView.fromAsset(GLOSSARY_FILE)
                     .defaultPage(pageNumber)
                     .enableSwipe(true)
-
                     .swipeHorizontal(false)
-                    .onPageChange(this)
                     .enableAnnotationRendering(true)
                     .onLoad(this)
                     .scrollHandle(new DefaultScrollHandle(getContext()))
@@ -73,21 +71,12 @@ public class PDFViewerFrag extends Fragment implements OnPageChangeListener, OnL
             pdfView.fromAsset("error.pdf")
                     .defaultPage(pageNumber)
                     .enableSwipe(true)
-
                     .swipeHorizontal(false)
-                    .onPageChange(this)
                     .enableAnnotationRendering(true)
                     .onLoad(this)
                     .scrollHandle(new DefaultScrollHandle(getContext()))
                     .load();
         }
-    }
-
-    @Override
-    public void onPageChanged(int page, int pageCount) {
-        pageNumber = page;
-        String activityTitle = pdfFileName.substring(0, pdfFileName.length() - 4);
-        getActivity().setTitle(String.format(activityTitle));
     }
 
 

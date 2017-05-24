@@ -2,62 +2,29 @@ package com.projectina.ina;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class Resources extends AppCompatActivity {
+public class Stories extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_resources);
+        setContentView(R.layout.activity_stories);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView)
-                findViewById(R.id.bottom_navigation);
+        //Initializes Card List for Stories
+        //Will eventually add a (2,1) case where it toggles between tabs of
+        //traditional stories and testimonies when we get the testimonies/personal stories
+        CardListFrag f = CardListFrag.newInstance(2, 0);
 
-        bottomNavigationView.setOnNavigationItemSelectedListener
-                (new BottomNavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                        CardListFrag selectedFragment = null;
-                        switch (item.getItemId()) {
-                            case R.id.all_resources:
-                                selectedFragment = CardListFrag.newInstance(1, 1);
-                                break;
-                            case R.id.pregnancy_resources:
-                                selectedFragment = CardListFrag.newInstance(1, 2);
-                                break;
-                            case R.id.after_birth_resources:
-                                selectedFragment = CardListFrag.newInstance(1, 3);
-                                break;
-                            case R.id.young_child_resources:
-                                selectedFragment = CardListFrag.newInstance(1, 4);
-                                break;
-                            case R.id.money_resources:
-                                selectedFragment = CardListFrag.newInstance(1, 5);
-                                break;
-                        }
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_resources, selectedFragment).commit();
-                        return true;
-                    }
-                });
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_resources, f).commit();
 
-        String initialDestination = getIntent().getStringExtra("GO_TO_SPECIFIC_RESOURCE");
-        if(initialDestination != null) {
-            PDFViewerFrag fragment = PDFViewerFrag.newInstance(initialDestination);
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_resources, fragment).commit();
-        } else {
-            //Display the default fragment (ALL)
-            CardListFrag selectedFragment = CardListFrag.newInstance(1, 1);
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_resources, selectedFragment).commit();
-        }
+
     }
 
     @Override

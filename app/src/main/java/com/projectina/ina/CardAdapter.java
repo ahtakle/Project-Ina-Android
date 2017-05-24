@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class ResourcesAdapter extends RecyclerView.Adapter<ResourcesAdapter.ResourceViewHolder>{
+public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ResourceViewHolder>{
 
     public static class ResourceViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
@@ -33,10 +33,10 @@ public class ResourcesAdapter extends RecyclerView.Adapter<ResourcesAdapter.Reso
         }
     }
 
-    List<ResourceCard> persons;
+    List<CardTerm> persons;
     private android.support.v4.app.FragmentManager fragmentManager;
 
-    ResourcesAdapter(List<ResourceCard> persons, android.support.v4.app.FragmentManager fragmentManager){
+    CardAdapter(List<CardTerm> persons, android.support.v4.app.FragmentManager fragmentManager){
         this.persons = persons;
         this.fragmentManager = fragmentManager;
     }

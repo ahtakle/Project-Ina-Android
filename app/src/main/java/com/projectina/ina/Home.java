@@ -63,5 +63,11 @@ public class Home extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //Start Stories Activity
+    public void dispatchStoriesIntent(View view) {
+        Intent intent = new Intent(this, Stories.class);
+        startActivity(intent);
+    }
+
 
 }
