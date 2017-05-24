@@ -21,16 +21,16 @@ public class TrimListAdapter extends BaseExpandableListAdapter {
     private List<String> expandableListTitle;
     private HashMap<String, List<String>> expandableListDetail;
 
-    public TrimListAdapter(Context context, List<String> expandableListTitle,
-                           HashMap<String, List<String>> expandableListDetail) {
-        this.context = context;
-        this.expandableListTitle = expandableListTitle;
-        this.expandableListDetail = expandableListDetail;
+    public TrimListAdapter(Context c, List<String> listTitle,
+                           HashMap<String, List<String>> listDetail) {
+        context = c;
+        expandableListTitle = listTitle;
+        expandableListDetail = listDetail;
     }
 
     @Override
     public Object getChild(int listPosition, int expandedListPosition) {
-        return this.expandableListDetail.get(this.expandableListTitle.get(listPosition))
+        return expandableListDetail.get(expandableListTitle.get(listPosition))
                 .get(expandedListPosition);
     }
 
@@ -56,7 +56,7 @@ public class TrimListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public int getChildrenCount(int listPosition) {
-        return this.expandableListDetail.get(this.expandableListTitle.get(listPosition))
+        return expandableListDetail.get(expandableListTitle.get(listPosition))
                 .size();
     }
 
@@ -80,16 +80,20 @@ public class TrimListAdapter extends BaseExpandableListAdapter {
                              View convertView, ViewGroup parent) {
         String listTitle = (String) getGroup(listPosition);
         if (convertView == null) {
-            LayoutInflater layoutInflater = (LayoutInflater) this.context.
+            LayoutInflater layoutInflater = (LayoutInflater) context.
                     getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.trim_list, null);
+
         }
         TextView listTitleTextView = (TextView) convertView
                 .findViewById(R.id.trimListTitle);
         listTitleTextView.setTypeface(null, Typeface.BOLD);
         listTitleTextView.setText(listTitle);
+
+
         return convertView;
     }
+
 
     @Override
     public boolean hasStableIds() {

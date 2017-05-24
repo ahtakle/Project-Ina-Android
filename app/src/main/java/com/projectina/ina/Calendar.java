@@ -5,8 +5,6 @@ import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.DisplayMetrics;
-import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
@@ -31,8 +29,8 @@ public class Calendar extends AppCompatActivity {
 
         Point point = new Point();
         getWindowManager().getDefaultDisplay().getSize(point);
-        int width = (int) (100.0 * point.x / 360);
-        int height = (int) (100.0 * point.y / 425);
+        int width = (int) (100.0 * point.x / 320);//(int) (100.0 * point.x / 360);
+        int height = (int) (100.0 * point.y / 360);//(int) (100.0 * point.y / 425);
 
         //This logic allows to fit screen exactly, but then the text is super small.... :(
         //DO NOT DELETE YET!

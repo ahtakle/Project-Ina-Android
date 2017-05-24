@@ -2,25 +2,20 @@ package com.projectina.ina;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.GoogleMapOptions;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -34,12 +29,19 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
     private static final LatLng IHS = new LatLng(45.6568280, -97.0160580);
     private static final LatLng RCHealthNurse = new LatLng(45.6674190, -97.0457440);
     private static final LatLng DakotaPrideCenter = new LatLng(45.5636240, -97.0763670);
+    private static final LatLng Coteau = new LatLng(45.657723, -97.050173);
+    private static final LatLng GPTCHB = new LatLng(44.101915, -103.263103);
+    private static final LatLng LittleStepsDaycare = new LatLng(45.567646, -97.069341);
+
 
     private Marker mHeadStart;
     private Marker mTribalAdminBuilding;
     private Marker mIHS;
     private Marker mRCHealthNurse;
     private Marker mDakotaPrideCenter;
+    private Marker mCoteau;
+    private Marker mGPTCHB;
+    private Marker mLittleStepsDaycare;
 
     private static final CharSequence[] MAP_TYPE_ITEMS =
             {"Road Map", "Hybrid", "Satellite", "Terrain"};
@@ -102,6 +104,12 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
         mRCHealthNurse.setTag(3);
         mDakotaPrideCenter = mMap.addMarker(new MarkerOptions().position(DakotaPrideCenter).title("Dakota Pride Center"));
         mDakotaPrideCenter.setTag(4);
+        mCoteau = mMap.addMarker(new MarkerOptions().position(Coteau).title("Coteau"));
+        mCoteau.setTag(5);
+        mGPTCHB = mMap.addMarker(new MarkerOptions().position(GPTCHB).title("GPTCHB"));
+        mGPTCHB.setTag(6);
+        mLittleStepsDaycare = mMap.addMarker(new MarkerOptions().position(LittleStepsDaycare).title("SWO Daycare"));
+        mLittleStepsDaycare.setTag(7);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(TribalAdminBuilding, 9));
 

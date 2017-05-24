@@ -4,8 +4,6 @@ import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.DisplayMetrics;
-import android.util.TypedValue;
 import android.webkit.WebView;
 
 public class CalendarMonthly extends AppCompatActivity {
@@ -28,8 +26,8 @@ public class CalendarMonthly extends AppCompatActivity {
 
         Point point = new Point();
         getWindowManager().getDefaultDisplay().getSize(point);
-        int width = (int) (100.0 * point.x / 340);
-        int height = (int) (100.0 * point.y / 375);
+        int width = (int) ((100.0 * point.x) / 250);
+        int height = (int) ((100.0 * point.y) / 250);
 
 //        DisplayMetrics displayMetrics = new DisplayMetrics();
 //        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
