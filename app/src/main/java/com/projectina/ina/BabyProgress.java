@@ -12,8 +12,8 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -24,6 +24,7 @@ import java.util.List;
 public class BabyProgress extends AppCompatActivity {
 
     public static final String PREFS_NAME = "InaPrefsFile";
+    public static SharedPreferences settings;
     private ProgressBar progressBar = null;
 
     ExpandableListView expandableListView;
@@ -40,14 +41,13 @@ public class BabyProgress extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        settings = getSharedPreferences(PREFS_NAME, 0);
         String due_date_str = settings.getString("due_date", "");
         int due_year = Integer.parseInt(settings.getString("due_year", ""));
         int due_month = Integer.parseInt(settings.getString("due_month", ""));
         int due_day = Integer.parseInt(settings.getString("due_day", ""));
 
         if (due_date_str.equalsIgnoreCase("not selected")) {
-
         } else {
             progressBar = (ProgressBar) findViewById(R.id.progressBar2);
             progressBar.setVisibility(View.VISIBLE);
@@ -73,15 +73,29 @@ public class BabyProgress extends AppCompatActivity {
             //Calculate and display percent done
             int percentDone = (int) ((100.0 * progress) / pregnancyLength);
             TextView percentDoneText = (TextView) findViewById(R.id.percent_done);
-            percentDoneText.setText("You are " + percentDone + "% done with your pregnancy:");
+            percentDoneText.setText("You are " + percentDone + "% done");
+
+            //Display 'subtitles' to the right of the image
+            int weeksCompleted = progress / 7;
+            int daysCompleted = progress % 7 + 1;
+            TextView weekDaySubtitle = (TextView) findViewById(R.id.week_day_subtitle);
+            weekDaySubtitle.setText("Week " + weeksCompleted + ", Day " + daysCompleted);
+            TextView trimSubtitle = (TextView) findViewById(R.id.trim_subtitle);
 
             //Calculate and display weekly information
             TextView weekTitle = (TextView) findViewById(R.id.progress_weeks_title);
             TextView weekInfo = (TextView) findViewById(R.id.progress_weeks_info);
-            int weeksCompleted = (progress) / 7;
             String[] weeklyInfo = getResources().getStringArray(R.array.weekly_info);
-            weekTitle.setText("\nYou are in Week " + weeksCompleted + "!");
-            weekInfo.setText(weeklyInfo[weeksCompleted]);
+            weekTitle.setText("Week " + weeksCompleted + " Facts");
+            if (weeksCompleted > 20) //for testing
+                weeksCompleted = 20;
+            weekInfo.setText(weeklyInfo[weeksCompleted - 1]);
+
+            //Change image based on week
+            ImageView imageView = (ImageView) findViewById(R.id.weekly_img);
+            int resId = getResources().getIdentifier("week_" + weeksCompleted, "mipmap", getPackageName());
+            imageView.setImageResource(resId);
+            Log.d("image", resId + "");
 
             //Display trimester information
             //Info from: http://www.webmd.com/baby/tc/pregnancy-your-first-trimester#1
@@ -89,14 +103,17 @@ public class BabyProgress extends AppCompatActivity {
             TextView trimTitleInfo = (TextView) findViewById(R.id.trimInfo);
 
             if (weeksCompleted <= 12) {
-                trimTitleText.setText("\nTrimester 1");
+                trimTitleText.setText("Trimester 1 Facts");
                 trimTitleInfo.setText(getResources().getString(R.string.trim_1));
+                trimSubtitle.setText("Trimester 1");
             } else if (weeksCompleted <= 28) {
-                trimTitleText.setText("\nTrimester 2");
+                trimTitleText.setText("Trimester 2 Facts");
                 trimTitleInfo.setText(getResources().getString(R.string.trim_2));
+                trimSubtitle.setText("Trimester 2 Facts");
             } else {
-                trimTitleText.setText("\nTrimester 3");
+                trimTitleText.setText("Trimester 3 Facts");
                 trimTitleInfo.setText(getResources().getString(R.string.trim_3));
+                trimSubtitle.setText("Trimester 3");
             }
 
             /*DisplayMetrics metrics = new DisplayMetrics();
@@ -116,15 +133,15 @@ public class BabyProgress extends AppCompatActivity {
             expandableListAdapter = new TrimListAdapter(this, expandableListTitle, expandableListDetail);
             expandableListView.setAdapter(expandableListAdapter);
             expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
-
                 @Override
                 public void onGroupExpand(int groupPosition) {
-
+                    /*ExpandableListView.LayoutParams mParam = new ExpandableListView.LayoutParams
+                            (ExpandableListView.LayoutParams.FILL_PARENT, 400);
+                    expandableListView.setLayoutParams(mParam);*/
                 }
             });
 
             expandableListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
-
                 @Override
                 public void onGroupCollapse(int groupPosition) {
 
@@ -138,11 +155,7 @@ public class BabyProgress extends AppCompatActivity {
                     return false;
                 }
             });
-
         }
-
-        ScrollView scrollView = (ScrollView) findViewById(R.id.content_baby_progress);
-        scrollView.fullScroll(ScrollView.FOCUS_UP);
 
     }
 
@@ -150,7 +163,16 @@ public class BabyProgress extends AppCompatActivity {
     public void trimItemClicked(View view) {
         CheckBox tv = (CheckBox) view.findViewById(R.id.trimListItem);
         String data = tv.getText().toString();
-        Log.d("data", data);
+        if (tv.isChecked())
+            settings.edit().putBoolean(data, true).apply();
+        else
+            settings.edit().putBoolean(data, false).apply();
+    }
+
+    //Change/Remove Due Date
+    public void dispatchDueDate(View view) {
+        Intent intent = new Intent(this, DueDate.class);
+        startActivity(intent);
     }
 
 

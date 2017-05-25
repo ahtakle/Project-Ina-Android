@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.util.HashMap;
@@ -48,9 +49,13 @@ public class TrimListAdapter extends BaseExpandableListAdapter {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.trim_item, null);
         }
-        TextView expandedListTextView = (TextView) convertView
-                .findViewById(R.id.trimListItem);
-        expandedListTextView.setText(expandedListText);
+        //TextView expandedListTextView = (TextView) convertView.findViewById(R.id.trimListItem);
+        CheckBox expandedListCheckBox = (CheckBox) convertView.findViewById(R.id.trimListItem);
+        expandedListCheckBox.setText(expandedListText);
+
+        boolean checked = BabyProgress.settings.getBoolean(expandedListText, false);
+        expandedListCheckBox.setChecked(checked);
+
         return convertView;
     }
 
