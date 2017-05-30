@@ -29,15 +29,15 @@ public class CardTerm {
                 persons.add(new CardTerm("Coteau", "Coteau Clinic", R.mipmap.coteau));
                 persons.add(new CardTerm("GPTCHB", "Northern Plains Healthy Start", R.mipmap.gptchb));
                 persons.add(new CardTerm("NESD", "Community Health WIC", R.mipmap.nesd));
-                persons.add(new CardTerm("Roberts", "Short description", R.mipmap.roberts));
+                persons.add(new CardTerm("Roberts County", "WIC", R.mipmap.roberts));
                 persons.add(new CardTerm("SD Breastfeeding", "Breastfeeding Peer Counsel", R.mipmap.sd_breastfeeding));
                 persons.add(new CardTerm("SD Home Visiting", "Health Bright Start", R.mipmap.sd_homevisiting));
                 persons.add(new CardTerm("SD Social", "Department of Social Services", R.mipmap.sd_socialservices));
-                persons.add(new CardTerm("Sisseton Clinic", "IHS Clinic", R.mipmap.sisseton_clinic));
+                persons.add(new CardTerm("Sisseton Clinic", "IHS Clinic", R.mipmap.sisseton_clinic)); //Not sure if document is labeled correctly
                 persons.add(new CardTerm("Sisseton Dental", "IHS Dental", R.mipmap.sisseton_dental));
                 persons.add(new CardTerm("Sisseton Nurse", "IHS Public Health", R.mipmap.sisseton_nurse));
                 persons.add(new CardTerm("Sisseton School", "School District SPED", R.mipmap.sisseton_school));
-                persons.add(new CardTerm("SWO Benefits", "Benefits Coordinator", R.mipmap.swo_benefits));
+                persons.add(new CardTerm("Medicaid Eligibility", "Benefits Coordinator", R.mipmap.swo_benefits));
                 persons.add(new CardTerm("SWO Cavity", "Cavity Free", R.mipmap.swo_cavity));
                 persons.add(new CardTerm("SWO Child", "Child Protection", R.mipmap.swo_child));
                 persons.add(new CardTerm("SWO Health Education", "Community Health Ed.", R.mipmap.swo_healthed));
@@ -49,6 +49,7 @@ public class CardTerm {
                 persons.add(new CardTerm("SWO EHS", "Head Start", R.mipmap.swo_ehs));
                 persons.add(new CardTerm("SWO Daycare", "Little Steps Daycare", R.mipmap.swo_daycare));
                 persons.add(new CardTerm("SWO MCH", "Maternal and Child Health", R.mipmap.swo_mch));
+                persons.add(new CardTerm("MCH Program", "Maternal and Child Health", R.mipmap.swo_mch));
                 persons.add(new CardTerm("Finances", "Financial Advice", R.mipmap.finances));
                 break;
             //Adds to the arraylist the resources for pregnancy

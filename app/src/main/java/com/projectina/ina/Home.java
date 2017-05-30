@@ -5,10 +5,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.TextView;
 
 
 public class Home extends AppCompatActivity {
+
+    public static final String PREFS_NAME = "InaPrefsFile";
+    public static SharedPreferences settings;
 
 //    public static final String PREFS_NAME = "InaPrefsFile";
 //
@@ -59,7 +61,14 @@ public class Home extends AppCompatActivity {
 
     //Start BabyProgress Activity
     public void dispatchBabyProgressIntent(View view) {
-        Intent intent = new Intent(this, BabyProgress.class);
+        settings = getSharedPreferences(PREFS_NAME, 0);
+        String due_date_str = settings.getString("due_date", "");
+        Intent intent;
+        if (due_date_str.equalsIgnoreCase("not selected")) {
+            intent = new Intent(this, NoDueDateProgress.class);
+        } else {
+            intent = new Intent(this, BabyProgress.class);
+        }
         startActivity(intent);
     }
 

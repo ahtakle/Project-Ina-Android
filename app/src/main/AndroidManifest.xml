@@ -62,7 +62,11 @@
         <activity
             android:name=".Feedback"
             android:label="@string/title_activity_feedback"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.projectina.ina.Home" />
+        </activity>
         <activity
             android:name=".Help"
             android:label="@string/title_activity_help"
@@ -117,6 +121,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.projectina.ina.Home" />
         </activity>
+        <activity
+            android:name=".NoDueDateProgress"
+            android:label="@string/title_activity_no_due_date_progress"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.projectina.ina.Home" />
+        </activity>
+
     </application>
 
 </manifest>

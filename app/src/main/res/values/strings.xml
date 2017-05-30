@@ -1601,11 +1601,33 @@
         <item>\u2022 Your baby is the size of a bell pepper or a sweet potato.\n\u2022 Your baby\'s weight is around 6.70 oz.\n\u2022 Your baby is now flexing his or her arms and legs. Internally, a protective coating of myelin is forming around his nerves.</item>
         <item>\u2022 Your baby is the size of a mango.\n\u2022 Your baby\'s weight is around 8.47 oz.\n\u2022 Your baby\'s senses – smell, vision, touch, taste and hearing – are developing and she may be able to hear your voice.</item>
         <item>\u2022 Your baby is the size of a banana or small artichoke.\n\u2022 Your baby\'s weight is around 10.58 oz.\n\u2022 Your baby can swallow now, and your baby’s digestive system is producing meconium, the dark, sticky goo that your baby will pass in his or her first poop.</item>
+        <item>\u2022 Your baby will begin to jab or kick the wall of your womb.\n\u2022 You may begin to notice patterns in your baby’s movements.\n\u2022 Your baby\'s weight is around 0.75 pounds.\n\u2022 Your baby is the size of a carrot.</item>
+        <item>\u2022 Your baby now looks almost like a small newborn.\n\u2022 Your baby has more developed lips and eyebrows, but does not have colored eyes yet.\n\u2022 Your baby\'s weight is almost 1 pound.\n\u2022 Your baby is roughly the size of a spaghetti squash.</item>
+        <item>\u2022 Your baby’s ability to detect sounds is improving.\n\u2022 Your baby\'s weight is just over 1 pound.\n\u2022 Your baby is the size of a large mango.</item>
+        <item>\u2022 Your baby is the size of an ear of corn.\n\u2022 Your baby\'s weight is around 1.33 pounds.\n\u2022 Your baby\'s skin is still translucent and thin.</item>
+        <item>\u2022 Your baby is the size of a rutabaga.\n\u2022 Your baby\'s skin is starting to become baby fat.\n\u2022 Your baby\'s weight is around 1.5 pounds.\n\u2022 Your baby’s hair is starting to grow, with its natural color and texture.</item>
+        <item>\u2022 Your baby is the size of a bunch of scallions.\n\u2022 Your baby\'s weight is around 1.67 pounds.\n\u2022 Your baby is now inhaling and exhaling amniotic fluid.\n\u2022 Through breathing the amniotic fluid in and out, your baby will start to develop lungs.</item>
+        <item>\u2022 This is the last week of your second trimester.\n\u2022 Your baby now has a regular sleep schedule and an active brain, but not yet fully formed lungs.n\u2022 Your baby is the size of a head of cauliflower.\n\u2022 Your baby\'s weight is almost 2 pounds.</item>
+        <item>\u2022 Your baby is the size of a large eggplant.\n\u2022 Your baby\'s weight is around 2.25 pounds.\n\u2022 Your baby can blink and has grown eyelashes.\n\u2022 Your baby is beginning to develop eyesight, and can sense light filtering in from outside the womb.</item>
+        <item>\u2022 Your baby is the size of a butternut squash.\n\u2022 Your baby\'s weight is around 2.5 pounds.\n\u2022 Your baby is continuing to grow and develop its muscles and lungs, as well as its head for its brain!</item>
+        <item>\u2022 Your baby is the size of a large cabbage.\n\u2022 Your baby\'s weight is almost 3 pounds.\n\u2022 Your baby is continuing to develop eyesight, but this likely won’t be fully developed until after birth.</item>
+        <item>\u2022 Your baby is the size of a coconut.\n\u2022 Your baby\'s weight is around 3.33 pounds.\n\u2022 Your baby can turn its head from side to side. Your baby can also move around its limbs a lot more, so be prepared for more kicks!</item>
+        <item>\u2022 Your baby is the size of a large jicama.\n\u2022 Your baby\'s weight is around 3.75 pounds.\n\u2022 Your baby now has fingernails, toenails, and real hair, and is still accumulating baby fat.</item>
+        <item>\u2022 Your baby is the size of a pineapple.\n\u2022 Your baby\'s weight is just over 4 pounds.\n\u2022 Your baby\'s skeleton is firming up, but its head will still remain largely flexible until after birth.</item>
+        <item>\u2022 Your baby is the size of a cantaloupe.\n\u2022 Your baby\'s weight is around 4.75 pounds.\n\u2022 Your baby\'s nervous system and lungs are maturing. Its skin is also very smoothed out now.</item>
+        <item>\u2022 Your baby is the size of an honeydew melon.\n\u2022 Your baby\'s weight is around 5.25 pounds.\n\u2022 Your baby is getting pretty big for the womb, so it won’t be somersaulting much, but it’ll still be kicking! Also, its kidneys are fully developed by now, and its liver is almost ready.</item>
+        <item>\u2022 Your baby is the size of a head of romaine lettuce.\n\u2022 Your baby\'s weight is around 6 pounds.\n\u2022 Your baby is shedding its vernix caseosa, which was the waxy substance covering the skin for the last nine months. This will be swallowed and incorporated into the meconium.</item>
+        <item>\u2022 Your baby is the size of a bunch of Swiss chard.\n\u2022 Your baby\'s weight is around 6.33 pounds.\n\u2022 Your baby is continuing to fatten up before birth, and has grown out most of its hair, if any at all.</item>
+        <item>\u2022 Your baby is the size of a leek.\n\u2022 Your baby\'s weight is around 6.8 pounds.\n\u2022 Your baby has matured its organs, and also now has a firm grasp to hold your hand with!</item>
+        <item>\u2022 Your baby is the size of a mini-watermelon.\n\u2022 Your baby\'s weight is just over 7 pounds.\n\u2022 Your baby is now sloughing off old layers of skin for new, fresh ones.</item>
+        <item>\u2022 Your baby is likely the size of a small pumpkin.\n\u2022 Your baby\'s weight is around 7.5 pounds.\n\u2022 Your baby’s skull is not yet fully fused, so that it can pass more easily through the birth canal.</item>
     </string-array>
 
     <string name="trim_1">There are so many changes taking place, both inside and outside of your body. Your baby is growing faster than at any other stage of your pregnancy, with its heart, brain and spine already developing.</string>
     <string name="trim_2">The second trimester of pregnancy is full of baby kicks and growing bumps. Morning sickness usually starts to calms down.</string>
     <string name="trim_3">You will look very pregnant now and regularly feel your baby wriggling around. It is a great time to be shopping for baby!</string>
+
+    <string name="no_due_date_txt">Congratulations on your baby, and thank you for downloading this app! Please enter a due date to access information about pregnancy or baby progress.</string>
 
 
     <string name="title_activity_background_intro">Introduction Information</string>
@@ -1625,4 +1647,5 @@
 
     <string name="change_due_date">Change or remove due date</string>
     <string name="title_activity_stories">Stories</string>
+    <string name="title_activity_no_due_date_progress">Baby Progress</string>
 </resources>

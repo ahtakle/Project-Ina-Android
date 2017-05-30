@@ -25,8 +25,8 @@ public class BabyProgress extends AppCompatActivity {
 
     public static final String PREFS_NAME = "InaPrefsFile";
     public static SharedPreferences settings;
-    private ProgressBar progressBar = null;
 
+    private ProgressBar progressBar = null;
     ExpandableListView expandableListView;
     ExpandableListAdapter expandableListAdapter;
     List<String> expandableListTitle;
@@ -69,11 +69,14 @@ public class BabyProgress extends AppCompatActivity {
             int diffInDays = (int) ((dueDate.getTime() - currDate.getTime()) / millisInDay);
             int progress = pregnancyLength - diffInDays;
             progressBar.setProgress(progress);
+            int percentDone = (int) ((100.0 * progress) / pregnancyLength);
+            if (percentDone > 100) percentDone = 100;
+            TextView progressPercentText = (TextView) findViewById(R.id.progress_percent);
+            progressPercentText.setText("Progress: " + percentDone + "%");
 
             //Calculate and display percent done
-            int percentDone = (int) ((100.0 * progress) / pregnancyLength);
-            TextView percentDoneText = (TextView) findViewById(R.id.percent_done);
-            percentDoneText.setText("You are " + percentDone + "% done");
+            //TextView percentDoneText = (TextView) findViewById(R.id.percent_done);
+            //percentDoneText.setText("You are " + percentDone + "% done");
 
             //Display 'subtitles' to the right of the image
             int weeksCompleted = progress / 7;
@@ -87,8 +90,8 @@ public class BabyProgress extends AppCompatActivity {
             TextView weekInfo = (TextView) findViewById(R.id.progress_weeks_info);
             String[] weeklyInfo = getResources().getStringArray(R.array.weekly_info);
             weekTitle.setText("Week " + weeksCompleted + " Facts");
-            if (weeksCompleted > 20) //for testing
-                weeksCompleted = 20;
+            if (weeksCompleted > 40) //for testing
+                weeksCompleted = 40;
             weekInfo.setText(weeklyInfo[weeksCompleted - 1]);
 
             //Change image based on week
@@ -109,7 +112,7 @@ public class BabyProgress extends AppCompatActivity {
             } else if (weeksCompleted <= 28) {
                 trimTitleText.setText("Trimester 2 Facts");
                 trimTitleInfo.setText(getResources().getString(R.string.trim_2));
-                trimSubtitle.setText("Trimester 2 Facts");
+                trimSubtitle.setText("Trimester 2");
             } else {
                 trimTitleText.setText("Trimester 3 Facts");
                 trimTitleInfo.setText(getResources().getString(R.string.trim_3));
@@ -120,7 +123,6 @@ public class BabyProgress extends AppCompatActivity {
             getWindowManager().getDefaultDisplay().getMetrics(metrics);
             int width = metrics.widthPixels;
             expandableListView.setIndicatorBounds(width - GetPixelFromDips(50), width - GetPixelFromDips(10));*/
-
 
             //Put data into drop down menus
             expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
@@ -135,9 +137,9 @@ public class BabyProgress extends AppCompatActivity {
             expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
                 @Override
                 public void onGroupExpand(int groupPosition) {
-                    /*ExpandableListView.LayoutParams mParam = new ExpandableListView.LayoutParams
-                            (ExpandableListView.LayoutParams.FILL_PARENT, 400);
-                    expandableListView.setLayoutParams(mParam);*/
+                    ExpandableListView expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
+                    expandableListView.setMinimumHeight(5000);
+                    Log.d("height", expandableListView.getHeight() + "");
                 }
             });
 
