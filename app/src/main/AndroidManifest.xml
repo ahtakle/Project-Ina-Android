@@ -56,10 +56,6 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".AboutMe"
-            android:label="@string/title_activity_about_me"
-            android:theme="@style/AppTheme" />
-        <activity
             android:name=".Feedback"
             android:label="@string/title_activity_feedback"
             android:theme="@style/AppTheme">
@@ -68,10 +64,6 @@
                 android:value="com.projectina.ina.Home" />
         </activity>
         <activity
-            android:name=".Help"
-            android:label="@string/title_activity_help"
-            android:theme="@style/AppTheme" />
-        <activity
             android:name=".Map"
             android:label="@string/title_activity_map">
             <meta-data
@@ -79,7 +71,7 @@
                 android:value="com.projectina.ina.Home" />
         </activity>
         <activity
-            android:name=".BackgroundIntro"
+            android:name=".AboutMe"
             android:label="@string/background_intro_title"
             android:parentActivityName=".Home"
             android:theme="@style/AppTheme">
@@ -103,9 +95,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.projectina.ina.Home" />
         </activity>
-        <activity android:name=".DueDate" />
+        <activity android:name=".DueDate">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.projectina.ina.DateOptions" />
+        </activity>
         <activity
-            android:name=".BabyProgress"
+            android:name=".PregnancyProgress"
             android:label="@string/title_activity_baby_progress"
             android:theme="@style/AppTheme">
             <meta-data
@@ -129,7 +125,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.projectina.ina.Home" />
         </activity>
-
+        <activity
+            android:name=".DateOptions"
+            android:label="@string/title_activity_date_options"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.projectina.ina.Home" />
+        </activity>
+        <activity
+            android:name=".BabyProgress"
+            android:label="@string/title_activity_baby_progress"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

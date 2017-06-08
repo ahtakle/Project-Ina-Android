@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
-import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 import com.shockwave.pdfium.PdfDocument;
 
@@ -67,8 +66,9 @@ public class PDFViewerFrag extends Fragment implements OnLoadCompleteListener {
                     .scrollHandle(new DefaultScrollHandle(getContext()))
                     .load();
         } catch (Exception e) {
-            //error.pdf contains a pdf that gives error description to user
-            pdfView.fromAsset("error.pdf")
+            //About Me.pdf contains a pdf that gives description of app
+            //Used because About Me activity can't pass in a parameter
+            pdfView.fromAsset("About Me.pdf")
                     .defaultPage(pageNumber)
                     .enableSwipe(true)
                     .swipeHorizontal(false)

@@ -3,12 +3,7 @@
     <!-- Define the background properties like color etc -->
     <item android:id="@android:id/background">
         <shape>
-            <gradient
-                android:startColor="#CCCCCC"
-                android:centerColor="#CCCCCC"
-                android:centerY="1.0"
-                android:endColor="#CCCCCC"
-                android:angle="270" />
+            <solid android:color="#CCCCCC" />
             <corners android:radius="8dp" />
 
         </shape>
@@ -18,12 +13,7 @@
     <item android:id="@android:id/progress">
         <clip>
             <shape>
-                <gradient
-                    android:startColor="#FFDAE0"
-                    android:centerColor="#FFA7B6"
-                    android:centerX="1.0"
-                    android:endColor="#FF748C"
-                    android:angle="0" />
+                <solid android:color="@color/colorAccent" />
                 <corners android:radius="8dp" />
             </shape>
         </clip>

@@ -29,11 +29,6 @@ public class Home extends AppCompatActivity {
 
     }
 
-    //Start BackgroundIntro Activity
-    public void dispatchBackgroundIntent(View view) {
-        Intent intent = new Intent(this, BackgroundIntro.class);
-        startActivity(intent);
-    }
 
     //Start Map Activity
     public void dispatchMapIntent(View view) {
@@ -62,13 +57,21 @@ public class Home extends AppCompatActivity {
     //Start BabyProgress Activity
     public void dispatchBabyProgressIntent(View view) {
         settings = getSharedPreferences(PREFS_NAME, 0);
-        String due_date_str = settings.getString("due_date", "");
+        //String due_date_str = settings.getString("date", "");
         Intent intent;
-        if (due_date_str.equalsIgnoreCase("not selected")) {
+        String data_type = settings.getString("date_type", "");
+        //Log.d("data type", data_type);
+        if (data_type.equals("due_date"))
+            intent = new Intent(this, PregnancyProgress.class);
+        else if (data_type.equals("birth_date"))
+            intent = new Intent(this, BabyProgress.class);
+        else
+            intent = new Intent(this, NoDueDateProgress.class);
+        /*if (due_date_str.equalsIgnoreCase("not selected")) {
             intent = new Intent(this, NoDueDateProgress.class);
         } else {
             intent = new Intent(this, BabyProgress.class);
-        }
+        }*/
         startActivity(intent);
     }
 

@@ -33,11 +33,9 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!--Menu Items-->
-    <string name="action_settings">Settings</string>
     <string name="action_about_me">About Me</string>
     <string name="action_feedback">Feedback</string>
-    <string name="action_help">Help</string>
-    <string name="resources">Resources</string>
+    <string name="action_tutorial">Tutorial</string>
 
     <string name="glossary_header">Glossary</string>
     <string name="title_activity_map">Map</string>
@@ -1623,6 +1621,42 @@
         <item>\u2022 Your baby is likely the size of a small pumpkin.\n\u2022 Your baby\'s weight is around 7.5 pounds.\n\u2022 Your baby’s skull is not yet fully fused, so that it can pass more easily through the birth canal.</item>
     </string-array>
 
+    <string-array name="monthly_info">
+        <item>\u2022 Most babies will be able to suck well, focus on a face, and lift their heads briefly.\n\n\u2022 It is normal for baby’s to sleep up to 18 hours out of 24 a day when they are younger than 3 months, but not more than 1 to 3 hours at a time.\n\n\u2022 Play with your baby, keeping in mind that he/she can only see between 8-12 inches in front of his or her face. While you’re enjoying this one-on-one time, she’ll learn how to identify you by sight and sound at the same time you’re helping her to develop motor and cognitive skills.</item>
+        <item>\u2022 If your baby hasn\'t done so already, your baby is about to crack a spectacular toothless smile.\n\n\u2022 She may also laugh, coo, and recognize your face and your voice about now.\n\n\u2022 Start trying to recognize signs that your baby is tired (rubbing his eyes, flicking his ear with his hand, losing interest in people and toys), and put your baby down in his crib when you see them to help regulate his sleep.</item>
+        <item>\u2022 Your baby will have started or will start making their first sounds, especially different vowel noises.\n\n\u2022 Your baby will continue to be more active.\n\n\u2022 Be careful about baby safety — he\'s still pretty teeny and vulnerable to a host of serious injuries including shaken-baby syndrome. Hold off on the horseplay for now and focus on cuddles for a while longer.</item>
+        <item>\u2022 By this age, your baby can raise up on her arms when placed on her tummy (thanks to all the supervised tummy time you give her) and keep her head level when propped in a sitting position.\n\n\u2022 He might even turn in the direction of your voice and complain if you take away his toy.\n\n\u2022 You should still only be feeding your baby breast milk or formula at this age.</item>
+        <item>\u2022 Your baby has learned object permanence, so he’ll probably love playing peek-a-boo or finding “hidden” items.\n\n\u2022 Your baby can start eating solids now.\n\n\u2022 Eczema and food allergies often emerge around now, so be on the look out.\n\n\u2022 For allergies, introduce new foods one at a time and wait two or three days before offering another new food. Keeping a food log can also help you pinpoint the cause if your baby has an adverse reaction.</item>
+        <item>\u2022 Your baby\'s probably able to bear weight on her legs when you hold her upright and may even be ready to hit the road, albeit at a crawl.\n\n\u2022 If your baby is still not sleeping through the night, this may be a good time to consider some sleep strategies, like showing him the difference between night time and day time through different lights and sounds.</item>
+        <item>\u2022 Your baby can or will soon be able sit without support, and wave or play patty-cake.\n\n\u2022 During this and the surrounding months, your child should eat a diet similar o around 1-3 teaspoons fruit in four feedings, 1-3 teaspoon vegetables in four feedings, and 3 to 9 tablespoons cereal in 2 or 3 feedings in addition to formula or breast milk.</item>
+        <item>\u2022 Gone are the days when your baby would stay where you plopped her. Most critters are ready to roll…and scoot, creep, crawl, or cruise.\n\n\u2022 If baby’s show readiness for finger foods (like transferring items between hands and moving jaw in a chewing motion), you can start to feed her things like O-shaped cereal, small bits of scrambled eggs, well-cooked pieces of potato, or teething crackers.</item>
+        <item>\u2022 Listen up, Mom, and you\'ll start to hear emerging baby speech patterns. Also, your baby will probably be able to respond to simple commands (“Give mommy the cup”).\n\n\u2022 Your easy-eater may become picky around now—you can mediate this by laying out a few nibbles for her to select from, and let her pick and choose.</item>
+        <item>\u2022 Your baby will be able to stand holding on, and may be able to stand alone (for a second) or even walk unassisted (the chase begins, Mom!).\n\n\u2022 You (and/or your baby) may be ready to wean (or not) so make a plan (though be ready to revise your timetable, perhaps more than once).</item>
+        <item>\u2022 Your baby loves games — especially those that involve pointing — and his interest in books will grow exponentially as he begins to comprehend more and recognize familiar pictures.\n\n\u2022 A few things not to be concerned about: bowed legs (almost always normal and temporary) and hitting milestones later than his peers.\n\n\u2022Children learn best and build confidence when you let them learn at their own pace, but if you\'re truly concerned, check with your pediatrician.</item>
+        <item>\u2022 One-year-olds are pretty good at doing a few things for themselves, such as eating with their fingers, helping their parents dress them, and turning the pages of a storybook. Your baby should be starting to use a few everyday items correctly, including a spoon, telephone, and hairbrush.\n\n\u2022 At this point, your baby can transition from human milk to cow milk (start with whole milk), and eat honey.</item>
+        <item>\u2022 Your baby will begin to stand on his or her own well.\n\n\u2022 Your little one can still choke on chunks of food. Never offer peanuts, whole grapes, cherry tomatoes (unless they\'re cut in quarters), whole carrots, seeds (i.e., processed pumpkin or sunflower seeds), nor whole or large sections of hot dogs.</item>
+        <item>\u2022 Your baby will probably be able to walk well on his own.\n\n\u2022 Don\'t restrict fats from your baby’s menu at this point. Babies and young toddlers should get about half of their calories from fat, which are very important for their growth and development at this age.</item>
+        <item>\u2022 About half of baby’s can walk backwards by 15 months.\n\n\u2022
+        The generally agreeable nature of a 12-month-old can morph overnight into something more exhausting. Rigid, contrarian behavior shows that your child is beginning to understand a huge concept: She\'s a separate person from you.\n\n\u2022 Baby’s need about 1,000 calories divided among three meals and two snacks per day for good nutrition. Don\'t count on your child always eating it that way though—the eating habits of toddlers are erratic and unpredictable from one day to the next!</item>
+        <item>\u2022 Your baby will be hard at work understanding rules (and also testing their limits).\n\n\u2022 Bedtime will go more smoothly if you establish a routine your child can count on (like a bath, putting on pajamas, or reading a book).</item>
+        <item>\u2022 About half of babies at 17 months can walk up stairs with help.\n\n\u2022 Lisping and mixing regular words with babbling phrases isn\'t unusual at 17 months. As your child\'s tongue and mouth muscles develop, enunciation should improve. Help him out by repeating what he says. </item>
+        <item>\u2022 You baby should be able to speak at least 15 words by the end of 18 months.\n\n\u2022 Don’t worry if your toddler suddenly decides to hate milk. Keep serving it, but don’t force her to drink it. Serve other diary products as well to make sure she is getting enough calcium.</item>
+        <item>\u2022 Your baby has a vocabulary of anywhere from 10 to 50 words.\n\n\u2022 Your baby may also start testing backwards and sideways movements.\n\n\u2022 Your baby needs between 11-14 hours of sleep a day.</item>
+        <item>\u2022 Your baby will start exploring its artistic skills, drawing simple lines and shapes.\n\n\u2022 Your baby will start experimenting with fuller, simple sentences.\n\n\u2022 Your baby needs between 11-14 hours of sleep a day.</item>
+        <item>\u2022 Your baby will begin to test its balance and climbing ability.\n\n\u2022 Your baby can also now begin naming most body parts.\n\n\u2022 Your baby needs between 11-14 hours of sleep a day.</item>
+        <item>\u2022 Your baby is beginning to explore its dexterity.\n\n\u2022 Your baby can also start to ask simple questions.\n\n\u2022 Your baby needs between 11-14 hours of sleep a day.</item>
+        <item>\u2022 Your toddler can likely follow simple two-step commands.\n\n\u2022 Your toddler can also probably begin to undress itself.\n\n\u2022 Your baby\'s weight is around 1.5 pounds.\n\n\u2022 Your baby needs between 11-14 hours of sleep a day.</item>
+        <item>\u2022 Your toddler can regularly ask and answer questions.\n\n\u2022 Your baby now should have a functional vocabulary of around 50 words.\n\n\u2022 Your baby needs between 11-14 hours of sleep a day.</item>
+        Information stops segregating by month after the 24-month marker, and instead is grouped by
+        pairs of months
+        <item>\u2022 Your toddler should start slimming down from its baby fat.\n\n\u2022 Your toddler will have a lot more energy over the next year, and should get the chance to run around at least once a day.n\u2022 Your child only needs between 9-13 hours of sleep at night for the next year.</item>
+        <item>\u2022 Your toddler can now easily handle small objects.\n\n\u2022 This is the time when you will need to start setting rules for your toddler.\n\n\u2022 Your child also now has a longer attention span, and might try to concentrate harder on simple tasks!</item>
+        <item>\u2022 Your child should be able to put on a few articles of clothing.\n\n\u2022 Your toddler is going to expand its creativity through messiness, and may begin to remember friends by their names.\n\n\u2022 This is around the time that you should begin potty-training your toddler!</item>
+        <item>\u2022 Your child now should have a basic understanding of adult behaviors and rules.\n\n\u2022 Your toddler will now also begin to change its speech, depending on who it is speaking to.\n\n\u2022 This is also around the time that your child will begin to tell fibs, because of its vivid imagination.</item>
+        <item>\u2022 Your child is beginning to develop its unique temperament - make sure to encourage your child to be its true self!\n\n\u2022 This is also a critical time for ensuring that your child meets others and learns to share.\n\n\u2022 Also, this is around the time that your toddler may begin to develop imaginary friends.</item>
+        <item>\u2022 Several of your child’s movements, like running and jumping, have become second nature.\n\n\u2022 Your toddler likely only needs a short nap in the afternoon by this point - the days of long naps are behind you!\n\n\u2022 This is also around the time that your child will be able to begin preparing its own food.</item>
+    </string-array>
+
     <string name="trim_1">There are so many changes taking place, both inside and outside of your body. Your baby is growing faster than at any other stage of your pregnancy, with its heart, brain and spine already developing.</string>
     <string name="trim_2">The second trimester of pregnancy is full of baby kicks and growing bumps. Morning sickness usually starts to calms down.</string>
     <string name="trim_3">You will look very pregnant now and regularly feel your baby wriggling around. It is a great time to be shopping for baby!</string>
@@ -1648,4 +1682,7 @@
     <string name="change_due_date">Change or remove due date</string>
     <string name="title_activity_stories">Stories</string>
     <string name="title_activity_no_due_date_progress">Baby Progress</string>
+    <string name="title_activity_date_options">How Will You Be Using this App?</string>
+    <string name="title_activity_test">Test</string>
+    <string name="action_settings">Settings</string>
 </resources>

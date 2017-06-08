@@ -53,7 +53,7 @@ public class TrimListAdapter extends BaseExpandableListAdapter {
         CheckBox expandedListCheckBox = (CheckBox) convertView.findViewById(R.id.trimListItem);
         expandedListCheckBox.setText(expandedListText);
 
-        boolean checked = BabyProgress.settings.getBoolean(expandedListText, false);
+        boolean checked = PregnancyProgress.settings.getBoolean(expandedListText, false);
         expandedListCheckBox.setChecked(checked);
 
         return convertView;

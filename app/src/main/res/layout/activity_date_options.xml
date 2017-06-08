@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.projectina.ina.AboutMe"
-    android:id="@+id/background_intro"
-    android:background="@color/background">
+    tools:context="com.projectina.ina.DateOptions">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -23,43 +21,54 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:name="com.projectina.ina.PDFViewerFrag"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:layout="@layout/fragment_pdf_viewer" />
-
-    <!--<RelativeLayout
-        android:id="@+id/backgroundintro_text"
+        android:id="@+id/content_date_options"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        android:background="@color/background"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="com.projectina.ina.AboutMe"
-        tools:showIn="@layout/activity_about_me">
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp">
+        tools:context="com.projectina.ina.DateOptions"
+        tools:showIn="@layout/activity_date_options"
+        android:orientation="vertical"
+        android:weightSum="4">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/background_intro_text"
-            android:textSize="16sp"
-            android:id="@+id/background_text"
-            android:textColor="@color/colorTextDark" />
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Please select how you would like to use this app."
+            android:gravity="center"
+            android:textSize="20sp" />
 
-        </ScrollView>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="I'm pregnant"
+            android:layout_margin="10dp"
+            android:onClick="dispatchDueDate" />
 
-    </RelativeLayout> -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="My baby is under 3 years old"
+            android:layout_margin="10dp"
+            android:onClick="dispatchBirthDate" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Neither"
+            android:layout_margin="10dp"
+            android:onClick="dispatchNoDate" />
+
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

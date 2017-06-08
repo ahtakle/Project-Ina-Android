@@ -23,7 +23,7 @@ public class NoDueDateProgress extends AppCompatActivity {
 
     //Change/Remove Due Date
     public void dispatchDueDate(View view) {
-        Intent intent = new Intent(this, DueDate.class);
+        Intent intent = new Intent(this, DateOptions.class);
         startActivity(intent);
     }
 
@@ -42,26 +42,17 @@ public class NoDueDateProgress extends AppCompatActivity {
         int id = item.getItemId();
         //popUpWindow = new PopupWindow(this);
 
-        if (id == R.id.action_settings) {
-            //TODO: Make settings activity... but what do we have??
-            //Intent intent = new Intent(this, SettingsActivity.class);
-            //startActivity(intent);
-            return true;
-        } else if (id == R.id.action_about_me) {
+        if (id == R.id.action_about_me) {
             Intent intent = new Intent(this, AboutMe.class);
             startActivity(intent);
             return true;
-        } else if (id == R.id.action_help) {
-            Intent intent = new Intent(this, Help.class);
-            startActivity(intent);
+        } else if (id == R.id.action_tutorial) {
+            /*Intent intent = new Intent(this, Help.class);
+            startActivity(intent);*/
             return true;
         } else if (id == R.id.action_feedback) {
             Intent intent = new Intent(this, Feedback.class);
             startActivity(intent);
-            return true;
-        } else if (id == R.id.action_resources) {
-            //TODO: Come up with some contact info thing.
-            //Note: Aditi has some good code on her original branch for this :)
             return true;
         }
 
