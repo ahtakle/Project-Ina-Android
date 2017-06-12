@@ -136,6 +136,14 @@
         <activity
             android:name=".BabyProgress"
             android:label="@string/title_activity_baby_progress"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.projectina.ina.Home" />
+        </activity>
+        <activity
+            android:name=".Tutorial"
+            android:label="@string/title_activity_onboarding"
             android:theme="@style/AppTheme"></activity>
     </application>
 

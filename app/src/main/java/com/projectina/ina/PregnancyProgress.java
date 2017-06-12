@@ -3,6 +3,8 @@ package com.projectina.ina;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
@@ -10,6 +12,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
@@ -42,131 +45,141 @@ public class PregnancyProgress extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        //Fetal Development OnClick
+        Button fetalDevBtn = (Button) findViewById(R.id.fetal_dev);
+        fetalDevBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                Fragment fragment = PDFViewerFrag.newInstance("Fetal Development");
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content_pregnancy_progress, fragment).addToBackStack(null).commit();
+            }
+        });
+
         settings = getSharedPreferences(PREFS_NAME, 0);
         String due_date_str = settings.getString("date", "");
         int due_year = Integer.parseInt(settings.getString("year", ""));
         int due_month = Integer.parseInt(settings.getString("month", ""));
         int due_day = Integer.parseInt(settings.getString("day", ""));
 
-        if (due_date_str.equalsIgnoreCase("not selected")) {
+
+        progressBar = (ProgressBar) findViewById(R.id.progressBar2);
+        progressBar.setVisibility(View.VISIBLE);
+
+        //Average length of pregnancy is 280 days
+        final int pregnancyLength = 280;
+        progressBar.setMax(pregnancyLength);
+
+        //Get current date
+        java.util.Calendar mcurrentDate = java.util.Calendar.getInstance();
+        int mYear = mcurrentDate.get(java.util.Calendar.YEAR);
+        int mMonth = mcurrentDate.get(java.util.Calendar.MONTH);
+        int mDay = mcurrentDate.get(java.util.Calendar.DAY_OF_MONTH);
+
+        //Calculate time until due date and display on progress bar
+        Date currDate = new Date(mYear, mMonth, mDay);
+        Date dueDate = new Date(due_year, due_month, due_day);
+        final int millisInDay = 1000 * 60 * 60 * 24;
+        int diffInDays = (int) ((dueDate.getTime() - currDate.getTime()) / millisInDay);
+        int progress = pregnancyLength - diffInDays;
+        progressBar.setProgress(progress);
+        int percentDone = (int) ((100.0 * progress) / pregnancyLength);
+        if (percentDone > 100) percentDone = 100;
+        TextView progressPercentText = (TextView) findViewById(R.id.progress_percent);
+        progressPercentText.setText("Progress: " + percentDone + "%");
+
+        //Calculate and display percent done
+        //TextView percentDoneText = (TextView) findViewById(R.id.percent_done);
+        //percentDoneText.setText("You are " + percentDone + "% done");
+
+        //Display 'subtitles' to the right of the image
+        int weeksCompleted = progress / 7;
+        int daysCompleted = progress % 7 + 1;
+        TextView weekDaySubtitle = (TextView) findViewById(R.id.week_day_subtitle);
+        weekDaySubtitle.setText("Week " + weeksCompleted + ", Day " + daysCompleted);
+        TextView trimSubtitle = (TextView) findViewById(R.id.trim_subtitle);
+        TextView dueDateSubtitle = (TextView) findViewById(R.id.due_date_subtitle);
+        dueDateSubtitle.setText("Due Date: " + due_date_str);
+
+        //Calculate and display weekly information
+        TextView weekTitle = (TextView) findViewById(R.id.progress_weeks_title);
+        TextView weekInfo = (TextView) findViewById(R.id.progress_weeks_info);
+        String[] weeklyInfo = getResources().getStringArray(R.array.weekly_info);
+        weekTitle.setText("Week " + weeksCompleted + " Facts");
+        if (weeksCompleted > 40) //for testing
+            weeksCompleted = 40;
+        weekInfo.setText(weeklyInfo[weeksCompleted - 1]);
+
+        //Change image based on week
+        ImageView imageView = (ImageView) findViewById(R.id.weekly_img);
+        int resId = getResources().getIdentifier("week_" + weeksCompleted, "mipmap", getPackageName());
+        imageView.setImageResource(resId);
+        Log.d("image", resId + "");
+
+        //Display trimester information
+        //Info from: http://www.webmd.com/baby/tc/pregnancy-your-first-trimester#1
+        TextView trimTitleText = (TextView) findViewById(R.id.trimTitle);
+        TextView trimTitleInfo = (TextView) findViewById(R.id.trimInfo);
+
+        if (weeksCompleted <= 12) {
+            trimTitleText.setText("Trimester 1 Facts");
+            trimTitleInfo.setText(getResources().getString(R.string.trim_1));
+            trimSubtitle.setText("Trimester 1");
+        } else if (weeksCompleted <= 28) {
+            trimTitleText.setText("Trimester 2 Facts");
+            trimTitleInfo.setText(getResources().getString(R.string.trim_2));
+            trimSubtitle.setText("Trimester 2");
         } else {
-            progressBar = (ProgressBar) findViewById(R.id.progressBar2);
-            progressBar.setVisibility(View.VISIBLE);
-
-            //Average length of pregnancy is 280 days
-            final int pregnancyLength = 280;
-            progressBar.setMax(pregnancyLength);
-
-            //Get current date
-            java.util.Calendar mcurrentDate = java.util.Calendar.getInstance();
-            int mYear = mcurrentDate.get(java.util.Calendar.YEAR);
-            int mMonth = mcurrentDate.get(java.util.Calendar.MONTH);
-            int mDay = mcurrentDate.get(java.util.Calendar.DAY_OF_MONTH);
-
-            //Calculate time until due date and display on progress bar
-            Date currDate = new Date(mYear, mMonth, mDay);
-            Date dueDate = new Date(due_year, due_month, due_day);
-            final int millisInDay = 1000 * 60 * 60 * 24;
-            int diffInDays = (int) ((dueDate.getTime() - currDate.getTime()) / millisInDay);
-            int progress = pregnancyLength - diffInDays;
-            progressBar.setProgress(progress);
-            int percentDone = (int) ((100.0 * progress) / pregnancyLength);
-            if (percentDone > 100) percentDone = 100;
-            TextView progressPercentText = (TextView) findViewById(R.id.progress_percent);
-            progressPercentText.setText("Progress: " + percentDone + "%");
-
-            //Calculate and display percent done
-            //TextView percentDoneText = (TextView) findViewById(R.id.percent_done);
-            //percentDoneText.setText("You are " + percentDone + "% done");
-
-            //Display 'subtitles' to the right of the image
-            int weeksCompleted = progress / 7;
-            int daysCompleted = progress % 7 + 1;
-            TextView weekDaySubtitle = (TextView) findViewById(R.id.week_day_subtitle);
-            weekDaySubtitle.setText("Week " + weeksCompleted + ", Day " + daysCompleted);
-            TextView trimSubtitle = (TextView) findViewById(R.id.trim_subtitle);
-            TextView dueDateSubtitle = (TextView) findViewById(R.id.due_date_subtitle);
-            dueDateSubtitle.setText("Due Date: " + due_date_str);
-
-            //Calculate and display weekly information
-            TextView weekTitle = (TextView) findViewById(R.id.progress_weeks_title);
-            TextView weekInfo = (TextView) findViewById(R.id.progress_weeks_info);
-            String[] weeklyInfo = getResources().getStringArray(R.array.weekly_info);
-            weekTitle.setText("Week " + weeksCompleted + " Facts");
-            if (weeksCompleted > 40) //for testing
-                weeksCompleted = 40;
-            weekInfo.setText(weeklyInfo[weeksCompleted - 1]);
-
-            //Change image based on week
-            ImageView imageView = (ImageView) findViewById(R.id.weekly_img);
-            int resId = getResources().getIdentifier("week_" + weeksCompleted, "mipmap", getPackageName());
-            imageView.setImageResource(resId);
-            Log.d("image", resId + "");
-
-            //Display trimester information
-            //Info from: http://www.webmd.com/baby/tc/pregnancy-your-first-trimester#1
-            TextView trimTitleText = (TextView) findViewById(R.id.trimTitle);
-            TextView trimTitleInfo = (TextView) findViewById(R.id.trimInfo);
-
-            if (weeksCompleted <= 12) {
-                trimTitleText.setText("Trimester 1 Facts");
-                trimTitleInfo.setText(getResources().getString(R.string.trim_1));
-                trimSubtitle.setText("Trimester 1");
-            } else if (weeksCompleted <= 28) {
-                trimTitleText.setText("Trimester 2 Facts");
-                trimTitleInfo.setText(getResources().getString(R.string.trim_2));
-                trimSubtitle.setText("Trimester 2");
-            } else {
-                trimTitleText.setText("Trimester 3 Facts");
-                trimTitleInfo.setText(getResources().getString(R.string.trim_3));
-                trimSubtitle.setText("Trimester 3");
-            }
-
-
-            //Put data into drop down menus
-            expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
-            expandableListDetail = getData();
-            expandableListTitle = new ArrayList<String>();
-            expandableListTitle.add("Trimester 1");
-            expandableListTitle.add("Trimester 2");
-            expandableListTitle.add("Trimester 3");
-            expandableListTitle.add("Daily");
-            expandableListAdapter = new TrimListAdapter(this, expandableListTitle, expandableListDetail);
-            //Arrow position
-            DisplayMetrics metrics = new DisplayMetrics();
-            getWindowManager().getDefaultDisplay().getMetrics(metrics);
-            int width = metrics.widthPixels;
-            expandableListView.setIndicatorBounds(width - GetPixelFromDips(100), width);
-
-            expandableListView.setAdapter(expandableListAdapter);
-            expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
-                @Override
-                public void onGroupExpand(int groupPosition) {
-                    //Increase height of view when expanded
-                    ExpandableListView expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
-                    expandableListView.getLayoutParams().height = 1000;
-                }
-            });
-
-            expandableListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
-                @Override
-                public void onGroupCollapse(int groupPosition) {
-                    //Decrease height of view when collapsed
-                    ExpandableListView expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
-                    expandableListView.getLayoutParams().height = GetPixelFromDips(165);
-                }
-            });
-
-            expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-                @Override
-                public boolean onChildClick(ExpandableListView parent, View v,
-                                            int groupPosition, int childPosition, long id) {
-                    return false;
-                }
-            });
+            trimTitleText.setText("Trimester 3 Facts");
+            trimTitleInfo.setText(getResources().getString(R.string.trim_3));
+            trimSubtitle.setText("Trimester 3");
         }
 
+
+        //Put data into drop down menus
+        expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
+        expandableListDetail = getData();
+        expandableListTitle = new ArrayList<String>();
+        expandableListTitle.add("Trimester 1");
+        expandableListTitle.add("Trimester 2");
+        expandableListTitle.add("Trimester 3");
+        expandableListTitle.add("Daily");
+        expandableListAdapter = new TrimListAdapter(this, expandableListTitle, expandableListDetail);
+        //Arrow position
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        int width = metrics.widthPixels;
+        expandableListView.setIndicatorBounds(width - GetPixelFromDips(100), width);
+
+        expandableListView.setAdapter(expandableListAdapter);
+        expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+            @Override
+            public void onGroupExpand(int groupPosition) {
+                //Increase height of view when expanded
+                ExpandableListView expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
+                expandableListView.getLayoutParams().height = 1000;
+            }
+        });
+
+        expandableListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
+            @Override
+            public void onGroupCollapse(int groupPosition) {
+                //Decrease height of view when collapsed
+                ExpandableListView expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
+                expandableListView.getLayoutParams().height = GetPixelFromDips(245);
+            }
+        });
+
+        expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v,
+                                        int groupPosition, int childPosition, long id) {
+                return false;
+            }
+        });
     }
+
 
     //OnClickListener for CheckBox
     public void trimItemClicked(View view) {
@@ -332,8 +345,8 @@ public class PregnancyProgress extends AppCompatActivity {
             startActivity(intent);
             return true;
         } else if (id == R.id.action_tutorial) {
-            /*Intent intent = new Intent(this, Help.class);
-            startActivity(intent);*/
+            Intent intent = new Intent(this, Tutorial.class);
+            startActivity(intent);
             return true;
         } else if (id == R.id.action_feedback) {
             Intent intent = new Intent(this, Feedback.class);

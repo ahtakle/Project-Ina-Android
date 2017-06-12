@@ -80,8 +80,8 @@ public class Calendar extends AppCompatActivity {
             startActivity(intent);
             return true;
         } else if (id == R.id.action_tutorial) {
-            /*Intent intent = new Intent(this, Help.class);
-            startActivity(intent);*/
+            Intent intent = new Intent(this, Tutorial.class);
+            startActivity(intent);
             return true;
         } else if (id == R.id.action_feedback) {
             Intent intent = new Intent(this, Feedback.class);
