@@ -106,9 +106,8 @@
                     android:id="@+id/progress_percent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:textColor="#00000F"
-                    android:textSize="20sp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <ProgressBar
@@ -178,6 +177,7 @@
                     android:dividerHeight="0.5dp"
                     android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
                     android:minHeight="1000dp"
+                    android:buttonTint="@color/colorPrimary"
                     android:nestedScrollingEnabled="true" />
                 <!--android:groupIndicator="@drawable/group_indicator"-->
 

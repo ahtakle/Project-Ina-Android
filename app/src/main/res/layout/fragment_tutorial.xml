@@ -26,6 +26,7 @@
         android:textSize="30sp"
         android:layout_weight="1"
         android:gravity="center|bottom"
+        android:textColor="@color/colorText"
         android:text="@string/tutorial_title_1" />
 
     <TextView
@@ -37,6 +38,7 @@
         android:id="@+id/tutorial_desc"
         android:gravity="center"
         android:text="@string/tutorial_desc_1"
+        android:textColor="@color/colorText"
         android:textSize="15sp"
         android:layout_marginBottom="10dp" />
 

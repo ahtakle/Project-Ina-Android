@@ -33,4 +33,17 @@
     <color name="blue">#9999FF</color>
     <color name="yellow">#CCCC00</color>
 
+    <color name="tutorial1">#c0392b</color>
+    <color name="tutorial2">#8e44ad</color>
+    <color name="tutorial3">#155799</color>
+    <color name="tutorial4">#159957</color>
+    <color name="tutorial5">#FF8235</color>
+    <color name="tutorial6">#30E8BF</color>
+    <color name="tutorial7">#C33764</color>
+    <color name="tutorial8">#1D2671</color>
+
+    <color name="duedate1">#FF5F6D</color>
+    <color name="duedate2">#FFC371</color>
+
+
 </resources>

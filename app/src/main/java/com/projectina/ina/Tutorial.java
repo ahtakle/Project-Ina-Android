@@ -1,6 +1,8 @@
 package com.projectina.ina;
 
 import android.animation.ArgbEvaluator;
+import android.app.ActionBar;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,6 +15,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -35,25 +39,17 @@ public class Tutorial extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_tutorial);
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-        //select colors for each page
-        int color1 = ContextCompat.getColor(this, R.color.red);
-        int color2 = ContextCompat.getColor(this, R.color.blue);
-        int color3 = ContextCompat.getColor(this, R.color.yellow);
-        int color4 = ContextCompat.getColor(this, R.color.red);
-        int color5 = ContextCompat.getColor(this, R.color.blue);
-        int color6 = ContextCompat.getColor(this, R.color.yellow);
-        int color7 = ContextCompat.getColor(this, R.color.yellow);
-        final int[] colorList = new int[]{color1, color2, color3, color4, color5, color6, color7};
-
         //keep track of how many pages
         pageCount = 7;
-
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
@@ -64,13 +60,32 @@ public class Tutorial extends AppCompatActivity {
                 currPage = position;
                 ArgbEvaluator evaluator = new ArgbEvaluator();
 
-                int colorUpdate = 0;
-                try {
-                    colorUpdate = (Integer) evaluator.evaluate(positionOffset, colorList[position], colorList[position == (pageCount - 1) ? position : position + 1]);
-                } catch (Exception e) {
-                    colorUpdate = (Integer) evaluator.evaluate(positionOffset, colorList[pageCount - 1], colorList[position == (pageCount - 1) ? position : position + 1]);
+                switch (currPage) {
+                    case 0:
+                        mViewPager.setBackgroundResource(R.drawable.tutorial_background1);
+                        break;
+                    case 1:
+                        mViewPager.setBackgroundResource(R.drawable.tutorial_background2);
+                        break;
+                    case 2:
+                        mViewPager.setBackgroundResource(R.drawable.tutorial_background3);
+                        break;
+                    case 3:
+                        mViewPager.setBackgroundResource(R.drawable.tutorial_background4);
+                        break;
+                    case 4:
+                        mViewPager.setBackgroundResource(R.drawable.tutorial_background5);
+                        break;
+                    case 5:
+                        mViewPager.setBackgroundResource(R.drawable.tutorial_background6);
+                        break;
+                    case 6:
+                        mViewPager.setBackgroundResource(R.drawable.tutorial_background7);
+                        break;
+                    default:
+                        mViewPager.setBackgroundResource(R.drawable.tutorial_background1);
+                        break;
                 }
-                mViewPager.setBackgroundColor(colorUpdate);
             }
 
 
@@ -86,7 +101,34 @@ public class Tutorial extends AppCompatActivity {
 
                 currPage = position;
                 updateIndicators(currPage);
-                mViewPager.setBackgroundColor(colorList[position]);
+
+                //Update Background Color on Page Change
+                switch (currPage) {
+                    case 0:
+                        mViewPager.setBackgroundResource(R.drawable.tutorial_background1);
+                        break;
+                    case 1:
+                        mViewPager.setBackgroundResource(R.drawable.tutorial_background2);
+                        break;
+                    case 2:
+                        mViewPager.setBackgroundResource(R.drawable.tutorial_background3);
+                        break;
+                    case 3:
+                        mViewPager.setBackgroundResource(R.drawable.tutorial_background4);
+                        break;
+                    case 4:
+                        mViewPager.setBackgroundResource(R.drawable.tutorial_background5);
+                        break;
+                    case 5:
+                        mViewPager.setBackgroundResource(R.drawable.tutorial_background6);
+                        break;
+                    case 6:
+                        mViewPager.setBackgroundResource(R.drawable.tutorial_background7);
+                        break;
+                    default:
+                        mViewPager.setBackgroundResource(R.drawable.tutorial_background1);
+                        break;
+                }
 
 
                 TextView title = (TextView) findViewById(R.id.tutorial_label);
@@ -101,13 +143,13 @@ public class Tutorial extends AppCompatActivity {
                 ImageView img = (ImageView) findViewById(R.id.tutorial_img);
                 switch (position) {
                     case 0: //Intro
-                        img.setImageResource(R.mipmap.tutorial_1);
+                        img.setImageResource(R.mipmap.tutorial_home);
                         break;
                     case 1:
-                        img.setImageResource(R.mipmap.tutorial_1);
+                        img.setImageResource(R.mipmap.tutorial_babyprogress);
                         break;
                     case 2:
-                        img.setImageResource(R.mipmap.tutorial_1);
+                        img.setImageResource(R.mipmap.tutorial_glossary);
                         break;
                     case 3:
                         img.setImageResource(R.mipmap.tutorial_1);
@@ -116,7 +158,7 @@ public class Tutorial extends AppCompatActivity {
                         img.setImageResource(R.mipmap.tutorial_1);
                         break;
                     case 5:
-                        img.setImageResource(R.mipmap.tutorial_1);
+                        img.setImageResource(R.mipmap.tutorial_map);
                         break;
                     case 6:
                         img.setImageResource(R.mipmap.tutorial_1);

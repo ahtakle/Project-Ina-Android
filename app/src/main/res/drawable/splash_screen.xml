@@ -2,12 +2,14 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:drawable="@mipmap/splash"/>
+        android:drawable="@color/colorPrimary"/>
 
-    <!--<item>
+    <item>
         <bitmap
             android:gravity="center"
-            android:src="@mipmap/ic_launcher"/>
-    </item>-->
+            android:width="200dp"
+            android:height="200dp"
+            android:src="@drawable/ic_launcher"/>
+    </item>
 
 </layer-list>

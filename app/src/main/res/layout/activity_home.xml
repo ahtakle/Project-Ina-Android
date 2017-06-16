@@ -18,16 +18,23 @@
             android:layout_height="0dp"
             android:layout_weight=".28"
             android:orientation="horizontal"
-            android:background="@mipmap/swo_cavity">
-
+            android:background="@drawable/pregnant_woman">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
             <TextView
                 android:id="@+id/due_date_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="4dp"
                 android:text="Project Ina"
-                android:textColor="@color/colorPrimary"
-                android:background="@color/colorTextOverlay"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
                 android:textSize="35sp"/>
+            </RelativeLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -53,7 +60,10 @@
                     android:background="@color/background"
                     android:layout_centerHorizontal="true"
                     android:src="@mipmap/ic_baby_resource"
-                    android:tint="@color/colorPrimary"/>
+                    android:tint="@color/colorPrimary"
+                    android:adjustViewBounds="true"
+                    android:padding="32dp"
+                    android:scaleType="fitCenter"/>
 
                 <TextView
                     android:id="@+id/textView_babyprogress"
@@ -61,10 +71,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/imageButton_babyprogress"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="10dp"
                     android:textSize="20sp"
                     android:text="Baby Progress"
-                    android:textColor="@color/colorPrimary"/>
+                    android:textColor="@color/colorTextDark"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -82,7 +92,10 @@
                     android:layout_centerHorizontal="true"
                     android:src="@mipmap/ic_view_list_white_48dp"
                     android:background="@color/background"
-                    android:tint="@color/colorPrimary"/>
+                    android:tint="@color/colorPrimary"
+                    android:adjustViewBounds="true"
+                    android:padding="32dp"
+                    android:scaleType="fitCenter"/>
 
                 <TextView
                     android:id="@+id/textView_glossary"
@@ -90,10 +103,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/imageButton_glossary"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="10dp"
                     android:textSize="20sp"
                     android:text="Glossary"
-                    android:textColor="@color/colorPrimary"/>
+                    android:textColor="@color/colorTextDark"/>
             </RelativeLayout>
 
         </LinearLayout>
@@ -121,7 +134,10 @@
                     android:background="@color/background"
                     android:layout_centerHorizontal="true"
                     android:src="@mipmap/ic_stories_resource"
-                    android:tint="@color/colorPrimary"/>
+                    android:tint="@color/colorPrimary"
+                    android:adjustViewBounds="true"
+                    android:padding="35dp"
+                    android:scaleType="fitCenter"/>
 
                 <TextView
                     android:id="@+id/textView_stories"
@@ -129,10 +145,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/imageButton_stories"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="10dp"
                     android:textSize="20sp"
                     android:text="Stories"
-                    android:textColor="@color/colorPrimary"/>
+                    android:textColor="@color/colorTextDark"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -150,7 +166,10 @@
                     android:layout_centerHorizontal="true"
                     android:src="@mipmap/ic_assignment_white_48dp"
                     android:background="@color/background"
-                    android:tint="@color/colorPrimary"/>
+                    android:tint="@color/colorPrimary"
+                    android:adjustViewBounds="true"
+                    android:padding="35dp"
+                    android:scaleType="fitCenter"/>
 
                 <TextView
                     android:id="@+id/textView_resources"
@@ -158,10 +177,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/imageButton_resources"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="10dp"
                     android:textSize="20sp"
                     android:text="Resources"
-                    android:textColor="@color/colorPrimary"/>
+                    android:textColor="@color/colorTextDark"/>
             </RelativeLayout>
 
         </LinearLayout>
@@ -189,7 +208,10 @@
                     android:layout_centerHorizontal="true"
                     android:src="@mipmap/ic_map_white_48dp"
                     android:background="@color/background"
-                    android:tint="@color/colorPrimary"/>
+                    android:tint="@color/colorPrimary"
+                    android:adjustViewBounds="true"
+                    android:padding="35dp"
+                    android:scaleType="fitCenter"/>
 
                 <TextView
                     android:id="@+id/textView_map"
@@ -197,10 +219,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/imageButton_map"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="10dp"
                     android:textSize="20sp"
                     android:text="Map"
-                    android:textColor="@color/colorPrimary"/>
+                    android:textColor="@color/colorTextDark"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -218,7 +240,10 @@
                     android:layout_centerHorizontal="true"
                     android:src="@mipmap/ic_date_range_white_48dp"
                     android:background="@color/background"
-                    android:tint="@color/colorPrimary"/>
+                    android:tint="@color/colorPrimary"
+                    android:adjustViewBounds="true"
+                    android:padding="35dp"
+                    android:scaleType="fitCenter"/>
 
                 <TextView
                     android:id="@+id/textView_calendar"
@@ -226,10 +251,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/imageButton_calendar"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="10dp"
                     android:textSize="20sp"
                     android:text="Calendar"
-                    android:textColor="@color/colorPrimary"/>
+                    android:textColor="@color/colorTextDark"/>
             </RelativeLayout>
 
         </LinearLayout>

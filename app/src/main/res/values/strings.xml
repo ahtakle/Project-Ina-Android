@@ -1658,7 +1658,7 @@
     </string-array>
 
     <string name="tutorial_title_1">Welcome to Project Ina</string>
-    <string name="tutorial_desc_1">Begin by selecting how you would like to use the app.</string>
+    <string name="tutorial_desc_1">Learn about the adventure of pregnancy and connect to your community!</string>
 
     <string-array name="tutorial_titles">
         <item>@string/tutorial_title_1</item>
@@ -1672,12 +1672,12 @@
 
     <string-array name="tutorial_desc">
         <item>@string/tutorial_desc_1</item>
-        <item>Learn about your baby at every step of the pregnancy and your newborn\'s life.</item>
-        <item>Read through various articles to help with your baby.</item>
-        <item>Find cultural stories and customs from your community.</item>
-        <item>View resources around Sisseton and other nearby towns.</item>
-        <item>Get directions to resources near you.</item>
-        <item>Find out about classes and community events.</item>
+        <item>Learn about your baby at every step of the pregnancy and your newborn\'s life!</item>
+        <item>Read through various articles to help with your baby!</item>
+        <item>Find cultural stories and customs from your community!</item>
+        <item>View resources around Sisseton and other nearby towns!</item>
+        <item>Get directions to resources near you!</item>
+        <item>Find out about classes and community events!</item>
     </string-array>
 
     <string name="trim_1">There are so many changes taking place, both inside and outside of your body. Your baby is growing faster than at any other stage of your pregnancy, with its heart, brain and spine already developing.</string>
@@ -1705,7 +1705,7 @@
     <string name="change_due_date">Change or remove due date</string>
     <string name="title_activity_stories">Stories</string>
     <string name="title_activity_no_due_date_progress">Baby Progress</string>
-    <string name="title_activity_date_options">How Will You Be Using this App?</string>
+    <string name="title_activity_date_options">Project Ina</string>
     <string name="title_activity_test">Test</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_onboarding">Onboarding</string>
