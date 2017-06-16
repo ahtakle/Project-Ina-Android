@@ -5,8 +5,6 @@ import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.DisplayMetrics;
-import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
@@ -31,8 +29,8 @@ public class Calendar extends AppCompatActivity {
 
         Point point = new Point();
         getWindowManager().getDefaultDisplay().getSize(point);
-        int width = (int) (100.0 * point.x / 360);
-        int height = (int) (100.0 * point.y / 425);
+        int width = (int) (100.0 * point.x / 320);//(int) (100.0 * point.x / 360);
+        int height = (int) (100.0 * point.y / 360);//(int) (100.0 * point.y / 425);
 
         //This logic allows to fit screen exactly, but then the text is super small.... :(
         //DO NOT DELETE YET!
@@ -52,7 +50,7 @@ public class Calendar extends AppCompatActivity {
 //        int width = displayMetrics.widthPixels-10;
 
         String html = "<iframe src='https://calendar.google.com/calendar/embed?src=" +
-                "svttqkqr143jcadd858a3da8u8%40group.calendar.google.com&ctz=America/New_York' style='border: 0'" +
+                "c4hsduhjqb118qhp4ft3glkqeo%40group.calendar.google.com&ctz=America%2FNew_York' style='border: 0'" +
                 "width='" + width + "' height='" + height + "' frameborder='0' scrolling='no'></iframe>";
 
         wv.loadDataWithBaseURL("", html, mimeType, encoding, "");
@@ -77,26 +75,17 @@ public class Calendar extends AppCompatActivity {
         int id = item.getItemId();
         //popUpWindow = new PopupWindow(this);
 
-        if (id == R.id.action_settings) {
-            //TODO: Make settings activity... but what do we have??
-            //Intent intent = new Intent(this, SettingsActivity.class);
-            //startActivity(intent);
-            return true;
-        } else if (id == R.id.action_about_me) {
+        if (id == R.id.action_about_me) {
             Intent intent = new Intent(this, AboutMe.class);
             startActivity(intent);
             return true;
-        } else if (id == R.id.action_help) {
-            Intent intent = new Intent(this, Help.class);
+        } else if (id == R.id.action_tutorial) {
+            Intent intent = new Intent(this, Tutorial.class);
             startActivity(intent);
             return true;
         } else if (id == R.id.action_feedback) {
             Intent intent = new Intent(this, Feedback.class);
             startActivity(intent);
-            return true;
-        } else if (id == R.id.action_resources) {
-            //TODO: Come up with some contact info thing.
-            //Note: Aditi has some good code on her original branch for this :)
             return true;
         }
 

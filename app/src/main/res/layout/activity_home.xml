@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,95 +16,66 @@
             android:id="@+id/dashboard"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".3"
+            android:layout_weight=".28"
             android:orientation="horizontal"
-            android:background="@color/colorPrimary">
-
+            android:background="@drawable/pregnant_woman">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
             <TextView
                 android:id="@+id/due_date_title"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="DASHBOARD"
-                android:textColor="@color/colorAccent"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="4dp"
+                android:text="Project Ina"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
                 android:textSize="35sp"/>
+            </RelativeLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".35"
+            android:layout_weight=".24"
             android:divider="?android:dividerVertical"
             android:showDividers="middle"
             android:orientation="horizontal">
 
             <RelativeLayout
-                android:id="@+id/layout_map"
+                android:id="@+id/layout_babyprogress"
                 android:layout_width="0dp"
                 android:layout_weight=".50"
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true">
 
                 <ImageButton
-                    android:id="@+id/imageButton_map"
+                    android:id="@+id/imageButton_babyprogress"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:onClick="dispatchMapIntent"
+                    android:onClick="dispatchBabyProgressIntent"
                     android:background="@color/background"
                     android:layout_centerHorizontal="true"
-                    android:src="@mipmap/ic_map_white_48dp"
-                    android:tint="@color/colorPrimary"/>
+                    android:src="@mipmap/ic_baby_resource"
+                    android:tint="@color/colorPrimary"
+                    android:adjustViewBounds="true"
+                    android:padding="32dp"
+                    android:scaleType="fitCenter"/>
 
                 <TextView
-                    android:id="@+id/textView_map"
+                    android:id="@+id/textView_babyprogress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/imageButton_map"
+                    android:layout_alignBottom="@+id/imageButton_babyprogress"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="10dp"
                     android:textSize="20sp"
-                    android:text="Map"
-                    android:textColor="@color/colorPrimary"/>
+                    android:text="Baby Progress"
+                    android:textColor="@color/colorTextDark"/>
             </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/layout_calendar"
-                android:layout_width="0dp"
-                android:layout_weight=".50"
-                android:layout_height="match_parent"
-                android:layout_centerHorizontal="true">
-
-                <ImageButton
-                    android:id="@+id/imageButton_calendar"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:onClick="dispatchCalendarIntent"
-                    android:layout_centerHorizontal="true"
-                    android:src="@mipmap/ic_date_range_white_48dp"
-                    android:background="@color/background"
-                    android:tint="@color/colorPrimary"/>
-
-                <TextView
-                    android:id="@+id/textView_calendar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/imageButton_calendar"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="30dp"
-                    android:textSize="20sp"
-                    android:text="Calendar"
-                    android:textColor="@color/colorPrimary"/>
-            </RelativeLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".35"
-            android:divider="?android:dividerVertical"
-            android:showDividers="middle"
-            android:orientation="horizontal">
 
             <RelativeLayout
                 android:id="@+id/layout_glossary"
@@ -122,7 +92,10 @@
                     android:layout_centerHorizontal="true"
                     android:src="@mipmap/ic_view_list_white_48dp"
                     android:background="@color/background"
-                    android:tint="@color/colorPrimary"/>
+                    android:tint="@color/colorPrimary"
+                    android:adjustViewBounds="true"
+                    android:padding="32dp"
+                    android:scaleType="fitCenter"/>
 
                 <TextView
                     android:id="@+id/textView_glossary"
@@ -130,10 +103,52 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/imageButton_glossary"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="10dp"
                     android:textSize="20sp"
                     android:text="Glossary"
-                    android:textColor="@color/colorPrimary"/>
+                    android:textColor="@color/colorTextDark"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".24"
+            android:divider="?android:dividerVertical"
+            android:showDividers="middle"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/layout_stories"
+                android:layout_width="0dp"
+                android:layout_weight=".50"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true">
+
+                <ImageButton
+                    android:id="@+id/imageButton_stories"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="dispatchStoriesIntent"
+                    android:background="@color/background"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/ic_stories_resource"
+                    android:tint="@color/colorPrimary"
+                    android:adjustViewBounds="true"
+                    android:padding="35dp"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:id="@+id/textView_stories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageButton_stories"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="20sp"
+                    android:text="Stories"
+                    android:textColor="@color/colorTextDark"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -151,7 +166,10 @@
                     android:layout_centerHorizontal="true"
                     android:src="@mipmap/ic_assignment_white_48dp"
                     android:background="@color/background"
-                    android:tint="@color/colorPrimary"/>
+                    android:tint="@color/colorPrimary"
+                    android:adjustViewBounds="true"
+                    android:padding="35dp"
+                    android:scaleType="fitCenter"/>
 
                 <TextView
                     android:id="@+id/textView_resources"
@@ -159,68 +177,88 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/imageButton_resources"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="10dp"
                     android:textSize="20sp"
                     android:text="Resources"
-                    android:textColor="@color/colorPrimary"/>
+                    android:textColor="@color/colorTextDark"/>
             </RelativeLayout>
 
-            <!--<ImageButton-->
-                <!--android:id="@+id/toGlossary"-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_weight=".50"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:onClick="dispatchGlossaryIntent"-->
-                <!--android:text="Glossary"-->
-                <!--android:textSize="25sp"-->
-                <!--android:background="@drawable/home_buttons"-->
-                <!--android:scaleType="center"-->
-                <!--android:src="drawable/ic_menu_camera"-->
-                <!--style="?android:buttonBarStyle"/>-->
+        </LinearLayout>
 
-            <!--<ImageButton-->
-                <!--android:id="@+id/toTrimesters"-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_weight=".50"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:onClick="dispatchResourcesIntent"-->
-                <!--android:text="Resources"-->
-                <!--android:textSize="25sp"-->
-                <!--android:background="@drawable/home_buttons"-->
-                <!--android:scaleType="center"-->
-                <!--android:src="drawable/ic_menu_camera"-->
-                <!--style="?android:buttonBarStyle"/>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".24"
+            android:divider="?android:dividerVertical"
+            android:showDividers="middle"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/layout_map"
+                android:layout_width="0dp"
+                android:layout_weight=".50"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true">
+
+                <ImageButton
+                    android:id="@+id/imageButton_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="dispatchMapIntent"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/ic_map_white_48dp"
+                    android:background="@color/background"
+                    android:tint="@color/colorPrimary"
+                    android:adjustViewBounds="true"
+                    android:padding="35dp"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:id="@+id/textView_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageButton_map"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="20sp"
+                    android:text="Map"
+                    android:textColor="@color/colorTextDark"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_calendar"
+                android:layout_width="0dp"
+                android:layout_weight=".50"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true">
+
+                <ImageButton
+                    android:id="@+id/imageButton_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="dispatchCalendarIntent"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/ic_date_range_white_48dp"
+                    android:background="@color/background"
+                    android:tint="@color/colorPrimary"
+                    android:adjustViewBounds="true"
+                    android:padding="35dp"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:id="@+id/textView_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageButton_calendar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="20sp"
+                    android:text="Calendar"
+                    android:textColor="@color/colorTextDark"/>
+            </RelativeLayout>
+
         </LinearLayout>
 
     </LinearLayout>
 
-    <android.support.design.widget.FloatingActionButton
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_anchor="@id/dashboard"
-        app:layout_anchorGravity="bottom|right|end"
-        android:onClick="dispatchBackgroundIntent"
-        android:src="@drawable/ic_info_outline_black_24dp"
-        app:elevation="4dp" />
-
 </android.support.design.widget.CoordinatorLayout>
-
-
-    <!--width: 300dp; height: 100dp-->
-
-
-    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--android:id="@+id/activity_home"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--tools:context="com.projectina.ina.Home">-->
-
-
-    <!--<ImageButton--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--app:srcCompat="@mipmap/glossary"--><!--android:id="@+id/imageButtonGlossary"--><!--android:onClick="dispatchGlossaryIntent"--><!--android:layout_marginBottom="36dp"--><!--android:layout_alignParentBottom="true"--><!--android:layout_centerHorizontal="true" />-->
-
-    <!--<ImageButton--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--app:srcCompat="@mipmap/test1"--><!--android:id="@+id/imageButtonMap"--><!--android:onClick="dispatchMapIntent"--><!--android:layout_above="@+id/imageButtonGlossary"--><!--android:layout_centerHorizontal="true" />-->
-
-    <!--<ImageButton--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--app:srcCompat="@mipmap/baby"--><!--android:id="@+id/imageButtonTrimesters"--><!--android:onClick="dispatchTrimesterIntent"--><!--android:layout_below="@+id/imageButtonQuestion"--><!--android:layout_centerHorizontal="true"--><!--android:layout_marginTop="22dp" />-->
-
-    <!--<ImageButton--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--app:srcCompat="@mipmap/question"--><!--android:id="@+id/imageButtonQuestion"--><!--android:onClick="dispatchBackgroundIntent"--><!--android:layout_alignBottom="@+id/imageButtonMap"--><!--android:layout_alignParentStart="true"--><!--android:layout_marginStart="14dp"--><!--android:layout_marginBottom="109dp" />-->
-
-    <!--<Button--><!--android:text="Button"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:id="@+id/button2"--><!--android:layout_marginTop="42dp"--><!--android:layout_alignParentTop="true"--><!--android:layout_centerHorizontal="true" />-->
-
-
-    <!--</RelativeLayout>-->

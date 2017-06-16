@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.projectina.ina.DateOptions">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content_date_options"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.projectina.ina.DateOptions"
+        tools:showIn="@layout/activity_date_options"
+        android:orientation="vertical"
+        android:background="@drawable/duedate_background"
+        android:weightSum="4">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Please select how you would like to use this app."
+            android:textColor="@color/colorText"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="I'm pregnant"
+            android:textColor="@color/colorText"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:background="@drawable/duedateoptions_btn"
+            android:onClick="dispatchDueDate" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="My baby is under 3 years old"
+            android:textColor="@color/colorText"
+            android:background="@drawable/duedateoptions_btn"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:onClick="dispatchBirthDate" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Neither"
+            android:textColor="@color/colorText"
+            android:background="@drawable/duedateoptions_btn"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:onClick="dispatchNoDate" />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

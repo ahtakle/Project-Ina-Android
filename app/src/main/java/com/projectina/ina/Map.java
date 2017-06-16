@@ -2,7 +2,6 @@ package com.projectina.ina;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -11,11 +10,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.GoogleMapOptions;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -32,12 +29,19 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
     private static final LatLng IHS = new LatLng(45.6568280, -97.0160580);
     private static final LatLng RCHealthNurse = new LatLng(45.6674190, -97.0457440);
     private static final LatLng DakotaPrideCenter = new LatLng(45.5636240, -97.0763670);
+    private static final LatLng Coteau = new LatLng(45.657723, -97.050173);
+    private static final LatLng GPTCHB = new LatLng(44.101915, -103.263103);
+    private static final LatLng LittleStepsDaycare = new LatLng(45.567646, -97.069341);
+
 
     private Marker mHeadStart;
     private Marker mTribalAdminBuilding;
     private Marker mIHS;
     private Marker mRCHealthNurse;
     private Marker mDakotaPrideCenter;
+    private Marker mCoteau;
+    private Marker mGPTCHB;
+    private Marker mLittleStepsDaycare;
 
     private static final CharSequence[] MAP_TYPE_ITEMS =
             {"Road Map", "Hybrid", "Satellite", "Terrain"};
@@ -73,7 +77,22 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        //Stylize the Map
+//        try {
+//            boolean success = googleMap.setMapStyle(
+//                    MapStyleOptions.loadRawResourceStyle(
+//                            this, R.raw.styles_json));
+//            if (!success) {
+//                Log.e("LastNightMap", "Style parsing failed.");
+//            }
+//        } catch (Exception e) {
+//            Log.e("LastNightMap", "Can't find style. Error: ", e);
+//        }
+
         // Add some markers to the map, and add a data object to each marker.
+        //******************************************************************************************
+        //NOTE: The marker titles have to be the same as the resource!!!!
+        //******************************************************************************************
         //mHeadStart = mMap.addMarker(new MarkerOptions().position(HeadStart).title("Head Start").snippet("Some infor will go here, it can be a few lines?"));
         mHeadStart = mMap.addMarker(new MarkerOptions().position(HeadStart).title("Head Start"));
         mHeadStart.setTag(0);
@@ -81,12 +100,18 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
         mTribalAdminBuilding.setTag(1);
         mIHS = mMap.addMarker(new MarkerOptions().position(IHS).title("IHS"));
         mIHS.setTag(2);
-        mRCHealthNurse = mMap.addMarker(new MarkerOptions().position(RCHealthNurse).title("Roberts County Health Nurse"));
+        mRCHealthNurse = mMap.addMarker(new MarkerOptions().position(RCHealthNurse).title("Roberts"));
         mRCHealthNurse.setTag(3);
         mDakotaPrideCenter = mMap.addMarker(new MarkerOptions().position(DakotaPrideCenter).title("Dakota Pride Center"));
         mDakotaPrideCenter.setTag(4);
+        mCoteau = mMap.addMarker(new MarkerOptions().position(Coteau).title("Coteau"));
+        mCoteau.setTag(5);
+        mGPTCHB = mMap.addMarker(new MarkerOptions().position(GPTCHB).title("GPTCHB"));
+        mGPTCHB.setTag(6);
+        mLittleStepsDaycare = mMap.addMarker(new MarkerOptions().position(LittleStepsDaycare).title("SWO Daycare"));
+        mLittleStepsDaycare.setTag(7);
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(TribalAdminBuilding, 12));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(TribalAdminBuilding, 9));
 
         // Set a listener for info window events.
         mMap.setOnInfoWindowClickListener(this);
@@ -112,17 +137,14 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
     }
 
     /**  Called when the user clicks an info window
-     *   TODO: Customize this as necessary for what we want
+     *   We will bring them to the resource page for the specific resource
      */
     @Override
     public void onInfoWindowClick(Marker marker) {
-        Toast.makeText(this, "I will pull up the information for this service", Toast.LENGTH_SHORT).show();
-
-        //Set up correct data to map to each marker
-//        Uri gmmIntentUri = Uri.parse("google.navigation:q=Taronga+Zoo,+Sydney+Australia");
-//        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-//        mapIntent.setPackage("com.google.android.apps.maps");
-//        startActivity(mapIntent);
+        //Go to glossary intent passing the marker's title to go to the specific resource
+        Intent goToResource = new Intent(getBaseContext(), Resources.class);
+        goToResource.putExtra("GO_TO_SPECIFIC_RESOURCE", marker.getTitle());
+        startActivity(goToResource);
     }
 
 
@@ -185,26 +207,17 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
         int id = item.getItemId();
         //popUpWindow = new PopupWindow(this);
 
-        if (id == R.id.action_settings) {
-            //TODO: Make settings activity... but what do we have??
-            //Intent intent = new Intent(this, SettingsActivity.class);
-            //startActivity(intent);
-            return true;
-        } else if (id == R.id.action_about_me) {
+        if (id == R.id.action_about_me) {
             Intent intent = new Intent(this, AboutMe.class);
             startActivity(intent);
             return true;
-        } else if (id == R.id.action_help) {
-            Intent intent = new Intent(this, Help.class);
+        } else if (id == R.id.action_tutorial) {
+            Intent intent = new Intent(this, Tutorial.class);
             startActivity(intent);
             return true;
         } else if (id == R.id.action_feedback) {
             Intent intent = new Intent(this, Feedback.class);
             startActivity(intent);
-            return true;
-        } else if (id == R.id.action_resources) {
-            //TODO: Come up with some contact info thing.
-            //Note: Aditi has some good code on her original branch for this :)
             return true;
         }
 

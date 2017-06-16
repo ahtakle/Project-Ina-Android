@@ -28,6 +28,7 @@ public class Feedback extends AppCompatActivity {
         setContentView(R.layout.activity_feedback);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //create listener for Submit Feedback button
         buttonSubmitFeedback = (Button) findViewById(R.id.buttonSubmitFeedback);

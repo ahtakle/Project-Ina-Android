@@ -23,13 +23,11 @@ public class GlossaryAdapter extends RecyclerView.Adapter<GlossaryAdapter.ViewHo
     private android.support.v4.app.FragmentManager mFragmentManager;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView title, year, genre;
+        public TextView title;
 
         public ViewHolder(View view) {
             super(view);
             title = (TextView) view.findViewById(R.id.title);
-            genre = (TextView) view.findViewById(R.id.genre);
-            year = (TextView) view.findViewById(R.id.year);
         }
     }
 
@@ -81,8 +79,6 @@ public class GlossaryAdapter extends RecyclerView.Adapter<GlossaryAdapter.ViewHo
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         GlossaryTerm term = glossaryList.get(position);
         holder.title.setText(term.getTitle());
-        holder.genre.setText(term.getGenre());
-        holder.year.setText(term.getYear());
 
         //int textColor = R.color.colorText;
         //holder.title.setTextColor(term.getColor());

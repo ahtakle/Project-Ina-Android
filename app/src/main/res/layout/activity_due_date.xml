@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryLight"
+    android:background="@color/colorButtons"
     tools:context="com.projectina.ina.DueDate">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
@@ -12,14 +12,7 @@
         android:id="@+id/datepicker"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:backgroundTint="#FFFFFF"
-        android:ellipsize="start"
-        android:gravity="center_horizontal"
-        android:hint="Due Date"
-        android:inputType="textEmailAddress"
-        android:layout_centerHorizontal="true"
-        android:calendarTextColor="@color/colorText"
-        android:textColorHint="#FFFFFF" />
+        android:hint="Due Date" />
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
@@ -44,6 +37,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorText"
                 android:text="@string/due_date_btn" />
 
         </LinearLayout>

@@ -19,8 +19,12 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        if (settings.getString("due_date", "") == null || settings.getString("due_date","") == ""){
-            Intent intent = new Intent(this, DueDate.class);
+        if (!settings.getBoolean("tutorial", false)) {
+            Intent intent = new Intent(this, Tutorial.class);
+            startActivity(intent);
+        } else if (settings.getString("date_type", "").length() == 0) {
+            //Intent intent = new Intent(this, DueDate.class);
+            Intent intent = new Intent(this, DateOptions.class);
             startActivity(intent);
         } else {
             Intent intent = new Intent(this, Home.class);

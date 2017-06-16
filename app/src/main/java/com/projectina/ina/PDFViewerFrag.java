@@ -10,13 +10,12 @@ import android.view.ViewGroup;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
-import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 import com.shockwave.pdfium.PdfDocument;
 
 import java.util.List;
 
-public class PDFViewerFrag extends Fragment implements OnPageChangeListener, OnLoadCompleteListener {
+public class PDFViewerFrag extends Fragment implements OnLoadCompleteListener {
 
     private static String fragTitle;
 
@@ -61,33 +60,23 @@ public class PDFViewerFrag extends Fragment implements OnPageChangeListener, OnL
             pdfView.fromAsset(GLOSSARY_FILE)
                     .defaultPage(pageNumber)
                     .enableSwipe(true)
-
                     .swipeHorizontal(false)
-                    .onPageChange(this)
                     .enableAnnotationRendering(true)
                     .onLoad(this)
                     .scrollHandle(new DefaultScrollHandle(getContext()))
                     .load();
         } catch (Exception e) {
-            //error.pdf contains a pdf that gives error description to user
-            pdfView.fromAsset("error.pdf")
+            //About Me.pdf contains a pdf that gives description of app
+            //Used because About Me activity can't pass in a parameter
+            pdfView.fromAsset("About Me.pdf")
                     .defaultPage(pageNumber)
                     .enableSwipe(true)
-
                     .swipeHorizontal(false)
-                    .onPageChange(this)
                     .enableAnnotationRendering(true)
                     .onLoad(this)
                     .scrollHandle(new DefaultScrollHandle(getContext()))
                     .load();
         }
-    }
-
-    @Override
-    public void onPageChanged(int page, int pageCount) {
-        pageNumber = page;
-        String activityTitle = pdfFileName.substring(0, pdfFileName.length() - 4);
-        getActivity().setTitle(String.format(activityTitle));
     }
 
 

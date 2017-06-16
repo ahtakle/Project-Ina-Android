@@ -21,10 +21,29 @@
     <color name="colorText">#FFFFFF</color>
     <color name="colorTextDark">#000000</color>
 
+    <color name="colorTextOverlay">#ededed</color>
+
     <!--Glossary Term Colors-->
     <color name="info">#000000</color>
     <color name="term">#000000</color>
 
     <color name="black_overlay">#66000000</color>
+
+    <color name="red">#FF9999</color>
+    <color name="blue">#9999FF</color>
+    <color name="yellow">#CCCC00</color>
+
+    <color name="tutorial1">#c0392b</color>
+    <color name="tutorial2">#8e44ad</color>
+    <color name="tutorial3">#155799</color>
+    <color name="tutorial4">#159957</color>
+    <color name="tutorial5">#FF8235</color>
+    <color name="tutorial6">#30E8BF</color>
+    <color name="tutorial7">#C33764</color>
+    <color name="tutorial8">#1D2671</color>
+
+    <color name="duedate1">#FF5F6D</color>
+    <color name="duedate2">#FFC371</color>
+
 
 </resources>
