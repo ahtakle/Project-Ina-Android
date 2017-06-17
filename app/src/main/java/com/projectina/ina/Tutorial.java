@@ -149,7 +149,7 @@ public class Tutorial extends AppCompatActivity {
                         img.setImageResource(R.mipmap.tutorial_glossary);
                         break;
                     case 3:
-                        img.setImageResource(R.mipmap.tutorial_1);
+                        img.setImageResource(R.mipmap.tutorial_stories);
                         break;
                     case 4:
                         img.setImageResource(R.mipmap.tutorial_1);
@@ -242,7 +242,7 @@ public class Tutorial extends AppCompatActivity {
                     img.setImageResource(R.mipmap.tutorial_glossary);
                     break;
                 case 3:
-                    img.setImageResource(R.mipmap.tutorial_1);
+                    img.setImageResource(R.mipmap.tutorial_stories);
                     break;
                 case 4:
                     img.setImageResource(R.mipmap.tutorial_1);

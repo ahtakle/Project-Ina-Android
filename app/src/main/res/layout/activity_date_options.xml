@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="My baby is under 3 years old"
+            android:text="My baby is under\n3 years old"
             android:textColor="@color/colorText"
             android:background="@drawable/duedateoptions_btn"
             android:textSize="20sp"
