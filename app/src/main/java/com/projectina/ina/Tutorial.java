@@ -1,15 +1,12 @@
 package com.projectina.ina;
 
 import android.animation.ArgbEvaluator;
-import android.app.ActionBar;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -152,7 +149,7 @@ public class Tutorial extends AppCompatActivity {
                         img.setImageResource(R.mipmap.tutorial_glossary);
                         break;
                     case 3:
-                        img.setImageResource(R.mipmap.tutorial_1);
+                        img.setImageResource(R.mipmap.tutorial_stories);
                         break;
                     case 4:
                         img.setImageResource(R.mipmap.tutorial_1);
@@ -236,22 +233,22 @@ public class Tutorial extends AppCompatActivity {
             //TODO: change image resources
             switch (getArguments().getInt(ARG_SECTION_NUMBER) - 1) {
                 case 0: //Intro
-                    img.setImageResource(R.mipmap.tutorial_1);
+                    img.setImageResource(R.mipmap.tutorial_home);
                     break;
                 case 1:
-                    img.setImageResource(R.mipmap.tutorial_1);
+                    img.setImageResource(R.mipmap.tutorial_babyprogress);
                     break;
                 case 2:
-                    img.setImageResource(R.mipmap.tutorial_1);
+                    img.setImageResource(R.mipmap.tutorial_glossary);
                     break;
                 case 3:
-                    img.setImageResource(R.mipmap.tutorial_1);
+                    img.setImageResource(R.mipmap.tutorial_stories);
                     break;
                 case 4:
                     img.setImageResource(R.mipmap.tutorial_1);
                     break;
                 case 5:
-                    img.setImageResource(R.mipmap.tutorial_1);
+                    img.setImageResource(R.mipmap.tutorial_map);
                     break;
                 case 6:
                     img.setImageResource(R.mipmap.tutorial_1);

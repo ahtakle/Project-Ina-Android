@@ -49,7 +49,7 @@ public class CardTerm {
                 //persons.add(new CardTerm("SWO EHS", "Head Start", R.mipmap.swo_ehs));
                 persons.add(new CardTerm("Little Steps Daycare", "SWO Daycare", R.mipmap.swo_daycare));
                 persons.add(new CardTerm("SWO MCH", "Maternal and Child Health", R.mipmap.swo_mch));
-                persons.add(new CardTerm("MCH", "Maternal and Child Health", R.mipmap.swo_mch)); //Is there a difference between these two?
+                //persons.add(new CardTerm("MCH", "Maternal and Child Health", R.mipmap.swo_mch)); //Is there a difference between these two?
                 //persons.add(new CardTerm("Finances", "Financial Advice", R.mipmap.finances));
                 break;
             //Adds to the arraylist the resources for pregnancy
@@ -63,11 +63,11 @@ public class CardTerm {
                 persons.add(new CardTerm("SWO Health Education", "Community Health Ed.", R.mipmap.swo_healthed));
                 persons.add(new CardTerm("SWO Health Rep", "Community Health Rep.", R.mipmap.swo_healthrep));
                 persons.add(new CardTerm("SWO Pride", "Dakota Pride Center", R.mipmap.swo_pride));
-                persons.add(new CardTerm("SWO MCH", "Maternal and Child Health", R.mipmap.swo_mch));
                 break;
             //Adds to the arraylist the resources for after_birth
             case 3:
-                persons.add(new CardTerm("MCH Program", "Breastfeeding Peer Counsel", R.mipmap.sd_breastfeeding));
+                persons.add(new CardTerm("Breastfeeding Aftercare", "MCH Program", R.mipmap.sd_breastfeeding));
+                persons.add(new CardTerm("SWO MCH", "Maternal and Child Health", R.mipmap.swo_mch));
                 //persons.add(new CardTerm("SD Home Visiting", "Health Bright Start", R.mipmap.sd_homevisiting));
                 //persons.add(new CardTerm("SWO Intervention", "Early Child Intervention", R.mipmap.swo_intervention));
                 break;
@@ -98,9 +98,12 @@ public class CardTerm {
 
     //Create Cards for RecyclerView
     public static ArrayList<CardTerm> initializeStories() {
-        ArrayList<CardTerm> persons = new ArrayList<>();
-        persons.add(new CardTerm("Coteau", "Coteau Clinic", R.mipmap.coteau));
+        ArrayList<CardTerm> stories = new ArrayList<>();
+        stories.add(new CardTerm("Dakota Pregnancy Traditions", "", R.mipmap.pregnancy_traditions));
+        stories.add(new CardTerm("Pregnancy as Sacred", "", R.mipmap.pregnancy_as_sacred));
+        stories.add(new CardTerm("The Woman in the Sky", "Dakota Story", R.mipmap.stars));
 
-        return persons;
+
+        return stories;
     }
 }
