@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.projectina.ina.PDFViewerFrag">
+    tools:context="com.projectina.projectina.PDFViewerFrag">
 
     <com.github.barteksc.pdfviewer.PDFView
         android:id="@+id/pdfView"

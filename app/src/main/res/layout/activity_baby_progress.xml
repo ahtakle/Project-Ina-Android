@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.projectina.ina.BabyProgress">
+    tools:context="com.projectina.projectina.BabyProgress">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -30,10 +30,10 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="com.projectina.ina.BabyProgress"
+        tools:context="com.projectina.projectina.BabyProgress"
         tools:showIn="@layout/activity_baby_progress">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -41,46 +41,64 @@
 
             <TextView
                 android:id="@+id/week_day_subtitle"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#00000F"
-                android:textSize="20sp"
+                android:textSize="24sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/due_date_subtitle"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/week_day_subtitle"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/change_date_btn"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@color/background"
-                android:gravity="center"
+                android:gravity="start"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/due_date_subtitle"
                 android:onClick="dispatchDueDate"
                 android:text="Change or remove date"
                 android:textColor="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/babyImageView"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/baby"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"/>
 
             <TextView
                 android:id="@+id/progress_weeks_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:textColor="#00000F"
                 android:textSize="20sp"
+                android:layout_below="@+id/babyImageView"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/progress_weeks_info"
                 android:layout_width="match_parent"
+                android:layout_below="@+id/progress_weeks_title"
                 android:layout_height="wrap_content" />
 
 
-        </LinearLayout>
+        </RelativeLayout>
     </ScrollView>
 
 </android.support.design.widget.CoordinatorLayout>

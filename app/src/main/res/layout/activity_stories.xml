@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.projectina.ina.Stories">
+    tools:context="com.projectina.projectina.Stories">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

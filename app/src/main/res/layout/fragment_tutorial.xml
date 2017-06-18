@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.projectina.ina.Tutorial$PlaceholderFragment"
+    tools:context="com.projectina.projectina.Tutorial$PlaceholderFragment"
     android:layout_weight="10"
     android:layout_marginBottom="50dp">
 
