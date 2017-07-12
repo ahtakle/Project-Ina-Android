@@ -66,12 +66,7 @@ public class Home extends AppCompatActivity {
         else if (data_type.equals("birth_date"))
             intent = new Intent(this, BabyProgress.class);
         else
-            intent = new Intent(this, NoDueDateProgress.class);
-        /*if (due_date_str.equalsIgnoreCase("not selected")) {
-            intent = new Intent(this, NoDueDateProgress.class);
-        } else {
-            intent = new Intent(this, BabyProgress.class);
-        }*/
+            intent = new Intent(this, InvalidDateProgress.class);
         startActivity(intent);
     }
 

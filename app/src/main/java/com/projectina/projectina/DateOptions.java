@@ -1,6 +1,7 @@
 package com.projectina.projectina;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -9,6 +10,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 public class DateOptions extends AppCompatActivity {
+    public static final String PREFS_NAME = "InaPrefsFile";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +40,12 @@ public class DateOptions extends AppCompatActivity {
     }
 
     public void dispatchNoDate(View view) {
-        Intent intent = new Intent(this, NoDueDateProgress.class);
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString("date_type", "no_date");
+        editor.apply();
+
+        Intent intent = new Intent(this, InvalidDateProgress.class);
         startActivity(intent);
     }
 

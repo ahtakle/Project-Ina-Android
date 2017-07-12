@@ -50,7 +50,7 @@ public class BabyProgress extends AppCompatActivity {
             //percentDoneText.setText("You are " + percentDone + "% done");
 
             //Display 'subtitles' to the right of the image
-            int monthsCompleted = diffInDays / 30;
+            int monthsCompleted = (int) (diffInDays / 30.4) + 1;
             int weeksCompleted = (diffInDays % 30 + 1) / 7;
             TextView weekDaySubtitle = (TextView) findViewById(R.id.week_day_subtitle);
             weekDaySubtitle.setText("Month " + monthsCompleted + ", Week " + weeksCompleted);
@@ -63,6 +63,8 @@ public class BabyProgress extends AppCompatActivity {
             TextView monthInfo = (TextView) findViewById(R.id.progress_weeks_info);
             String[] monthlyInfo = getResources().getStringArray(R.array.monthly_info);
             monthTitle.setText("Month " + monthsCompleted + " Facts");
+            if (monthsCompleted > 24)
+                monthsCompleted = (monthsCompleted - 24) / 2;
             monthInfo.setText(monthlyInfo[monthsCompleted - 1]);
 
         }

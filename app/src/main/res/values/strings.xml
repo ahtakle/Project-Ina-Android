@@ -216,8 +216,6 @@
         <item>\u2022 Your baby is beginning to explore its dexterity.\n\n\u2022 Your baby can also start to ask simple questions.\n\n\u2022 Your baby needs between 11-14 hours of sleep a day.</item>
         <item>\u2022 Your toddler can likely follow simple two-step commands.\n\n\u2022 Your toddler can also probably begin to undress itself.\n\n\u2022 Your baby\'s weight is around 1.5 pounds.\n\n\u2022 Your baby needs between 11-14 hours of sleep a day.</item>
         <item>\u2022 Your toddler can regularly ask and answer questions.\n\n\u2022 Your baby now should have a functional vocabulary of around 50 words.\n\n\u2022 Your baby needs between 11-14 hours of sleep a day.</item>
-        Information stops segregating by month after the 24-month marker, and instead is grouped by
-        pairs of months
         <item>\u2022 Your toddler should start slimming down from its baby fat.\n\n\u2022 Your toddler will have a lot more energy over the next year, and should get the chance to run around at least once a day.n\u2022 Your child only needs between 9-13 hours of sleep at night for the next year.</item>
         <item>\u2022 Your toddler can now easily handle small objects.\n\n\u2022 This is the time when you will need to start setting rules for your toddler.\n\n\u2022 Your child also now has a longer attention span, and might try to concentrate harder on simple tasks!</item>
         <item>\u2022 Your child should be able to put on a few articles of clothing.\n\n\u2022 Your toddler is going to expand its creativity through messiness, and may begin to remember friends by their names.\n\n\u2022 This is around the time that you should begin potty-training your toddler!</item>
@@ -254,7 +252,8 @@
     <string name="trim_3">You will look very pregnant now and regularly feel your baby wriggling around. It is a great time to be shopping for baby!</string>
 
     <string name="no_due_date_txt">Congratulations on your baby, and thank you for downloading this app! Please enter a due date to access information about pregnancy or baby progress.</string>
-
+    <string name="invalid_due_date">The due date entered is invalid. Please ensure the due date is up to 42 weeks in the future in order to access information about pregnancy progress.</string>
+    <string name="invalid_birth_date">The birth date entered is invalid. Please ensure the birth date is up to 3 years in the past in order to access information about pregnancy progress.</string>
 
     <string name="title_activity_background_intro">Introduction Information</string>
     <string name="title_activity_calendar">Calendar</string>

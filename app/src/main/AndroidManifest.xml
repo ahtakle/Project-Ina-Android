@@ -118,7 +118,7 @@
                 android:value="com.projectina.projectina.Home" />
         </activity>
         <activity
-            android:name="com.projectina.projectina.NoDueDateProgress"
+            android:name="com.projectina.projectina.InvalidDateProgress"
             android:label="@string/title_activity_no_due_date_progress"
             android:theme="@style/AppTheme">
             <meta-data
