@@ -30,7 +30,7 @@ public class CardTerm {
                 persons.add(new CardTerm("GPTCHB", "Northern Plains Healthy Start", R.mipmap.gptchb));
                 persons.add(new CardTerm("Roberts County", "Community Health WIC", R.mipmap.nesd));
                 persons.add(new CardTerm("WIC", "Women, Infants, & Children", R.mipmap.roberts));
-                persons.add(new CardTerm("MCH Program", "Breastfeeding Peer Counsel", R.mipmap.sd_breastfeeding));
+                persons.add(new CardTerm("MCH", "Breastfeeding Peer Counsel", R.mipmap.sd_breastfeeding));
                 //persons.add(new CardTerm("SD Home Visiting", "Health Bright Start", R.mipmap.sd_homevisiting));
                 persons.add(new CardTerm("Social Services", "Department of Social Services", R.mipmap.sd_socialservices));
                 persons.add(new CardTerm("IHS", "Indian Health Services", R.mipmap.sisseton_clinic)); //Not sure if document is labeled correctly
