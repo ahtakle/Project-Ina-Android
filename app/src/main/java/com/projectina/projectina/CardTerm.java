@@ -59,7 +59,7 @@ public class CardTerm {
                 //persons.add(new CardTerm("Roberts", "Short description", R.mipmap.roberts));
                 persons.add(new CardTerm("IHS", "Indian Health Services", R.mipmap.sisseton_clinic));
                 persons.add(new CardTerm("Sisseton Nurse", "IHS Public Health", R.mipmap.sisseton_nurse));
-                persons.add(new CardTerm("SWO Benefits", "Benefits Coordinator", R.mipmap.swo_benefits));
+                //persons.add(new CardTerm("SWO Benefits", "Benefits Coordinator", R.mipmap.swo_benefits));
                 persons.add(new CardTerm("SWO Community Health Education", "Community Health Ed.", R.mipmap.swo_healthed));
                 persons.add(new CardTerm("SWO Health Rep", "Community Health Rep.", R.mipmap.swo_healthrep));
                 persons.add(new CardTerm("Dakota Pride", "Dakota Pride Center", R.mipmap.swo_pride));
@@ -87,7 +87,7 @@ public class CardTerm {
             case 5:
                 //persons.add(new CardTerm("Roberts", "Short description", R.mipmap.roberts));
                 persons.add(new CardTerm("Social Services", "Department of Social Services", R.mipmap.sd_socialservices));
-                persons.add(new CardTerm("SWO Benefits", "Benefits Coordinator", R.mipmap.swo_benefits));
+                //persons.add(new CardTerm("SWO Benefits", "Benefits Coordinator", R.mipmap.swo_benefits));
                 persons.add(new CardTerm("SWO Food Pantry", "Food Pantry", R.mipmap.swo_food));
                 //persons.add(new CardTerm("Finances", "Financial Advice", R.mipmap.finances));
                 break;
