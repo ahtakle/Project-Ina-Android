@@ -33,17 +33,17 @@
     <color name="blue">#11205e</color>
     <color name="yellow">#f5efdb</color>
 
-    <color name="tutorial1">#11205e</color>
+    <color name="tutorial1">#f7c05d</color>
     <color name="tutorial2">#f7c05d</color>
-    <color name="tutorial3">#9a0305</color>
+    <color name="tutorial3">#f7c05d</color>
     <color name="tutorial4">#f7c05d</color>
-    <color name="tutorial5">#11205e</color>
+    <color name="tutorial5">#f7c05d</color>
     <color name="tutorial6">#f7c05d</color>
-    <color name="tutorial7">#9a0305</color>
+    <color name="tutorial7">#f7c05d</color>
     <color name="tutorial8">#f7c05d</color>
 
     <color name="duedate1">#f7c05d</color>
-    <color name="duedate2">#f5efdb</color>
+    <color name="duedate2">#11205e</color>
 
 
 </resources>
