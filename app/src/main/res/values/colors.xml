@@ -12,12 +12,12 @@
     <color name="background">#982649</color>-->
 
 
-    <color name="colorPrimary">#f9a212</color>
-    <color name="background">#ffffff</color>
+    <color name="colorPrimary">#11205e</color>
+    <color name="background">#F5EFDB</color>
     <color name="colorButtons">#DDDDDD</color>
     <color name="colorAccent">#D55D28</color>
-    <color name="colorPrimaryDark">#588D3F</color>
-    <color name="colorPrimaryLight">#52A847</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimaryLight">#000000</color>
     <color name="colorText">#FFFFFF</color>
     <color name="colorTextDark">#000000</color>
 
@@ -29,21 +29,21 @@
 
     <color name="black_overlay">#66000000</color>
 
-    <color name="red">#FF9999</color>
-    <color name="blue">#9999FF</color>
-    <color name="yellow">#CCCC00</color>
+    <color name="red">#9a0305</color>
+    <color name="blue">#11205e</color>
+    <color name="yellow">#f5efdb</color>
 
-    <color name="tutorial1">#f9a212</color>
-    <color name="tutorial2">#D55D28</color>
-    <color name="tutorial3">#52A847</color>
-    <color name="tutorial4">#588D3F</color>
-    <color name="tutorial5">#f9a212</color>
-    <color name="tutorial6">#D55D28</color>
-    <color name="tutorial7">#52A847</color>
-    <color name="tutorial8">#588D3F</color>
+    <color name="tutorial1">#f7c05d</color>
+    <color name="tutorial2">#f7c05d</color>
+    <color name="tutorial3">#f7c05d</color>
+    <color name="tutorial4">#f7c05d</color>
+    <color name="tutorial5">#f7c05d</color>
+    <color name="tutorial6">#f7c05d</color>
+    <color name="tutorial7">#f7c05d</color>
+    <color name="tutorial8">#f7c05d</color>
 
-    <color name="duedate1">#FF5F6D</color>
-    <color name="duedate2">#FFC371</color>
+    <color name="duedate1">#f7c05d</color>
+    <color name="duedate2">#11205e</color>
 
 
 </resources>
