@@ -39,7 +39,7 @@ public class CardTerm {
                 //persons.add(new CardTerm("Sisseton School", "School District SPED", R.mipmap.sisseton_school));
                 persons.add(new CardTerm("Medicaid Eligibility", "Benefits Coordinator", R.mipmap.swo_benefits));
                 //persons.add(new CardTerm("SWO Cavity", "Cavity Free", R.mipmap.swo_cavity));
-                //persons.add(new CardTerm("SWO Child Protection", "Child Protection", R.mipmap.swo_child));
+                persons.add(new CardTerm("SWO Child Protection Program", "Child Protection", R.mipmap.swo_child));
                 persons.add(new CardTerm("SWO Community Health Education", "Community Health Ed.", R.mipmap.swo_healthed));
                 persons.add(new CardTerm("SWO Health Rep", "Community Health Rep.", R.mipmap.swo_healthrep));
                 persons.add(new CardTerm("Dakota Pride", "Dakota Pride Center", R.mipmap.swo_pride));
