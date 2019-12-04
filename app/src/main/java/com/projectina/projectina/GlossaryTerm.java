@@ -28,7 +28,6 @@ public class GlossaryTerm {
         glossaryList.add(new GlossaryTerm("Complicated Pregnancies"));
         glossaryList.add(new GlossaryTerm("Domestic Violence"));
         glossaryList.add(new GlossaryTerm("Family Planning"));
-        //glossaryList.add(new GlossaryTerm("Fetal Development"));
         glossaryList.add(new GlossaryTerm("Gestational Diabetes"));
         glossaryList.add(new GlossaryTerm("Healthy Diet"));
         glossaryList.add(new GlossaryTerm("Healthy Relationships"));
