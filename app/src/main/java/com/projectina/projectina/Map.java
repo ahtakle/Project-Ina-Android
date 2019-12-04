@@ -24,15 +24,15 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
     private GoogleMap mMap;
     Button button;
 
-    private static final LatLng HeadStart = new LatLng(45.5681150, -97.0669610);
-    private static final LatLng TribalAdminBuilding = new LatLng(45.5677590, -97.0711610);
-    private static final LatLng IHS = new LatLng(45.6568280, -97.0160580);
-    private static final LatLng RCHealthNurse = new LatLng(45.6674190, -97.0457440);
-    private static final LatLng DakotaPrideCenter = new LatLng(45.5636240, -97.0763670);
-    private static final LatLng Coteau = new LatLng(45.657723, -97.050173);
-    private static final LatLng GPTCHB = new LatLng(44.101915, -103.263103);
-    private static final LatLng LittleStepsDaycare = new LatLng(45.567646, -97.069341);
-    private static final LatLng WIC = new LatLng(45.660120, -97.050772);
+    private static final LatLng HeadStart = new LatLng(45.568170, -97.061490);
+    private static final LatLng TribalAdminBuilding = new LatLng(45.572700, -97.063040);
+    private static final LatLng IHS = new LatLng(45.657550, -97.016550);
+    private static final LatLng RCHealthNurse = new LatLng(45.667390, -97.045690);
+    private static final LatLng DakotaPrideCenter = new LatLng(45.563680, -97.076940);
+    private static final LatLng Coteau = new LatLng(45.657690, -97.050410);
+    private static final LatLng GPTCHB = new LatLng(44.059600, -103.158790);
+    private static final LatLng LittleStepsDaycare = new LatLng(45.568210, -97.066030);
+    private static final LatLng WIC = new LatLng(45.660170, -97.050050);
 
 
     private Marker mHeadStart;
