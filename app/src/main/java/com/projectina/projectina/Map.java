@@ -24,16 +24,18 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
     private GoogleMap mMap;
     Button button;
 
-    private static final LatLng HeadStart = new LatLng(45.5681150, -97.0669610);
-    private static final LatLng TribalAdminBuilding = new LatLng(45.5677590, -97.0711610);
-    private static final LatLng IHS = new LatLng(45.6568280, -97.0160580);
-    private static final LatLng RCHealthNurse = new LatLng(45.6674190, -97.0457440);
-    private static final LatLng DakotaPrideCenter = new LatLng(45.5636240, -97.0763670);
-    private static final LatLng Coteau = new LatLng(45.657723, -97.050173);
-    private static final LatLng GPTCHB = new LatLng(44.101915, -103.263103);
-    private static final LatLng LittleStepsDaycare = new LatLng(45.567646, -97.069341);
-    private static final LatLng WIC = new LatLng(45.660120, -97.050772);
-
+    private static final LatLng HeadStart = new LatLng(45.568170, -97.061490);
+    private static final LatLng TribalAdminBuilding = new LatLng(45.572700, -97.063040);
+    private static final LatLng IHS = new LatLng(45.657550, -97.016550);
+    private static final LatLng RCHealthNurse = new LatLng(45.667390, -97.045690);
+    private static final LatLng DakotaPrideCenter = new LatLng(45.563680, -97.076940);
+    private static final LatLng Coteau = new LatLng(45.657690, -97.050410);
+    private static final LatLng LittleStepsDaycare = new LatLng(45.568210, -97.066030);
+    private static final LatLng WIC = new LatLng(45.660170, -97.050050);
+    private static final LatLng HealthyStart = new LatLng(45.665210, -97.049590);
+    private static final LatLng SocialServices = new LatLng(44.370310, -100.341570);
+    private static final LatLng SpecialEducation = new LatLng(45.665360, -97.061120);
+    private static final LatLng FoodPantry = new LatLng(45.568200, -97.064440);
 
     private Marker mHeadStart;
     private Marker mTribalAdminBuilding;
@@ -41,9 +43,12 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
     private Marker mRCHealthNurse;
     private Marker mDakotaPrideCenter;
     private Marker mCoteau;
-    private Marker mGPTCHB;
     private Marker mLittleStepsDaycare;
     private Marker mWIC;
+    private Marker mHealthyStart;
+    private Marker mSocialServices;
+    private Marker mSpecialEducation;
+    private Marker mFoodPantry;
 
     private static final CharSequence[] MAP_TYPE_ITEMS =
             {"Road Map", "Hybrid", "Satellite", "Terrain"};
@@ -104,16 +109,22 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Google
         mIHS.setTag(2);
         mRCHealthNurse = mMap.addMarker(new MarkerOptions().position(RCHealthNurse).title("Roberts County"));
         mRCHealthNurse.setTag(3);
-        mDakotaPrideCenter = mMap.addMarker(new MarkerOptions().position(DakotaPrideCenter).title("SWO Pride"));
+        mDakotaPrideCenter = mMap.addMarker(new MarkerOptions().position(DakotaPrideCenter).title("Dakota Pride"));
         mDakotaPrideCenter.setTag(4);
         mCoteau = mMap.addMarker(new MarkerOptions().position(Coteau).title("Coteau"));
         mCoteau.setTag(5);
-        mGPTCHB = mMap.addMarker(new MarkerOptions().position(GPTCHB).title("GPTCHB"));
-        mGPTCHB.setTag(6);
         mLittleStepsDaycare = mMap.addMarker(new MarkerOptions().position(LittleStepsDaycare).title("Little Steps Daycare"));
-        mLittleStepsDaycare.setTag(7);
+        mLittleStepsDaycare.setTag(6);
         mWIC = mMap.addMarker(new MarkerOptions().position(WIC).title("WIC"));
         mWIC.setTag(7);
+        mHealthyStart = mMap.addMarker(new MarkerOptions().position(HealthyStart).title("Healthy Start"));
+        mHealthyStart.setTag(8);
+        mSocialServices = mMap.addMarker(new MarkerOptions().position(SocialServices).title("Social Services"));
+        mSocialServices.setTag(9);
+        mSpecialEducation = mMap.addMarker(new MarkerOptions().position(SpecialEducation).title("Special Education"));
+        mSpecialEducation.setTag(10);
+        mFoodPantry = mMap.addMarker(new MarkerOptions().position(FoodPantry).title("SWO Food Pantry"));
+        mFoodPantry.setTag(11);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(TribalAdminBuilding, 9));
 
